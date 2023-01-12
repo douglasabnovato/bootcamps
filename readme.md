@@ -19,6 +19,7 @@ Exibir os bootcamps que participei com uma breve descrição
 - [ ] Responsividade
 - [ ] Explicação para cada evento
 - [ ] Funcionalidade de enviar e-mail
+- [ ] Redes Sociais
 
 ### Próximo passo
 
