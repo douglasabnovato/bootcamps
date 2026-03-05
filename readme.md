@@ -43,4 +43,9 @@ As branches desse projeto seguem a seguinte organização:
 - feature/nome_da_tarefa: resolver tarefa
 - hotfix/nome_da_tarefa: resolver urgência
 
+### Versão 1
+
+- Template do W3.CSS
+- Informações Estáticas que levam para os sites oficiais
+
 
