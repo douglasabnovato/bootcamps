@@ -4,6 +4,7 @@
  */
 
 export type EventCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'outros';
+export type EventStatus = 'concluido' | 'desejado';
 
 export interface BootcampEvent {
   id: string;
@@ -14,6 +15,7 @@ export interface BootcampEvent {
   coverImage: string;     // URL da imagem grande do Card
   altText: string;        // Acessibilidade (Obrigatório!)
   category: EventCategory;
+  status: EventStatus;
   
   // Informações para a página interna de detalhes
   content: {
