@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   :root {
@@ -9,18 +7,8 @@
   }
 
   body {
+    /* Use as variáveis ou as cores padrão do Tailwind */
     @apply bg-zinc-950 text-zinc-100 antialiased;
     font-family: 'Raleway', sans-serif;
-  }
-
-  /* Customização de Scrollbar para nível Sênior */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    @apply bg-zinc-900;
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-700 rounded-full hover:bg-brand-primary transition-colors;
   }
 }
