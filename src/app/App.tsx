@@ -1,5 +1,6 @@
 // src/app/App.tsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import { MainLayout } from '../shared/ui/layout/MainLayout';
  
 const HomeView = () => (
   <div className="min-h-screen bg-zinc-950 p-8">
@@ -18,15 +19,12 @@ const EventDetailsView = () => (
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes> 
-        <Route path="/" element={<HomeView />} />
-
-        {/* Rota dinâmica (Página interna de cada Bootcamp) */}
-        <Route path="/event/:slug" element={<EventDetailsView />} />
-
-        {/* Rota de fallback (404) opcional */}
-        <Route path="*" element={<div className="text-white p-10">404 - Não encontrado</div>} />
-      </Routes>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<HomeView />} />
+          <Route path="/event/:slug" element={<EventDetailsView />} />
+        </Routes>
+      </MainLayout>
     </BrowserRouter>
   );
 }
