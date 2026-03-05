@@ -1,7 +1,7 @@
 // src/entities/event/api/events.data.ts
 import type { BootcampEvent } from './../model/types';
 
-export const bootcampsMock: BootcampEvent[] = [
+export const events: BootcampEvent[] = [
   {
     id: '1',
     slug: '42-sp',

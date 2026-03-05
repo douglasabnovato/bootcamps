@@ -1,6 +1,10 @@
 # Bootcamps
 
-Quero apresentar os eventos de tecnologia que eu gostei de ter feito e aqueles que quero ir.
+O site é um Hub de Experiências Tecnológicas. Ele possui duas frentes claras:
+
+Retrospectiva: Exibir eventos e formações que você já concluiu e validou (ex: Piscine 42SP, Ignite).
+
+Prospecção: Mapear os eventos que você planeja participar (ex: HackTown, eventos de Blockchain), servindo como um roteiro de evolução profissional.
 
 ## Informações do Site
 
@@ -84,7 +88,7 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 
 4. Detail Page & Content Hub (A Experiência)
 
-- [ ] 4.1 - Transformação de um link externo em uma aplicação interna rica em conteúdo.
+- [x] 4.1 - Transformação de um link externo em uma aplicação interna rica em conteúdo.
 
 - [ ] 4.2 - Dynamic Event Page: Criação da página detalhada que consome o ID do evento via URL.
 
@@ -122,6 +126,60 @@ Para você não se perder durante o desenvolvimento, aqui está o guia de respon
 - entities/: Onde definimos o domínio de negócio. (Ex: EventCard, EventTypes).
 
 - shared/: O seu canivete suíço. Componentes de UI puros (botão, input), hooks genéricos e utilitários.
+
+#### Arquitetura Design
+
+````markddown
+src/
+├── app/                      # Configuração Global
+│   ├── App.tsx              # Componente raiz com rotas
+│   ├── main.tsx             # Entry point React
+│   ├── router/              # Roteamento (pode ser expandido)
+│   └── styles/              # Estilos globais
+│
+├── pages/                   # Páginas (rotas completas)
+│   ├── home/
+│   │   └── Home.tsx        # Página inicial - lista de bootcamps
+│   └── detail/
+│       └── Detail.tsx      # Página de detalhes (placeholder)
+│
+├── entities/                # Domínio de negócio (Bootcamps)
+│   └── event/
+│       ├── model/          # Tipos, lógica, hooks
+│       │   ├── types.ts    # Interface BootcampEvent
+│       │   ├── useEvents.ts # Hook customizado
+│       ├── api/            # Dados e chamadas
+│       │   ├── events.data.ts  # Mock de 3 bootcamps
+│       │   └── eventApi.ts     # Interface de dados
+│       └── ui/             # Componentes específicos da entidade
+│           ├── EventCard.tsx   # Card renderizado no grid
+│           └── badge/
+│               └── Badge.tsx   # Badge de categoria
+│
+├── shared/                  # Código reutilizável
+│   └── ui/
+│       └── layout/
+│           └── MainLayout.tsx # Wrapper com header/footer/nav
+│
+└── assets/                  # Recursos estáticos
+````
+
+
+#### Fluxo de Dados (Data Flow)
+
+````
+Home.tsx
+  ↓
+useEvents() [Hook]
+  ↓
+eventApi.getAll() [API Layer]
+  ↓
+events.data.ts [Mock Data]
+  ↓
+Retorna BootcampEvent[]
+  ↓
+.map(event => <EventCard event={event} />) [Rendering]
+````
 
 ### Estrutura de roteamento
 

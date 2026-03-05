@@ -1,9 +1,10 @@
 // src/shared/ui/layout/MainLayout.tsx
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 interface MainLayoutProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
@@ -33,9 +34,8 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
                 </div>
             </header>
 
-            {/* 2. MAIN: Onde o conteúdo das rotas (Home/Detalhes) é injetado */}
-            <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-12">
-                {children}
+            <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-12"> 
+                {children || <Outlet />} 
             </main>
 
             {/* 3. FOOTER: Rodapé informativo */}

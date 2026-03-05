@@ -1,6 +1,6 @@
 // src/entities/event/api/eventApi.ts
 import type { BootcampEvent } from '../model/types';
-import { bootcampsMock } from './events.data'; // Este arquivo criaremos no passo 2.2
+import { events } from './events.data'; // Este arquivo criaremos no passo 2.2
 
 /**
  * Camada de Abstração de Dados (Data Access Layer)
@@ -14,7 +14,7 @@ export const eventApi = {
     return new Promise((resolve) => {
       // Simulando latência de 500ms para testar Loadings no futuro
       setTimeout(() => {
-        resolve(bootcampsMock);
+        resolve(events);
       }, 500);
     });
   },
@@ -24,7 +24,7 @@ export const eventApi = {
    */
   getBySlug: async (slug: string): Promise<BootcampEvent | undefined> => {
     return new Promise((resolve) => {
-      const event = bootcampsMock.find((item) => item.slug === slug);
+      const event = events.find((item) => item.slug === slug);
       setTimeout(() => {
         resolve(event);
       }, 300);
