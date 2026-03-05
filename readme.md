@@ -91,6 +91,7 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 - [x] 4.1 - Transformação de um link externo em uma aplicação interna rica em conteúdo.
 
 - [ ] 4.2 - Dynamic Event Page: Criação da página detalhada que consome o ID do evento via URL.
+Warning: não esta exibindo a informação dos detalhes conforme o evento selecionado
 
 - [ ] 4.3 - Media Center: Implementação do container de vídeo e galeria de imagens para os detalhes do bootcamp.
 
