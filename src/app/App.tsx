@@ -1,11 +1,32 @@
-function App() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-dark">
-      <h1 className="text-4xl font-bold text-brand-primary animate-pulse">
-         Bootcamps do learnTECH
-      </h1>
-    </div>
-  )
-}
+// src/app/App.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+ 
+const HomeView = () => (
+  <div className="min-h-screen bg-zinc-950 p-8">
+    <h1 className="text-3xl font-bold text-brand-primary">Home: Lista de Eventos</h1>
+    <p className="text-zinc-400 mt-2">O motor de dados está pronto para alimentar esta tela.</p>
+  </div>
+);
 
-export default App
+const EventDetailsView = () => (
+  <div className="min-h-screen bg-zinc-950 p-8">
+    <h1 className="text-3xl font-bold text-brand-secondary">Detalhes do Evento</h1>
+    <p className="text-zinc-400 mt-2">O parâmetro slug será capturado aqui para buscar os dados.</p>
+  </div>
+);
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes> 
+        <Route path="/" element={<HomeView />} />
+
+        {/* Rota dinâmica (Página interna de cada Bootcamp) */}
+        <Route path="/event/:slug" element={<EventDetailsView />} />
+
+        {/* Rota de fallback (404) opcional */}
+        <Route path="*" element={<div className="text-white p-10">404 - Não encontrado</div>} />
+      </Routes>
+    </BrowserRouter>
+  );
+}

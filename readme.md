@@ -64,13 +64,13 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 
 2. Core Entities & Mock Data (O Motor)
 
-- [ ] 2.1 - Separação da lógica de dados da interface para facilitar futuras integrações com APIs.
+- [x] 2.1 - Separação da lógica de dados da interface para facilitar futuras integrações com APIs.
 
-- [ ] 2.2 - Data Manager: Criação de um arquivo central de dados (events.data.ts) com o array de bootcamps baseados no seu readme.md.
+- [x] 2.2 - Data Manager: Criação de um arquivo central de dados (events.data.ts) com o array de bootcamps baseados no seu readme.md.
 
-- [ ] 2.3 - Custom Hooks: Desenvolvimento de hooks como useEvents() para gerenciar a lógica de filtragem e busca de dados.
+- [x] 2.3 - Custom Hooks: Desenvolvimento de hooks como useEvents() para gerenciar a lógica de filtragem e busca de dados.
 
-- [ ] 2.4 - Configuração de Roteamento: Setup do React Router para suportar as rotas / (Home) e /event/:slug (Detalhes).
+- [x] 2.4 - Configuração de Roteamento: Setup do React Router para suportar as rotas / (Home) e /event/:slug (Detalhes).
 
 3. Responsive UI & Layout (A Estrutura Visual)
 
@@ -122,3 +122,11 @@ Para você não se perder durante o desenvolvimento, aqui está o guia de respon
 - entities/: Onde definimos o domínio de negócio. (Ex: EventCard, EventTypes).
 
 - shared/: O seu canivete suíço. Componentes de UI puros (botão, input), hooks genéricos e utilitários.
+
+### Estrutura de roteamento
+
+- Acesse http://localhost:5173/ -> Deve exibir "Home: Lista de Eventos".
+
+- Acesse http://localhost:5173/event/42-sp -> Deve exibir "Detalhes do Evento".
+
+- Acesse http://localhost:5173/qualquer-coisa -> Deve exibir o seu fallback de 404.
