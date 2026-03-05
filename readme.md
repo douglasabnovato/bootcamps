@@ -54,13 +54,13 @@ As branches desse projeto seguem a seguinte organização:
 
 Configuração do ambiente de desenvolvimento focado em escala e tipagem rigorosa.
 
-- [ ] 1.1 - Inicialização do Projeto: Setup com Vite + React + TypeScript.
+- [x] 1.1 - Inicialização do Projeto: Setup com Vite + React + TypeScript.
 
-- [ ] 1.2 - Configuração de Estilo: Instalação do Tailwind CSS e configuração de Design Tokens (cores da marca learnTECH, fontes, breakpoints).
+- [x] 1.2 - Configuração de Estilo: Instalação do Tailwind CSS e configuração de Design Tokens (cores da marca learnTECH, fontes, breakpoints).
 
-- [ ] 1.3 - Estrutura de Pastas (FSD): Implementação da arquitetura Feature-Sliced Design (Entities, Features, Widgets, Shared).
+- [x] 1.3 - Estrutura de Pastas (FSD): Implementação da arquitetura Feature-Sliced Design (Entities, Features, Widgets, Shared).
 
-- [ ] 1.4 - Contrato de Dados: Definição da Interface TypeScript para os Eventos, garantindo que nenhum bootcamp seja renderizado sem os campos obrigatórios (img, alt, descrição, etc).
+- [x] 1.4 - Contrato de Dados: Definição da Interface TypeScript para os Eventos, garantindo que nenhum bootcamp seja renderizado sem os campos obrigatórios (img, alt, descrição, etc).
 
 2. Core Entities & Mock Data (O Motor)
 
@@ -105,3 +105,20 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 - [ ] 5.4 - Performance: Otimização de imagens e análise do bundle final.
 
 - [ ] 5.5 - Continuous Deployment: Setup do workflow para deploy automatizado (GitHub Pages ou Vercel).
+
+### Estrutura de pasta do projeto
+
+Mapeamento das Camadas para apresentar O que vai em cada lugar.
+Para você não se perder durante o desenvolvimento, aqui está o guia de responsabilidades de cada pasta:
+
+- app/: Configurações globais que envolvem toda a aplicação. (Styles, Providers, Router).
+
+- pages/: Onde as rotas vivem. Elas apenas montam a página usando peças menores. (Ex: Home, EventDetails).
+
+- widgets/: Peças grandes e autônomas da interface. (Ex: EventGrid, Navbar).
+
+- features/: Funcionalidades que o usuário executa. (Ex: FilterEvents, RegisterNewsletter).
+
+- entities/: Onde definimos o domínio de negócio. (Ex: EventCard, EventTypes).
+
+- shared/: O seu canivete suíço. Componentes de UI puros (botão, input), hooks genéricos e utilitários.
