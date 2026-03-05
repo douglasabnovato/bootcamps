@@ -1,6 +1,6 @@
 # Bootcamps
 
-Quero apresentar os eventos de tecnologia que eu gosto e aqueles que quero ir.
+Quero apresentar os eventos de tecnologia que eu gostei de ter feito e aqueles que quero ir.
 
 ## Informações do Site
 
@@ -74,13 +74,13 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 
 3. Responsive UI & Layout (A Estrutura Visual)
 
-- [ ] 3.1 - Construção da interface objetiva com foco total em responsividade explícita.
+- [x] 3.1 - Construção da interface objetiva com foco total em responsividade explícita.
 
-- [ ] 3.2 - Layout Base: Criação do Header com Menu e Footer utilizando semântica HTML5 (<header>, <main>, <footer>).
+- [x] 3.2 - Layout Base: Criação do Header com Menu e Footer utilizando semântica HTML5 (<header>, <main>, <footer>).
 
-- [ ] 3.3 - Bento Grid: Implementação do grid de cards usando Tailwind. A responsividade será definida via classes utilitárias (grid-cols-1 md:grid-cols-2 lg:grid-cols-3).
+- [x] 3.3 - Bento Grid: Implementação do grid de cards usando Tailwind. A responsividade será definida via classes utilitárias (grid-cols-1 md:grid-cols-2 lg:grid-cols-3).
 
-- [ ] 3.4 - Componente EventCard: Desenvolvimento do card com imagens grandes, efeitos de hover (Glassmorphism) e exibição das informações essenciais (tecnologias, carga horária).
+- [x] 3.4 - Componente EventCard: Desenvolvimento do card com imagens grandes, efeitos de hover (Glassmorphism) e exibição das informações essenciais (tecnologias, carga horária).
 
 4. Detail Page & Content Hub (A Experiência)
 

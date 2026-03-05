@@ -1,5 +1,5 @@
 // src/entities/event/api/events.data.ts
-import { BootcampEvent } from '../model/types';
+import type { BootcampEvent } from './../model/types';
 
 export const bootcampsMock: BootcampEvent[] = [
   {

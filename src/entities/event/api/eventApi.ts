@@ -1,5 +1,5 @@
 // src/entities/event/api/eventApi.ts
-import { BootcampEvent } from '../model/types';
+import type { BootcampEvent } from '../model/types';
 import { bootcampsMock } from './events.data'; // Este arquivo criaremos no passo 2.2
 
 /**

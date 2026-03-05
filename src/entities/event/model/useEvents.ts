@@ -1,6 +1,6 @@
 // src/entities/event/model/useEvents.ts: este hook gerencia o estado de carregamento (isLoading), o que é essencial para uma boa UX
 import { useState, useEffect } from 'react';
-import { BootcampEvent } from './types';
+import type { BootcampEvent } from './types';
 import { eventApi } from '../api/eventApi';
 
 /**
