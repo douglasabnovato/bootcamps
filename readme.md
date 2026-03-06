@@ -29,17 +29,17 @@ Exibir os bootcamps que participei com uma breve descrição
 
 ### Requisitos
 
-- [ ] Design personalizado
-- [ ] Favicon
-- [ ] Responsividade
-- [ ] Explicação para cada evento
-- [ ] Funcionalidade de enviar e-mail
-- [ ] Redes Sociais
+- [x] Design personalizado
+- [x] Favicon
+- [x] Responsividade
+- [x] Explicação para cada evento
+- [x] Funcionalidade de enviar e-mail
+- [x] Redes Sociais
 
 ### Próximo passo
 
-- [ ] Abrir uma página com descrição e ementa da forma que acontece o evento e mais detalhes do que gostei e do que poderia ter acontecido.
-- [ ] Um cta para o site oficial para inscrições
+- [x] Abrir uma página com descrição e ementa da forma que acontece o evento e mais detalhes do que gostei e do que poderia ter acontecido.
+- [x] Um cta para o site oficial para inscrições
 
 ## Informações do Projeto
 
@@ -89,30 +89,30 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 
 - [x] 5.1 - Refinamentos finais para atingir o nível "Sênior" de entrega. (1,2,3,4) 
 1. Gerenciamento de Títulos Dinâmicos
-[ ] Hook de Título: Implementar o useDocumentTitle em shared/lib/hooks.
-[ ] Identidade Visual: Garantir que o sufixo | learnTECH apareça em todas as abas.
-[ ] Reatividade: O título deve mudar para "Carregando..." no loading e para o nome do bootcamp no success.
+[x] Hook de Título: Implementar o useDocumentTitle em shared/lib/hooks.
+[x] Identidade Visual: Garantir que o sufixo | learnTECH apareça em todas as abas.
+[x] Reatividade: O título deve mudar para "Carregando..." no loading e para o nome do bootcamp no success.
 2. Fluidez de Navegação (UX Invisível)
-[ ] Scroll Restoration: Inserir o componente <ScrollToTop /> no App.tsx para evitar que páginas de detalhes abram no meio da tela.
-[ ] Smooth Scrolling: Adicionar scroll-behavior: smooth no CSS global para transições menos bruscas.
-[ ] Micro-interações: Validar se o AnimatePresence está com mode="wait" para evitar sobreposição de páginas durante a troca de rotas.
+[x] Scroll Restoration: Inserir o componente <ScrollToTop /> no App.tsx para evitar que páginas de detalhes abram no meio da tela.
+[x] Smooth Scrolling: Adicionar scroll-behavior: smooth no CSS global para transições menos bruscas.
+[x] Micro-interações: Validar se o AnimatePresence está com mode="wait" para evitar sobreposição de páginas durante a troca de rotas.
 3. Percepção de Performance (Skeleton)
-[ ] Base UI: Criar o componente atômico Skeleton com animação de pulse.
-[ ] Padrão FSD: Construir o DetailSkeleton mimetizando a estrutura real da página (Banner, Header, Media Center).
-[ ] Flicker-Free: Garantir que a transição do Skeleton para o conteúdo real não cause "pulos" de layout (Cumulative Layout Shift).
+[x] Base UI: Criar o componente atômico Skeleton com animação de pulse.
+[x] Padrão FSD: Construir o DetailSkeleton mimetizando a estrutura real da página (Banner, Header, Media Center).
+[x] Flicker-Free: Garantir que a transição do Skeleton para o conteúdo real não cause "pulos" de layout (Cumulative Layout Shift).
 4. Tratamento de Erros e Observabilidade
-[ ] Página 404: Implementar o componente NotFound com design alinhado à ByteClass.
-[ ] Rota Coringa: Configurar <Route path="*" /> no arquivo de rotas principal.
-[ ] Log de Roteamento: Inserir o console.warn no useEffect do 404 para monitorar links quebrados ou acessos inválidos.
+[x] Página 404: Implementar o componente NotFound com design alinhado à ByteClass.
+[x] Rota Coringa: Configurar <Route path="*" /> no arquivo de rotas principal.
+[x] Log de Roteamento: Inserir o console.warn no useEffect do 404 para monitorar links quebrados ou acessos inválidos.
 5. Clean Code & DX (Developer Experience)
-[ ] Absolute Imports: Verificar se todos os componentes novos estão usando @/ ou caminhos relativos limpos.
-[ ] Prop Types/Interfaces: Garantir que todos os componentes (Skeleton, CTAButton, NotFound) tenham interfaces TypeScript estritas.
-[ ] Consistency Check: Validar se as cores Emerald (Concluído) e Amber (Desejado) estão sendo aplicadas via cn() ou lógica de props em todos os componentes de feedback.
+[x] Absolute Imports: Verificar se todos os componentes novos estão usando @/ ou caminhos relativos limpos.
+[x] Prop Types/Interfaces: Garantir que todos os componentes (Skeleton, CTAButton, NotFound) tenham interfaces TypeScript estritas.
+[x] Consistency Check: Validar se as cores Emerald (Concluído) e Amber (Desejado) estão sendo aplicadas via cn() ou lógica de props em todos os componentes de feedback.
 
-- [ ] 5.2 - Acessibilidade (a11y): Auditoria de tags alt, contraste de cores e navegação via teclado.
-- [ ] 5.3 - SEO & Meta: Configuração de títulos dinâmicos e Meta Tags para compartilhamento em redes sociais.
-- [ ] 5.4 - Performance: Otimização de imagens e análise do bundle final.
-- [ ] 5.5 - Continuous Deployment: Setup do workflow para deploy automatizado (GitHub Pages ou Vercel).
+- [x] 5.2 - Acessibilidade (a11y): Auditoria de tags alt, contraste de cores e navegação via teclado.
+- [x] 5.3 - SEO & Meta: Configuração de títulos dinâmicos e Meta Tags para compartilhamento em redes sociais.
+- [x] 5.4 - Performance: Otimização de imagens e análise do bundle final.
+- [x] 5.5 - Continuous Deployment: Setup do workflow para deploy automatizado (GitHub Pages ou Vercel).
 
 ### Estrutura de pasta do projeto
 
