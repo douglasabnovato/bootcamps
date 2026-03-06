@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-primary: #00D1FF;
+    --brand-secondary: #7000FF;
+  }
+
+  body {
+    /* Use as variáveis ou as cores padrão do Tailwind */
+    @apply bg-zinc-950 text-zinc-100 antialiased;
+    font-family: 'Raleway', sans-serif;
+  }
+}
