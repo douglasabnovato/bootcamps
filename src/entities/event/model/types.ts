@@ -1,27 +1,37 @@
-/**
- * Interface que define a estrutura rigorosa de um Evento/Bootcamp
- * no ecossistema learnTECH.
- */
+// src/entities/event/model/types.ts
 
-export type EventCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'outros';
-export type EventStatus = 'concluido' | 'desejado';
+export type EventCategory =
+  | "frontend"
+  | "backend"
+  | "fullstack"
+  | "mobile"
+  | "outros";
+export type EventStatus = "concluido" | "desejado";
+
+// Interface para itens da galeria
+export interface EventMedia {
+  id: string;
+  url: string;
+  type: "image" | "video";
+  alt?: string;
+}
 
 export interface BootcampEvent {
   id: string;
-  slug: string;           // Ex: 'rocketseat-ignite' (usado na URL)
-  title: string;          // Nome do Bootcamp
-  institution: string;    // Quem ofereceu (Caelum, DIO, etc)
-  description: string;    // Texto curto para o Card principal
-  coverImage: string;     // URL da imagem grande do Card
-  altText: string;        // Acessibilidade (Obrigatório!)
+  slug: string;
+  title: string;
+  institution: string;
+  description: string;
+  coverImage: string;
+  altText: string;
   category: EventCategory;
   status: EventStatus;
-  
-  // Informações para a página interna de detalhes
+
   content: {
     longDescription: string;
-    videoUrl?: string;    // Opcional, caso não tenha vídeo
-    curriculum: string[]; // Lista de tópicos aprendidos
-    officialLink: string; // Link para o site oficial
+    videoUrl?: string;
+    gallery?: EventMedia[]; // Adicionado para suportar o Media Center (4.3)
+    curriculum: string[];
+    officialLink: string;
   };
 }
