@@ -8,6 +8,11 @@ Prospecção: Mapear os eventos que você planeja participar (ex: HackTown, even
 
 ## Informações do Site
 
+### Versão 1
+
+- Template do W3.CSS
+- Informações Estáticas que levam para os sites oficiais
+
 ### Bootcamps
 
 Exibir os bootcamps que participei com uma breve descrição
@@ -30,11 +35,6 @@ Exibir os bootcamps que participei com uma breve descrição
 - [ ] Explicação para cada evento
 - [ ] Funcionalidade de enviar e-mail
 - [ ] Redes Sociais
-
-### Versão 1
-
-- Template do W3.CSS
-- Informações Estáticas que levam para os sites oficiais
 
 ### Próximo passo
 
@@ -87,7 +87,28 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 
 5. Polishing & Deploy (A Excelência)
 
-- [ ] 5.1 - Refinamentos finais para atingir o nível "Sênior" de entrega.
+- [x] 5.1 - Refinamentos finais para atingir o nível "Sênior" de entrega. (1,2,3,4) 
+1. Gerenciamento de Títulos Dinâmicos
+[ ] Hook de Título: Implementar o useDocumentTitle em shared/lib/hooks.
+[ ] Identidade Visual: Garantir que o sufixo | learnTECH apareça em todas as abas.
+[ ] Reatividade: O título deve mudar para "Carregando..." no loading e para o nome do bootcamp no success.
+2. Fluidez de Navegação (UX Invisível)
+[ ] Scroll Restoration: Inserir o componente <ScrollToTop /> no App.tsx para evitar que páginas de detalhes abram no meio da tela.
+[ ] Smooth Scrolling: Adicionar scroll-behavior: smooth no CSS global para transições menos bruscas.
+[ ] Micro-interações: Validar se o AnimatePresence está com mode="wait" para evitar sobreposição de páginas durante a troca de rotas.
+3. Percepção de Performance (Skeleton)
+[ ] Base UI: Criar o componente atômico Skeleton com animação de pulse.
+[ ] Padrão FSD: Construir o DetailSkeleton mimetizando a estrutura real da página (Banner, Header, Media Center).
+[ ] Flicker-Free: Garantir que a transição do Skeleton para o conteúdo real não cause "pulos" de layout (Cumulative Layout Shift).
+4. Tratamento de Erros e Observabilidade
+[ ] Página 404: Implementar o componente NotFound com design alinhado à ByteClass.
+[ ] Rota Coringa: Configurar <Route path="*" /> no arquivo de rotas principal.
+[ ] Log de Roteamento: Inserir o console.warn no useEffect do 404 para monitorar links quebrados ou acessos inválidos.
+5. Clean Code & DX (Developer Experience)
+[ ] Absolute Imports: Verificar se todos os componentes novos estão usando @/ ou caminhos relativos limpos.
+[ ] Prop Types/Interfaces: Garantir que todos os componentes (Skeleton, CTAButton, NotFound) tenham interfaces TypeScript estritas.
+[ ] Consistency Check: Validar se as cores Emerald (Concluído) e Amber (Desejado) estão sendo aplicadas via cn() ou lógica de props em todos os componentes de feedback.
+
 - [ ] 5.2 - Acessibilidade (a11y): Auditoria de tags alt, contraste de cores e navegação via teclado.
 - [ ] 5.3 - SEO & Meta: Configuração de títulos dinâmicos e Meta Tags para compartilhamento em redes sociais.
 - [ ] 5.4 - Performance: Otimização de imagens e análise do bundle final.

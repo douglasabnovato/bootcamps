@@ -3,6 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useEventBySlug } from '../../entities/event/model/useEventBySlug';
 import { Badge } from '../../entities/event/ui/badge/Badge';
+import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
+
+import { DetailSkeleton } from './DetailSkeleton';
+import { NotFound } from '../notFound/NotFound';
 
 // Shared Components
 import { VideoPlayer } from '../../shared/ui/videoPlayer/VideoPlayer';
@@ -13,15 +17,12 @@ export const Detail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { event, loading } = useEventBySlug(slug);
+  useDocumentTitle(event ? event.title : "Carregando Jornada...");
 
-  // 1. Estado de Carregamento (Padrão ByteClass)
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen text-zinc-500 font-mono animate-pulse">
-        Carregando ecossistema learnTECH...
-      </div>
-    );
-  }
+  if (loading) return <DetailSkeleton />;
+
+  if (!event) return <NotFound />;
+
 
   // 2. Tratamento de Erro (Fallback)
   if (!event) {

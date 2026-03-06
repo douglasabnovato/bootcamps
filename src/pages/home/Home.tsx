@@ -1,9 +1,11 @@
 // src/pages/home/HomePage.tsx
 import { useEvents } from '../../entities/event/model/useEvents';
-import { EventCard } from '../../entities/event/ui/EventCard'; // Importação do novo componente
+import { EventCard } from '../../entities/event/ui/EventCard'; 
+import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
 
 export const Home = () => {
     const { events, isLoading } = useEvents();
+    useDocumentTitle("Bootcamps & Formações");
 
     if (isLoading) {
         return (
