@@ -5,15 +5,28 @@ import { Badge } from '../../entities/event/ui/badge/Badge';
 export const Detail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const event = useEventBySlug(slug);
 
+  // AQUI ESTÁ A CHAVE: O hook agora retorna um objeto com o estado de loading
+  const { event, loading } = useEventBySlug(slug);
+
+  // 1. Enquanto a "API" está processando os 300ms de delay
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-[60vh] text-zinc-500 font-mono animate-pulse">
+        Carregando dados da ByteClass...
+      </div>
+    );
+  }
+
+  // 2. Só verificamos se o evento existe APÓS o carregamento terminar
   if (!event) {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] text-zinc-400 font-sans">
-        <h2 className="text-2xl font-bold mb-2">Evento não encontrado</h2>
+        <h2 className="text-2xl font-bold mb-2 text-white">Jornada não encontrada</h2>
+        <p className="mb-6 opacity-60">Verifique o slug ou retorne à listagem principal.</p>
         <button
           onClick={() => navigate('/')}
-          className="mt-4 px-6 py-2 bg-zinc-800 text-white rounded-full hover:bg-zinc-700 transition-all border border-zinc-700"
+          className="px-6 py-2 bg-zinc-800 text-white rounded-full hover:bg-zinc-700 transition-all border border-zinc-700"
         >
           Voltar para Home
         </button>
@@ -63,7 +76,7 @@ export const Detail = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {event.content.curriculum.map((item, index) => (
-            <div key={index} className="flex items-center gap-4 p-5 bg-zinc-900/40 border border-zinc-800 rounded-2xl">
+            <div key={index} className="flex items-center gap-4 p-5 bg-zinc-900/40 border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-colors">
               <span className="text-brand-primary font-mono font-bold">
                 {(index + 1).toString().padStart(2, '0')}
               </span>
