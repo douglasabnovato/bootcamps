@@ -1,0 +1,41 @@
+# --- Dependências ---
+node_modules/
+.pnp
+.pnp.js
+
+# --- Produção / Build ---
+dist/
+dist-ssr/
+*.local
+# Ignora arquivos de variáveis de ambiente (Segurança)
+.env
+.env*.local
+
+# --- Logs de Erro ---
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- TypeScript & Vite ---
+*.tsbuildinfo
+.vite/
+
+# --- Editor & Sistema ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Temporários do Git Bash / Windows ---
+*.bak
+*.tmp
+*.patch
