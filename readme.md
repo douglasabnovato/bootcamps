@@ -29,17 +29,17 @@ Exibir os bootcamps que participei com uma breve descrição
 
 ### Requisitos
 
-- [x] Design personalizado
-- [x] Favicon
-- [x] Responsividade
-- [x] Explicação para cada evento
-- [x] Funcionalidade de enviar e-mail
-- [x] Redes Sociais
+- [ ] Design personalizado
+- [ ] Favicon
+- [ ] Responsividade
+- [ ] Explicação para cada evento
+- [ ] Funcionalidade de enviar e-mail
+- [ ] Redes Sociais
 
 ### Próximo passo
 
-- [x] Abrir uma página com descrição e ementa da forma que acontece o evento e mais detalhes do que gostei e do que poderia ter acontecido.
-- [x] Um cta para o site oficial para inscrições
+- [ ] Abrir uma página com descrição e ementa da forma que acontece o evento e mais detalhes do que gostei e do que poderia ter acontecido.
+- [ ] Um cta para o site oficial para inscrições
 
 ## Informações do Projeto
 
