@@ -1,18 +1,28 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// src/app/App.tsx
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { MainLayout } from '../shared/ui/layout/MainLayout';
 import { Home } from '../pages/home/Home';
-// Importe a página que estruturamos com a lógica de dados
 import { Detail } from '../pages/detail/Detail';
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/event/:slug" element={<Detail />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 export default function App() {
   return (
     <BrowserRouter>
       <MainLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* TROCA: Saia o placeholder EventDetailsView, entra a página Detail */}
-          <Route path="/event/:slug" element={<Detail />} />
-        </Routes>
+        <AnimatedRoutes />
       </MainLayout>
     </BrowserRouter>
   );
