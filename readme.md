@@ -32,14 +32,7 @@ Exibir os bootcamps que participei com uma breve descrição
 - [ ] Design personalizado
 - [ ] Favicon
 - [ ] Responsividade
-- [ ] Explicação para cada evento
-- [ ] Funcionalidade de enviar e-mail
 - [ ] Redes Sociais
-
-### Próximo passo
-
-- [ ] Abrir uma página com descrição e ementa da forma que acontece o evento e mais detalhes do que gostei e do que poderia ter acontecido.
-- [ ] Um cta para o site oficial para inscrições
 
 ## Informações do Projeto
 
@@ -109,7 +102,7 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 [x] Prop Types/Interfaces: Garantir que todos os componentes (Skeleton, CTAButton, NotFound) tenham interfaces TypeScript estritas.
 [x] Consistency Check: Validar se as cores Emerald (Concluído) e Amber (Desejado) estão sendo aplicadas via cn() ou lógica de props em todos os componentes de feedback.
 
-- [ ] 5.2 - Acessibilidade (a11y): Auditoria de tags alt, contraste de cores e navegação via teclado.
+- [x] 5.2 - Acessibilidade (a11y): Auditoria de tags alt, contraste de cores e navegação via teclado.
 - [ ] 5.3 - SEO & Meta: Configuração de títulos dinâmicos e Meta Tags para compartilhamento em redes sociais.
 - [ ] 5.4 - Performance: Otimização de imagens e análise do bundle final.
 - [ ] 5.5 - Continuous Deployment: Setup do workflow para deploy automatizado (GitHub Pages ou Vercel).
