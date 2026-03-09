@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
+import { Footer } from '../footer/Footer';
+
 interface MainLayoutProps {
     children?: ReactNode;
 }
@@ -34,21 +36,12 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
                 </div>
             </header>
 
-            <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-12"> 
-                {children || <Outlet />} 
+            <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-12">
+                {children || <Outlet />}
             </main>
 
-            {/* 3. FOOTER: Rodapé informativo */}
-            <footer className="w-full border-t border-zinc-800 py-10 bg-zinc-950">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-zinc-500 text-sm">
-                        © 2026 <span className="text-zinc-300 font-semibold">learnTECH</span>. Todos os direitos reservados.
-                    </p>
-                    <div className="text-zinc-400 font-medium text-sm">
-                        Douglas Novato — <span className="text-brand-primary">Full-stack Developer</span>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
+
         </div>
     );
 };
