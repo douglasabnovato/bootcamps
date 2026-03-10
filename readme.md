@@ -8,6 +8,16 @@ Prospecção: Mapear os eventos que você planeja participar (ex: HackTown, even
 
 ## Informações do Projeto
 
+### Identidade Visual
+
+A idealização da comunidade LearnTECH para o projeto Eventos tem a cor principal Verde e a logo um cubo onde os lados tem "{" ou "}".
+
+### Cores do Design 
+
+- --color-brand-primary: #00C853 ;
+- --color-brand-secondary: #7000ff;
+- --color-text-white: #FFFFFF;
+
 ### Workflow
 
 As branches desse projeto seguem a seguinte organização:

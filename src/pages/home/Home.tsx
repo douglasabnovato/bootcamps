@@ -5,7 +5,7 @@ import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
 
 export const Home = () => {
     const { events, isLoading } = useEvents();
-    useDocumentTitle("Bootcamps LearnTECH");
+    useDocumentTitle("Eventos LearnTECH");
 
     if (isLoading) {
         return (
@@ -19,7 +19,7 @@ export const Home = () => {
         <section className="container mx-auto px-4 py-8">
             <header className="mb-12">
                 <h1 className="text-4xl font-extrabold tracking-tight text-white">
-                    Bootcamps LearnTECH
+                    Eventos LearnTECH
                 </h1>
                 <p className="text-zinc-400 mt-2 text-lg">
                     Explorando minha jornada técnica e especializações.

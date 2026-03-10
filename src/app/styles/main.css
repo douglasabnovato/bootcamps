@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
-@theme {
-  /* Isso cria as classes utilitárias como text-brand-primary, bg-brand-primary, ring-brand-primary */
-  --color-brand-primary: #00d1ff;
+@theme { 
+  --color-brand-primary: #00C853 ;
   --color-brand-secondary: #7000ff;
+  --color-text-white: #FFFFFF;
 }
 
 @layer base {
-  :focus-visible {
-    /* Agora o Tailwind reconhece 'ring-brand-primary' */
+  :focus-visible { 
     @apply outline-none ring-2 ring-[--color-brand-primary] ring-offset-4 ring-offset-zinc-950;
   }
 
