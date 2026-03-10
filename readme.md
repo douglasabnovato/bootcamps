@@ -175,7 +175,7 @@ objetivos são:
 - Consistência: Garantir que o código segue os padrões do ecossistema learnTECH (como o FSD que aplicamos).
 - Mentoria: Compartilhar conhecimento sobre técnicas mais modernas ou performáticas.
 
-- [ ] Favicon
+- [x] Favicon
 - [x] Redes Sociais no Footer
 - [x] Componentizar o Footer
 
