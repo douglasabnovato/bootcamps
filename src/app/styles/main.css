@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
+@theme { 
+  --color-brand-primary: #00C853 ;
+  --color-brand-secondary: #7000ff;
+  --color-text-white: #FFFFFF;
+}
+
 @layer base {
-  :root {
-    --brand-primary: #00D1FF;
-    --brand-secondary: #7000FF;
+  :focus-visible { 
+    @apply outline-none ring-2 ring-[--color-brand-primary] ring-offset-4 ring-offset-zinc-950;
   }
 
   body {
-    /* Use as variáveis ou as cores padrão do Tailwind */
     @apply bg-zinc-950 text-zinc-100 antialiased;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 }
