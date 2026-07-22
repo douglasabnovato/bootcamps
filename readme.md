@@ -8,6 +8,12 @@ Prospecção: Mapear os eventos que você planeja participar (ex: HackTown, even
 
 ## Informações do Projeto
 
+### Próximos Passos
+
+A partir da versão atual, gerei uma avaliação de responsividade para analisarmos e implementarmos o que for validado. 
+
+- [ ] documento "RELATORIO_RESPONSIVIDADE"
+
 ### Identidade Visual
 
 A idealização da comunidade LearnTECH para o projeto Eventos tem a cor principal Verde e a logo um cubo onde os lados tem "{" ou "}".
@@ -31,15 +37,15 @@ As branches desse projeto seguem a seguinte organização:
 
 Exibir os bootcamps que participei com uma breve descrição
 
-- [ ] caelum - apostilas em pdf
-- [ ] curso em vídeo - tutorias no youtube
-- [ ] dio - bootcamps na plataforma
-- [ ] driven - tutorias no youtube
-- [ ] startse tech academy - bootcamps na plataforma
-- [ ] w3schools - tutorias no site
-- [ ] xpeducação - minicamp
-- [ ] 42sp - bootcamp
-- [ ] rocketseat - tutoriais na plataforma, bootcamps
+- [x] caelum - apostilas em pdf
+- [x] curso em vídeo - tutorias no youtube
+- [x] dio - bootcamps na plataforma
+- [x] driven - tutorias no youtube
+- [x] startse tech academy - bootcamps na plataforma
+- [x] w3schools - tutorias no site
+- [x] xpeducação - minicamp
+- [x] 42sp - bootcamp
+- [x] rocketseat - tutoriais na plataforma, bootcamps
  
 ## Plano de Ação: Projeto Bootcamps v2
 
