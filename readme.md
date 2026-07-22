@@ -109,6 +109,22 @@ Configuração do ambiente de desenvolvimento focado em escala e tipagem rigoros
 - [x] 5.4 - Performance: Otimização de imagens e análise do bundle final.
 - [x] 5.5 - Continuous Deployment: Setup do workflow para deploy automatizado (GitHub Pages ou Vercel).
 
+### 📊 Monitoramento de Performance
+
+Métricas de performance em produção rastreadas via [Vercel Speed Insights](https://vercel.com/docs/speed-insights), medindo Core Web Vitals (LCP, FID/INP, CLS) automaticamente a cada deploy.
+
+```bash
+npm i @vercel/speed-insights
+```
+
+Integração feita no `main.tsx` (entry point da aplicação):
+
+```tsx
+import { SpeedInsights } from "@vercel/speed-insights/react";
+```
+
+> ⚠️ A coleta só funciona em produção (deploy real na Vercel) — não gera dados em `npm run dev`.
+
 ### Estrutura de pasta do projeto
 
 Mapeamento das Camadas para apresentar O que vai em cada lugar.

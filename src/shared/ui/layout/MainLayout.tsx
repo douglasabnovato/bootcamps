@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
 import { Footer } from '../footer/Footer';
-import { BackToTopButton } from '../backToTop/BackToTopButton';
+import { BackToTopButton } from './../backToTop/BackToTopButton';
 import LogoLTECH from './../../../assets/logo-icon.png';
-
+ 
 interface MainLayoutProps {
     children?: ReactNode;
 }
