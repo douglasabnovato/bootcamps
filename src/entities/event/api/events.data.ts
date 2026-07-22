@@ -5,7 +5,7 @@ import img42sp from "@/assets/instituicoes/42sp.jpg";
 import imgCaelum from "@/assets/instituicoes/caelum.jpg";
 import imgDio from "@/assets/instituicoes/dio.jpg";
 import imgRocketseat from "@/assets/instituicoes/rocketseat.jpg";
-import imgFreeCodeCamp from "@/assets/instituicoes/freecodecamp.jpg";
+import imgFreeCodeCamp from "@/assets/instituicoes/freeCodeCamp.jpg";
 import imgCursoEmVideo from "@/assets/instituicoes/curso-em-video.jpg";
 import imgDriven from "@/assets/instituicoes/driven.jpg";
 import imgGdgJf from "@/assets/instituicoes/gdg-jf.jpg";
