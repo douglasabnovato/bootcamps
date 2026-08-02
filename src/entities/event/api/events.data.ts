@@ -15,6 +15,7 @@ import imgUfjf from "@/assets/instituicoes/ufjf-dcc.jpg";
 import imgW3schools from "@/assets/instituicoes/w3schools.jpg";
 import imgXpeducacao from "@/assets/instituicoes/xpeducacao.jpg";
 import imgByteclassdev from "@/assets/instituicoes/byteclass-dev.jpg";
+import imgBqagendatech from "@/assets/instituicoes/bq-agenda-tech.jpg";
 
 export const events: BootcampEvent[] = [
   {
@@ -369,6 +370,31 @@ export const events: BootcampEvent[] = [
         "M5 — Bootcamp: projetos reais de ponta a ponta (Full-Stack), focados em portfólio",
       ],
       officialLink: "/eventos-vivos/byteclass.dev/index.html",
+    },
+  },
+  {
+    id: "15",
+    slug: "bq-agenda-tech",
+    title: "BQ Agenda Tech",
+    institution: "BQ Spazio",
+    description:
+      "Café e tecnologia para fomentar o ecossistema tech e acelerar negócios — realizado na BQ Spazio, em Juiz de Fora.",
+    coverImage: imgBqagendatech,
+    altText: "Identidade visual do BQ Agenda Tech",
+    category: "fullstack",
+    status: "desejado",
+    content: {
+      longDescription:
+        "O BQ Agenda Tech é um evento de café e tecnologia pensado para fomentar o ecossistema local e acelerar negócios, reunindo palestrantes, apoiadores e parceiros num encontro presencial. Realização de BQ Spazio em conjunto com Douglas Novato, com apoio da Volta Express Brasil e parceria de produção audiovisual (MovieMaker) de Marlon. A primeira edição ainda está em fase de organização — data, confirmação de palestrantes e divulgação em andamento.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [
+        "Localização e estrutura do evento",
+        "Palestras com convidados do ecossistema local",
+        "Rodada de apoiadores e parceiros",
+        "Networking entre participantes",
+      ],
+      officialLink: "/eventos-vivos/bq-agenda-tech/index.html",
     },
   },
 ];

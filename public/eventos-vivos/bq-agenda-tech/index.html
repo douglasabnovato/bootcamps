@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BQ Café e Tecnologia | Juiz de Fora</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png" />
+    <link rel="manifest" href="./public/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <nav class="container nav-wrapper">
+        <div class="bq-logo-container">
+          <div class="bq-logo-icon">
+            <span class="tag">&lt;</span><span class="letters">bq</span
+            ><span class="tag">/&gt;</span>
+          </div>
+          <div class="bq-logo-text">café e tecnologia</div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#sobre">O Evento</a></li>
+          <li><a href="#speakers">Palestrantes</a></li>
+          <li><a href="#local">Local</a></li>
+          <li><a href="#inscricao" class="btn-nav">Inscrição</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Onde a Tecnologia encontra a conexão.</h1>
+          <h3>É tomar café e entender de tecnologia.</h3>
+          <p>
+            Integrar o setor de serviços e produtos com o universo tech para
+            criar, validar e acelerar negócios.
+          </p>
+          <div class="event-meta">
+            <span>📅 <strong>Próxima edição:</strong> (Aguardando Data)</span>
+            <span>📍 <strong>Local:</strong> BQ Spazio Coworking</span>
+          </div>
+        </div>
+
+        <div id="inscricao" class="form-card">
+          <h3>Garanta sua vaga</h3>
+          <form id="event-form">
+            <div class="input-group">
+              <label>Seu nome *</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>Email *</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="seuemail@email.com"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>WhatsApp *</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+55 (32) 99999-9999"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>Qual sua stack/cargo? *</label>
+              <input
+                type="text"
+                id="job"
+                placeholder="Ex: Dev Fullstack"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-submit">Inscrever-se</button>
+            <p class="form-note">Inscrições Gratuitas | Vagas Limitadas</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers" class="container section-padding">
+      <h2 class="section-title">Palestrantes do Mês</h2>
+      <div class="speakers-grid" id="speakers-container"></div>
+    </section>
+
+    <section id="local" class="section-local section-padding">
+      <div class="container grid-local">
+        <div class="local-info">
+          <span class="tag-local">Onde Acontece</span>
+          <h2>Localização</h2>
+          <p>
+            O evento será realizado na <strong>BQ Spazio Coworking</strong>,
+            localizada no Shopping Spazio Design. Um ambiente moderno e
+            estratégico no bairro São Mateus.
+          </p>
+
+          <div class="address-box">
+            <p>📍 <strong>Endereço:</strong></p>
+            <p>Shopping Spazio Design</p>
+            <p>Ladeira Alexandre Leonel, 113 - São Mateus</p>
+            <p>Juiz de Fora - MG, 36033-240</p>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=BQ+Spazio+Coworking+Juiz+de+Fora"
+            target="_blank"
+            class="btn-map"
+            >Abrir no Google Maps</a
+          >
+        </div>
+
+        <div class="local-map">
+          <iframe
+            width="100%"
+            height="400"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.514434241284!2d-43.3516584!3d-21.7603387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b60161a000001%3A0x6a0f000000000000!2sBQ%20Spazio!5e0!3m2!1spt-BR!2sbr!4v17000000000003"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="realizacao" class="section-padding">
+      <div class="container">
+        <div class="realizacao-header">
+          <span class="tag-evento">Quem faz acontecer</span>
+          <h2>Realização & Propósito</h2>
+        </div>
+
+        <div class="realizacao-grid">
+          <div class="realizacao-text">
+            <p>
+              O <strong>BQ Café e Tecnologia</strong> nasceu da união entre a
+              infraestrutura de ponta da <strong>BQ Spazio Coworking</strong> e
+              a expertise técnica da nossa comunidade de tecnologia.
+            </p>
+            <p>
+              Nosso propósito é quebrar as barreiras entre o setor de serviços
+              tradicional e as soluções tecnológicas de alto nível, criando um
+              ambiente fértil para <strong>networking real</strong> e parcerias
+              estratégicas em Juiz de Fora.
+            </p>
+
+            <div class="pillars-list">
+              <div class="pillar-item">
+                <strong>Integração:</strong> Autônomos e devs no mesmo
+                ecossistema.
+              </div>
+              <div class="pillar-item">
+                <strong>Negócios:</strong> Foco total em gerar valor e
+                contratos.
+              </div>
+              <div class="pillar-item">
+                <strong>Comunidade:</strong> Fortalecendo o cenário tech local.
+              </div>
+            </div>
+          </div>
+
+          <div class="realizacao-partners">
+            <div class="partner-card">
+              <span>Organização Principal</span>
+              <h4>BQ Spazio Coworking</h4>
+              <p>Infraestrutura e Ecossistema</p>
+            </div>
+            <div class="partner-card highlight-partner">
+              <span>Curadoria Técnica</span>
+              <h4>Douglas & Tech Partners</h4>
+              <p>Conteúdo e Estratégia</p>
+            </div>
+            <div class="partner-card">
+              <span>Apoio & Audiovisual</span>
+              <h4>Marlon (Movie Maker)</h4>
+              <p>Cobertura e Mídia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="realizacao section-padding">
+      <div class="container">
+        <h2 class="section-title">Realização & Apoio</h2>
+        <div class="partners-grid">
+          <div class="partner-item">
+            <div class="partner-logo">
+              <img
+                src="./assets/imgs/iron-3.jpg"
+                alt="BQ Spazio e Douglas"
+              />
+            </div>
+            <span>Organização</span>
+            <p>BQ Spazio + Douglas</p>
+          </div>
+
+          <div class="partner-item">
+            <div class="partner-logo">
+              <img src="./assets/imgs/iron-1.jpg" alt="Vol" />
+            </div>
+            <span>Apoiadores</span>
+            <p>Vol</p>
+          </div>
+
+          <div class="partner-item">
+            <div class="partner-logo">
+              <img
+                src="./assets/imgs/iron-2.jpg"
+                alt="Marlon e Coffee Break"
+              />
+            </div>
+            <span>Parceiros</span>
+            <p>Marlon (Movie Maker) + Coffee Break</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <p>
+        &copy; 2026 BQ Café e Tecnologia. Feito com &lt;/&gt; em Juiz de Fora.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
