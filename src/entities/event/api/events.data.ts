@@ -19,6 +19,8 @@ import imgBqagendatech from "@/assets/instituicoes/bq-agenda-tech.jpg";
 import imgMinasSummitPlaceholder from "@/assets/instituicoes/minas-summit-2026.jpg";
 import imgMinasSummit from "@/assets/instituicoes/minas-summit-2026-2.jpg";
 import pdfMinasSummitCert from "@/assets/arquivos/minas-summit-2025-certificado.pdf";
+import imgCodexperience from "@/assets/instituicoes/codexperience.jpg";
+
 
 export const events: BootcampEvent[] = [
   {
@@ -450,6 +452,35 @@ export const events: BootcampEvent[] = [
           highlight: "Próxima edição — data e programação a serem anunciadas.",
           status: "anunciado",
         },
+      ],
+    },
+  },
+  {
+    id: "17",
+    slug: "codexperience",
+    title: "CodeXperience",
+    institution: "CodeXperience Zona da Mata",
+    description:
+      "Evento anual de tecnologia e desenvolvimento de software da Zona da Mata mineira, realizado em Juiz de Fora.",
+    coverImage: imgCodexperience, // placeholder — atualiza quando tiver a imagem real
+    altText: "Identidade visual do CodeXperience Zona da Mata",
+    category: "fullstack",
+    status: "concluido",
+    content: {
+      longDescription:
+        "O CodeXperience Zona da Mata é um evento regional de tecnologia realizado anualmente em Juiz de Fora, reunindo profissionais e estudantes de TI da região. A edição mais recente aconteceu em 29 de novembro de 2025, na UniAcademia, com palestras técnicas sobre arquitetura, DevOps, inteligência artificial e desenvolvimento web, além de ignite talks, open spaces e coffee breaks voltados a fortalecer a comunidade tech da Zona da Mata mineira.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [
+        "Palestras técnicas: arquitetura, DevOps, IA e desenvolvimento web",
+        "Ignite talks e open spaces",
+        "Coffee breaks para networking regional",
+      ],
+      officialLink: "https://www.sympla.com.br/evento/codexperience-zona-da-mata-2025/3113294",
+      links: [
+        { label: "Ingressos", url: "https://www.sympla.com.br/evento/codexperience-zona-da-mata-2025/3113294" },
+        { label: "Instagram", url: "https://www.instagram.com/codexperiencezonadamata/" },
+        { label: "Matéria", url: "https://zinenegocios.com.br/code-xperience-zona-da-mata/" },
       ],
     },
   },

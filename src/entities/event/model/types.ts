@@ -16,6 +16,11 @@ export type EventCategory =
   | "outros";
 export type EventStatus = "concluido" | "desejado";
 
+export interface EventLink {
+  label: string;
+  url: string;
+}
+
 
 export interface EventEdition {
   year: string;
@@ -41,7 +46,8 @@ export interface BootcampEvent {
     gallery?: EventMedia[];
     curriculum: string[];
     officialLink: string;
-    certificate?: string;
     editions?: EventEdition[];
+    links?: EventLink[];
+    certificate?: string; //  
   };
 }
