@@ -16,6 +16,9 @@ import imgW3schools from "@/assets/instituicoes/w3schools.jpg";
 import imgXpeducacao from "@/assets/instituicoes/xpeducacao.jpg";
 import imgByteclassdev from "@/assets/instituicoes/byteclass-dev.jpg";
 import imgBqagendatech from "@/assets/instituicoes/bq-agenda-tech.jpg";
+import imgMinasSummitPlaceholder from "@/assets/instituicoes/minas-summit-2026.jpg";
+import imgMinasSummit from "@/assets/instituicoes/minas-summit-2026-2.jpg";
+import pdfMinasSummitCert from "@/assets/arquivos/minas-summit-2025-certificado.pdf";
 
 export const events: BootcampEvent[] = [
   {
@@ -395,6 +398,59 @@ export const events: BootcampEvent[] = [
         "Networking entre participantes",
       ],
       officialLink: "/eventos-vivos/bq-agenda-tech/index.html",
+    },
+  },
+  {
+    id: "16",
+    slug: "minas-summit",
+    title: "Minas Summit",
+    institution: "FCJ Venture Builder",
+    description:
+      "O principal evento de inovação corporativa e tecnologia de Minas Gerais, reposicionando o estado no cenário nacional desde 2023.",
+    coverImage: imgMinasSummit,
+    altText: "Identidade visual do Minas Summit",
+    category: "fullstack",
+    status: "concluido",
+    content: {
+      longDescription:
+        "O Minas Summit é o principal evento de inovação corporativa de Minas Gerais, criado em 2023 pela FCJ Venture Builder em parceria com o Órbi Conecta, dentro do movimento San Pedro Valley, para reposicionar o estado no cenário tecnológico nacional. Já teve 4 edições realizadas, incluindo uma versão itinerante que percorreu 8 cidades mineiras, e segue crescendo em relevância nacional.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [],
+      certificate: pdfMinasSummitCert,
+      officialLink: "https://minassummit.com/",
+      editions: [
+        {
+          year: "2023",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Primeira edição, 30 de junho, no Minascentro — resgatando a história da 'geração de ouro' do San Pedro Valley.",
+          status: "realizado",
+        },
+        {
+          year: "2024",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Expansão para 2 dias (26-27 de junho) e o 'Minas Summit No Trecho' — versão itinerante por 8 cidades mineiras.",
+          status: "realizado",
+        },
+        {
+          year: "2025",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Edição sob o lema 'Inovação que move o mundo', com foco em colaboração e parcerias estratégicas.",
+          status: "realizado",
+        },
+        {
+          year: "2026",
+          image: imgMinasSummitPlaceholder,
+          highlight: "4ª edição, 17-18 de junho, consolidado como megaencontro multissetorial com dezenas de palestrantes e arenas simultâneas.",
+          status: "realizado",
+        },
+        {
+          year: "2027",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Próxima edição — data e programação a serem anunciadas.",
+          status: "anunciado",
+        },
+      ],
     },
   },
 ];
