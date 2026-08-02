@@ -170,21 +170,30 @@ export const Detail = () => {
                   </p>
                 </div>
 
-                <div className="max-w-md mx-auto flex gap-4">
+                <div className="max-w-md mx-auto flex flex-wrap gap-4 justify-center">
                   {(event.id === '16' || event.content.certificate) && (
                     <PDFViewerButton pdfPath={event.content.certificate} label="Ver certificado" />
                   )}
 
-                  <CTAButton
-                    url={event.content.officialLink}
-                    status={currentStatus}
-                  />
+                  <CTAButton url={event.content.officialLink} status={currentStatus} />
+
+                  {event.content.links?.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-300 text-sm font-medium hover:bg-zinc-800 transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
           </section>
         </motion.div>
-      </main>
+      </main >
     </>
   );
 };
