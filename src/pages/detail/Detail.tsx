@@ -12,6 +12,7 @@ import { NotFound } from '../notFound/NotFound';
 
 // Shared Components
 import { VideoPlayer } from '../../shared/ui/videoPlayer/VideoPlayer';
+import PDFViewerButton from '../../shared/ui/pdf/PDFViewerButton';
 import { EventGallery } from '../../shared/ui/eventGallery/EventGallery';
 import { CTAButton } from '../../shared/ui/ctaButton/CTAButton';
 
@@ -169,7 +170,11 @@ export const Detail = () => {
                   </p>
                 </div>
 
-                <div className="max-w-md mx-auto">
+                <div className="max-w-md mx-auto flex gap-4">
+                  {(event.id === '16' || event.content.certificate) && (
+                    <PDFViewerButton pdfPath={event.content.certificate} label="Ver certificado" />
+                  )}
+
                   <CTAButton
                     url={event.content.officialLink}
                     status={currentStatus}

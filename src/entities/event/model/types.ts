@@ -1,5 +1,13 @@
 // src/entities/event/model/types.ts
 
+// Interface para itens da galeria
+export interface EventMedia {
+  id: string;
+  url: string;
+  type: "image" | "video";
+  alt?: string;
+}
+
 export type EventCategory =
   | "frontend"
   | "backend"
@@ -8,12 +16,12 @@ export type EventCategory =
   | "outros";
 export type EventStatus = "concluido" | "desejado";
 
-// Interface para itens da galeria
-export interface EventMedia {
-  id: string;
-  url: string;
-  type: "image" | "video";
-  alt?: string;
+
+export interface EventEdition {
+  year: string;
+  image: string;
+  highlight: string;
+  status: "realizado" | "anunciado";
 }
 
 export interface BootcampEvent {
@@ -30,8 +38,10 @@ export interface BootcampEvent {
   content: {
     longDescription: string;
     videoUrl?: string;
-    gallery?: EventMedia[]; // Adicionado para suportar o Media Center (4.3)
+    gallery?: EventMedia[];
     curriculum: string[];
     officialLink: string;
+    certificate?: string;
+    editions?: EventEdition[];
   };
 }
