@@ -47,6 +47,7 @@ export interface BootcampEvent {
     curriculum: string[];
     officialLink: string;
     editions?: EventEdition[];
-    links?: EventLink[]; 
+    links?: EventLink[];
+    certificate?: string; //  
   };
 }
