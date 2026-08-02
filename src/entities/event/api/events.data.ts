@@ -14,6 +14,13 @@ import imgStartse from "@/assets/instituicoes/startse_tech_academy.jpg";
 import imgUfjf from "@/assets/instituicoes/ufjf-dcc.jpg";
 import imgW3schools from "@/assets/instituicoes/w3schools.jpg";
 import imgXpeducacao from "@/assets/instituicoes/xpeducacao.jpg";
+import imgByteclassdev from "@/assets/instituicoes/byteclass-dev.jpg";
+import imgBqagendatech from "@/assets/instituicoes/bq-agenda-tech.jpg";
+import imgMinasSummitPlaceholder from "@/assets/instituicoes/minas-summit-2026.jpg";
+import imgMinasSummit from "@/assets/instituicoes/minas-summit-2026-2.jpg";
+import pdfMinasSummitCert from "@/assets/arquivos/minas-summit-2025-certificado.pdf";
+import imgCodexperience from "@/assets/instituicoes/codexperience.jpg";
+
 
 export const events: BootcampEvent[] = [
   {
@@ -343,5 +350,138 @@ export const events: BootcampEvent[] = [
       ],
       officialLink: "https://www.startse.com/techacademy",
     },
-  }
+  },
+  {
+    id: "14",
+    slug: "byteclass-dev",
+    title: "ByteClass",
+    institution: "ByteClass",
+    description:
+      "Escola de tecnologia em Juiz de Fora (MG), com formação Full-Stack presencial/híbrida e mentoria direta de quem vive o mercado.",
+    coverImage: imgByteclassdev,
+    altText: "Identidade visual da ByteClass — estética Cyber-Retro em pixel art e glassmorphism",
+    category: "fullstack",
+    status: "concluido",
+    content: {
+      longDescription:
+        "A ByteClass é uma escola de tecnologia focada em transformar iniciantes em desenvolvedores seniores, com sede física no Edifício Stella Central (Sala 902), em Juiz de Fora - MG. A formação percorre 5 níveis — de Lógica e Algoritmos (M1) até um Bootcamp de projetos reais ponta a ponta (M5) — cobrindo 3 trilhas técnicas (Frontend, Backend e Fullstack) e 27 tecnologias do mercado. A mentoria é conduzida por quem atua no mercado como CTO, dentro de um hub de tecnologia que facilita networking real entre alunos. Além da formação contínua, a ByteClass organiza um evento de tecnologia com data anunciada e agendada diretamente pelo Discord da comunidade — fique de olho nos canais para não perder a próxima edição.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [
+        "M1 — Básico: lógica, algoritmos e ambiente de desenvolvimento",
+        "M2 — Fundamental: bases sólidas de Web (HTML/CSS) e linguagens estruturadas",
+        "M3 — Intermediário: frameworks, integração de APIs e banco de dados",
+        "M4 — Avançado: arquitetura de sistemas, performance e segurança",
+        "M5 — Bootcamp: projetos reais de ponta a ponta (Full-Stack), focados em portfólio",
+      ],
+      officialLink: "/eventos-vivos/byteclass.dev/index.html",
+    },
+  },
+  {
+    id: "15",
+    slug: "bq-agenda-tech",
+    title: "BQ Agenda Tech",
+    institution: "BQ Spazio",
+    description:
+      "Café e tecnologia para fomentar o ecossistema tech e acelerar negócios — realizado na BQ Spazio, em Juiz de Fora.",
+    coverImage: imgBqagendatech,
+    altText: "Identidade visual do BQ Agenda Tech",
+    category: "fullstack",
+    status: "desejado",
+    content: {
+      longDescription:
+        "O BQ Agenda Tech é um evento de café e tecnologia pensado para fomentar o ecossistema local e acelerar negócios, reunindo palestrantes, apoiadores e parceiros num encontro presencial. Realização de BQ Spazio em conjunto com Douglas Novato, com apoio da Volta Express Brasil e parceria de produção audiovisual (MovieMaker) de Marlon. A primeira edição ainda está em fase de organização — data, confirmação de palestrantes e divulgação em andamento.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [
+        "Localização e estrutura do evento",
+        "Palestras com convidados do ecossistema local",
+        "Rodada de apoiadores e parceiros",
+        "Networking entre participantes",
+      ],
+      officialLink: "/eventos-vivos/bq-agenda-tech/index.html",
+    },
+  },
+  {
+    id: "16",
+    slug: "minas-summit",
+    title: "Minas Summit",
+    institution: "FCJ Venture Builder",
+    description:
+      "O principal evento de inovação corporativa e tecnologia de Minas Gerais, reposicionando o estado no cenário nacional desde 2023.",
+    coverImage: imgMinasSummit,
+    altText: "Identidade visual do Minas Summit",
+    category: "fullstack",
+    status: "concluido",
+    content: {
+      longDescription:
+        "O Minas Summit é o principal evento de inovação corporativa de Minas Gerais, criado em 2023 pela FCJ Venture Builder em parceria com o Órbi Conecta, dentro do movimento San Pedro Valley, para reposicionar o estado no cenário tecnológico nacional. Já teve 4 edições realizadas, incluindo uma versão itinerante que percorreu 8 cidades mineiras, e segue crescendo em relevância nacional.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [],
+      certificate: pdfMinasSummitCert,
+      officialLink: "https://minassummit.com/",
+      editions: [
+        {
+          year: "2023",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Primeira edição, 30 de junho, no Minascentro — resgatando a história da 'geração de ouro' do San Pedro Valley.",
+          status: "realizado",
+        },
+        {
+          year: "2024",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Expansão para 2 dias (26-27 de junho) e o 'Minas Summit No Trecho' — versão itinerante por 8 cidades mineiras.",
+          status: "realizado",
+        },
+        {
+          year: "2025",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Edição sob o lema 'Inovação que move o mundo', com foco em colaboração e parcerias estratégicas.",
+          status: "realizado",
+        },
+        {
+          year: "2026",
+          image: imgMinasSummitPlaceholder,
+          highlight: "4ª edição, 17-18 de junho, consolidado como megaencontro multissetorial com dezenas de palestrantes e arenas simultâneas.",
+          status: "realizado",
+        },
+        {
+          year: "2027",
+          image: imgMinasSummitPlaceholder,
+          highlight: "Próxima edição — data e programação a serem anunciadas.",
+          status: "anunciado",
+        },
+      ],
+    },
+  },
+  {
+    id: "17",
+    slug: "codexperience",
+    title: "CodeXperience",
+    institution: "CodeXperience Zona da Mata",
+    description:
+      "Evento anual de tecnologia e desenvolvimento de software da Zona da Mata mineira, realizado em Juiz de Fora.",
+    coverImage: imgCodexperience, // placeholder — atualiza quando tiver a imagem real
+    altText: "Identidade visual do CodeXperience Zona da Mata",
+    category: "fullstack",
+    status: "concluido",
+    content: {
+      longDescription:
+        "O CodeXperience Zona da Mata é um evento regional de tecnologia realizado anualmente em Juiz de Fora, reunindo profissionais e estudantes de TI da região. A edição mais recente aconteceu em 29 de novembro de 2025, na UniAcademia, com palestras técnicas sobre arquitetura, DevOps, inteligência artificial e desenvolvimento web, além de ignite talks, open spaces e coffee breaks voltados a fortalecer a comunidade tech da Zona da Mata mineira.",
+      videoUrl: "",
+      gallery: [],
+      curriculum: [
+        "Palestras técnicas: arquitetura, DevOps, IA e desenvolvimento web",
+        "Ignite talks e open spaces",
+        "Coffee breaks para networking regional",
+      ],
+      officialLink: "https://www.sympla.com.br/evento/codexperience-zona-da-mata-2025/3113294",
+      links: [
+        { label: "Ingressos", url: "https://www.sympla.com.br/evento/codexperience-zona-da-mata-2025/3113294" },
+        { label: "Instagram", url: "https://www.instagram.com/codexperiencezonadamata/" },
+        { label: "Matéria", url: "https://zinenegocios.com.br/code-xperience-zona-da-mata/" },
+      ],
+    },
+  },
 ];

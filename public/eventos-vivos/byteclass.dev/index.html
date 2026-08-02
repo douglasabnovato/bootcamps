@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ByteClass - Formação Full-Stack Robusta na Sala 902 do Edifício Stella Central. Domine 27 tecnologias."
+    />
+    <title>ByteClass | A cada Byte construindo seu futuro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-wrapper">
+        <div class="logo-area">
+          <img
+            src="assets/byteclass_rocket.png"
+            alt="ByteClass Logo"
+            class="nav-logo"
+            style="width: 35px"
+          />
+          <span class="pixel-font">ByteClass</span>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#vitrine">Tecnologias</a></li>
+            <li><a href="#trilhas">Trilhas</a></li>
+            <li><a href="#comunidade">Comunidade</a></li>
+            <li><a href="#contato" class="btn-nav">SALA 902</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="badge pixel-font"
+              >Inscrições Abertas - Juiz de Fora</span
+            >
+            <h1 class="pixel-font">
+              A cada Byte construindo seu
+              <span class="text-green">futuro.</span>
+            </h1>
+            <p>
+              Domine o ecossistema Full-Stack com mentoria personalizada. Da
+              lógica de programação ao deploy robusto.
+            </p>
+            <div class="hero-actions">
+              <a href="#trilhas" class="btn-primary">Ver Formações</a>
+              <a href="#vitrine" class="btn-secondary">27 Tecnologias</a>
+            </div>
+          </div>
+          <div class="hero-visual glass-frame">
+            <img
+              src="assets/byteclass_hero.png"
+              alt="Setup Dev ByteClass"
+              class="img-hero"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="vitrine"
+        class="vitrine"
+        style="
+          background-image: url(&quot;assets/tech_wall_bg.png&quot;);
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="pixel-font">O Que Você Vai Dominar</h2>
+            <p>Passe o mouse nos ícones para explorar o stack tecnológico.</p>
+          </div>
+          <div id="tech-wall" class="tech-grid"></div>
+        </div>
+      </section>
+
+      <section id="trilhas" class="trilhas">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="pixel-font">Sua Jornada Tech</h2>
+            <div class="map-container" style="margin-bottom: 40px">
+              <img
+                src="assets/jornada_mapa.png"
+                alt="Mapa da Jornada do Programador"
+                class="img-responsive"
+                style="max-width: 100%; border-radius: 20px"
+              />
+            </div>
+            <div class="filter-group">
+              <button class="filter-btn active" data-filter="all">Todas</button>
+              <button class="filter-btn" data-filter="frontend">
+                Frontend
+              </button>
+              <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+          </div>
+          <div id="mosaico-trilhas" class="mosaico-grid"></div>
+        </div>
+      </section>
+
+      <section id="lab-vivencia" class="lab-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="badge pixel-font">Inside the Lab</span>
+            <h2 class="pixel-font">
+              A Vivência na <span class="text-green">Sala 902</span>
+            </h2>
+            <p>
+              Onde a teoria do código encontra a realidade do mercado em Juiz de
+              Fora.
+            </p>
+          </div>
+
+          <div class="lab-bento-grid">
+            <div class="lab-item featured glass-frame">
+              <img
+                src="assets/edificio_stella.png"
+                alt="Infraestrutura Sala 902 Neon"
+                class="lab-img"
+              />
+              <div class="lab-overlay">
+                <span class="pixel-font">High Performance Setup</span>
+              </div>
+            </div>
+
+            <div class="lab-item glass-frame">
+              <img
+                src="assets/aluno_focado.png"
+                alt="Mentoria Individual ByteClass"
+                class="lab-img"
+              />
+              <div class="lab-overlay">
+                <span class="pixel-font">Mentoria Real</span>
+              </div>
+            </div>
+
+            <div class="lab-item glass-frame">
+              <img
+                src="assets/byteclass_hero.png"
+                alt="Ambiente de Desenvolvimento"
+                class="lab-img"
+              />
+              <div class="lab-overlay">
+                <span class="pixel-font">Módulo M3: APIs</span>
+              </div>
+            </div>
+
+            <div class="lab-item wide glass-frame">
+              <img
+                src="assets/tech_wall_bg.png"
+                alt="Ecossistema ByteClass"
+                class="lab-img"
+              />
+              <div class="lab-overlay">
+                <span class="pixel-font">Networking & Coffee</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-40">
+            <p class="text-dim">Quer conhecer o espaço pessoalmente?</p>
+            <a
+              href="https://wa.me/seu-numero"
+              class="btn-secondary"
+              style="margin-top: 15px"
+              >Agendar visita no Edifício Stella</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="roadshow" class="roadshow-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="badge pixel-font">On the Road</span>
+            <h2 class="pixel-font">
+              ByteClass na <span class="text-green">Comunidade</span>
+            </h2>
+            <p>
+              Nossa jornada pelos principais hubs de inovação de Juiz de Fora.
+            </p>
+          </div>
+
+          <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            <div class="timeline-container">
+              <div class="timeline-node glass-frame">
+                <div class="node-dot"></div>
+                <span class="node-date pixel-font">Março 2026</span>
+                <h3 class="text-green">BQ Café e Tecnologia</h3>
+                <p>Networking estratégico no BQ Spazio Coworking.</p>
+              </div>
+
+              <div class="timeline-node glass-frame">
+                <div class="node-dot"></div>
+                <span class="node-date pixel-font">Fevereiro 2026</span>
+                <h3 class="text-green">Workshop Full Stack</h3>
+                <p>Imersão prática em arquitetura de sistemas modernos.</p>
+              </div>
+
+              <div class="timeline-node glass-frame">
+                <div class="node-dot"></div>
+                <span class="node-date pixel-font">Janeiro 2026</span>
+                <h3 class="text-green">Meetup Dev JF</h3>
+                <p>Conexão com desenvolvedores e empresas da região.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="comunidade" class="comunidade">
+        <div class="container">
+          <div class="social-card glass-frame">
+            <div class="social-image">
+              <img src="assets/aluno_focado.png" alt="Aluno na Sala 902" />
+            </div>
+            <div class="social-info">
+              <h2 class="pixel-font">
+                Mais que uma escola, um <span class="text-green">HUB.</span>
+              </h2>
+              <p>
+                "A experiência na Sala 902 mudou meu mindset. O foco em projetos
+                reais me deu a segurança para atuar como desenvolvedor."
+              </p>
+              <span class="author">— Aluno ByteClass</span>
+            </div>
+          </div>
+
+          <div
+            class="infra-card glass-frame"
+            style="
+              margin-top: 30px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              align-items: center;
+            "
+          >
+            <div class="social-info">
+              <h2 class="pixel-font">Sede Física</h2>
+              <p>
+                No coração de Juiz de Fora, o ambiente perfeito para network e
+                foco total.
+              </p>
+              <p><strong>Edifício Stella Central - Sala 902</strong></p>
+            </div>
+            <div class="social-image">
+              <img
+                src="assets/edificio_stella.png"
+                alt="Edifício Stella Central Juiz de Fora"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final">
+        <div class="container text-center">
+          <div class="cta-box glass-frame">
+            <img
+              src="assets/byteclass_rocket.png"
+              alt="Foguete ByteClass"
+              class="rocket-img"
+            />
+            <h2 class="pixel-font">Pronto para o próximo nível?</h2>
+            <p>
+              Visite-nos no Edifício Stella Central ou garanta sua vaga online.
+            </p>
+            <a
+              href="https://wa.me/seu-numero-aqui"
+              target="_blank"
+              class="btn-primary"
+              >Falar com Consultor</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="community-hub" class="community-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="badge pixel-font">Social Pulse</span>
+            <h2 class="pixel-font">
+              Comunidade <span class="text-green">@ByteClass</span>
+            </h2>
+            <p>
+              O que acontece nos bastidores e as conquistas dos nossos alunos.
+            </p>
+          </div>
+
+          <div class="social-bento-wall">
+            <div class="social-card-item glass-frame large">
+              <div class="card-header-social">
+                <span class="pixel-font">Instagram</span>
+              </div>
+              <img src="assets/aluno_focado.png" alt="Reels Aula na Prática" />
+              <div class="card-caption">
+                <p>Módulo M5: Sprint final de projetos Full Stack! 🚀</p>
+              </div>
+            </div>
+
+            <div class="social-card-item glass-frame highlight">
+              <div class="student-profile">
+                <div class="pixel-avatar">B</div>
+                <div class="profile-info">
+                  <h4 class="pixel-font">Aluno em Destaque</h4>
+                  <p>Contratado via ByteClass</p>
+                </div>
+              </div>
+              <blockquote class="text-dim">
+                "A Sala 902 foi o divisor de águas na minha transição de
+                carreira para Tech."
+              </blockquote>
+            </div>
+
+            <div class="social-card-item glass-frame">
+              <img src="assets/tech_wall_bg.png" alt="Turma ByteClass JF" />
+              <div class="card-caption">
+                <p>Networking & Tech no Edifício Stella Central.</p>
+              </div>
+            </div>
+
+            <div class="social-card-item glass-frame cta-social">
+              <h3 class="pixel-font">
+                Siga o <span class="text-green">Fluxo</span>
+              </h3>
+              <p>Acompanhe nosso Daily Code e bastidores.</p>
+              <a
+                href="https://instagram.com/byteclass"
+                class="btn-primary"
+                style="margin-top: 20px"
+                >@byteclass</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-byteclass">
+      <div class="container footer-grid">
+        <div class="footer-column branding-capture">
+          <div class="footer-logo-area">
+            <img
+              src="assets/byteclass_rocket.png"
+              alt="ByteClass Logo"
+              class="footer-logo-img"
+            />
+            <span class="pixel-font logo-text">ByteClass</span>
+          </div>
+          <p class="capture-text">
+            Assine o <strong>Daily Code</strong> e receba a
+            <strong>Grade Técnica M1-M5 (PDF)</strong>.
+          </p>
+
+          <form class="capture-form-footer">
+            <input
+              type="email"
+              placeholder="Seu melhor e-mail_"
+              required
+              class="glass-input"
+            />
+            <button type="submit" class="btn-primary btn-full pixel-font">
+              RECEBER GRADE
+            </button>
+          </form>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="pixel-font text-green footer-title">Institucional</h4>
+          <ul class="footer-list">
+            <li><a href="#hero">Sobre a ByteClass</a></li>
+            <li><a href="#">Mentoria Instrutor</a></li>
+            <li><a href="#">Ecossistema ByteClass</a></li>
+            <li><a href="#">Trabalhe Conosco (JF)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="pixel-font text-green footer-title">Acadêmico</h4>
+          <ul class="footer-list">
+            <li>
+              <a href="assets/jornada_mapa.png" download
+                >Download do Mapa Tech</a
+              >
+            </li>
+            <li><a href="#">Grade Curricular M1-M5</a></li>
+            <li><a href="#">Portal do Aluno (Em breve)</a></li>
+            <li><a href="#">Documentação do Ecossistema</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column contact-info">
+          <h4 class="pixel-font text-green footer-title">SALA 902</h4>
+          <div class="contact-details">
+            <p>
+              <strong>Atendimento Presencial & Híbrido:</strong><br />Seg a Sex
+              das 09:00 às 18:00.
+            </p>
+            <p>
+              <strong>WhatsApp JF:</strong><br /><a href="#" class="text-green"
+                >(32) 99999-9999</a
+              >
+            </p>
+            <p>
+              <strong>E-mail:</strong><br /><a
+                href="mailto:contato@byteclass.dev"
+                >contato@byteclass.dev</a
+              >
+            </p>
+          </div>
+          <div class="infra-tag glass-frame">
+            Sede: Edifício Stella Central - JF
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div class="footer-bottom-grid">
+          <div class="legal-data text-dim">
+            <p>ByteClass Dev</p>
+            <p>A cada Byte construindo seu futuro &copy; 2026</p>
+          </div>
+          <div class="stacks-badges">
+            <span>REACT</span> <span>NODE</span> <span>PHP</span>
+            <span>BQ SPAZIO</span>
+          </div>
+          <div class="social-links-footer">
+            <a href="#">GH</a> <a href="#">IN</a> <a href="#">LI</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
