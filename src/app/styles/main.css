@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
-@theme { 
-  --color-brand-primary: #00C853 ;
+@theme {
+  --color-brand-primary: #00c853;
   --color-brand-secondary: #7000ff;
-  --color-text-white: #FFFFFF;
+  --color-text-white: #ffffff;
+  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   :focus-visible { 
-    @apply outline-none ring-2 ring-[--color-brand-primary] ring-offset-4 ring-offset-zinc-950;
+    @apply outline-none ring-2 ring-brand-primary ring-offset-4 ring-offset-zinc-950;
   }
 
   body {

@@ -19,10 +19,10 @@ export const Footer = () => {
                                 alt="Logo LearnTECH"
                                 className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
                             />
-                            <h1 className="text-2xl font-black tracking-tighter transition-transform group-hover:scale-105">
+                            <span className="text-2xl font-black tracking-tighter transition-transform group-hover:scale-105">
                                 <span className="text-white">Learn</span>
                                 <span className="text-brand-primary">TECH</span>
-                            </h1>
+                            </span>
                         </Link>
                         <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
                             Ecossistema de aceleração para desenvolvedores focado em tracks práticas e bootcamps intensivos.
@@ -34,19 +34,19 @@ export const Footer = () => {
                         <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Connect with us</span>
                         <div className="flex items-center gap-5">
                             <SocialLink
-                                href="https://github.com/seuusuario"
+                                href="https://github.com/douglasabnovato"
                                 label="GitHub"
                                 icon={<Github size={20} />}
                             />
 
                             <SocialLink
-                                href="https://linkedin.com/in/seuusuario"
+                                href="https://www.linkedin.com/in/douglasabnovato/"
                                 label="LinkedIn"
                                 icon={<Linkedin size={20} />}
                             />
 
                             <SocialLink
-                                href="https://instagram.com/seuusuario"
+                                href="https://instagram.com/douglasabnovato"
                                 label="Instagram"
                                 icon={<Instagram size={20} />}
                             />
@@ -58,10 +58,10 @@ export const Footer = () => {
                 {/* Créditos Finais */}
                 <div className="mt-16 pt-8 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-zinc-600 text-xs font-mono">
-                        © {currentYear} LearnTECH. All rights reserved.
+                        © {currentYear} learnTECH — Douglas A. B. Novato
                     </p>
                     <div className="text-zinc-600 text-[10px] uppercase tracking-tighter">
-                        Desenvolvido <span className="text-brand-primary">Eventos </span>com <span className="text-brand-primary">React + Vite</span>
+                        Feito com <span className="text-brand-primary">React + TypeScript + Vite</span>
                     </div>
                 </div>
             </div>
