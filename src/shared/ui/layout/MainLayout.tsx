@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
 
 import { Footer } from '../footer/Footer';
 import { BackToTopButton } from './../backToTop/BackToTopButton';
@@ -21,15 +20,15 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
                             alt="Logo LearnTECH"
                             className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
                         />
-                        <h1 className="text-2xl font-black tracking-tighter transition-transform group-hover:scale-105">
+                        <span className="text-2xl font-black tracking-tighter transition-transform group-hover:scale-105">
                             <span className="text-white">Learn</span>
                             <span className="text-brand-primary">TECH</span>
-                        </h1>
+                        </span>
                     </Link>
                 </div>
             </header>
             <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-12">
-                {children || <Outlet />}
+                {children}
             </main>
             <Footer />
             <BackToTopButton />
