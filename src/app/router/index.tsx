@@ -1,21 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { MainLayout } from '../../shared/ui/layout/MainLayout';
-import { Home } from '../../pages/home/Home';
-import { Detail } from '../../pages/detail/Detail';
+/* index.tsx — ponto de entrada do roteamento.
+   Antes este arquivo trazia um segundo roteador (createBrowserRouter) que ninguém
+   importava e que não funcionava com o MainLayout baseado em children.
+   Agora é apenas o barril do AppRouter, que é o roteador de fato. */
 
-export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout />,  
-        children: [
-            {
-                path: '/',
-                element: <Home />,
-            },
-            {
-                path: '/event/:slug',
-                element: <Detail />,
-            },
-        ],
-    },
-]);
+export { AppRouter } from './AppRouter';
+
+/* Fim de index.tsx */
