@@ -1,226 +1,349 @@
-# Bootcamps
+<h1 align="center">🎓 Bootcamps</h1>
 
-O site é um Hub de Experiências Tecnológicas. Ele possui duas frentes claras:
+<p align="center">
+  <strong>O hub de eventos e formações do ecossistema learnTECH.</strong><br />
+  17 registros · 14 concluídos · 3 metas de estudo
+</p>
 
-Retrospectiva: Exibir eventos e formações que você já concluiu e validou (ex: Piscine 42SP, Ignite).
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-19-0a0a0b?style=flat-square&logo=react&logoColor=00C853" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-0a0a0b?style=flat-square&logo=typescript&logoColor=00C853" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-7-0a0a0b?style=flat-square&logo=vite&logoColor=00C853" />
+  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-4-0a0a0b?style=flat-square&logo=tailwindcss&logoColor=00C853" />
+  <img alt="FSD" src="https://img.shields.io/badge/arquitetura-Feature--Sliced%20Design-0a0a0b?style=flat-square" />
+</p>
 
-Prospecção: Mapear os eventos que você planeja participar (ex: HackTown, eventos de Blockchain), servindo como um roteiro de evolução profissional.
+---
 
-## Informações do Projeto
+## 🧭 Sobre
 
-### Próximos Passos
+O Bootcamps registra a jornada técnica em duas frentes, e é essa divisão que
+organiza o produto inteiro:
 
-A partir da versão atual, gerei uma avaliação de responsividade para analisarmos e implementarmos o que for validado. 
+- **Retrospectiva** — formações e eventos já concluídos e validados
+  (Piscine 42SP, Ignite, Minas Summit, CodeXperience). Marcados em **verde**.
+- **Prospecção** — o que está no radar e ainda não aconteceu. Marcados em
+  **âmbar**. Não são promessas: são o roteiro declarado de evolução.
 
-- [ ] documento "RELATORIO_RESPONSIVIDADE"
+A distinção entre os dois estados não é decorativa. Ela define a cor do card, o
+texto do botão, o título da seção de conteúdo e o agrupamento da listagem. É a
+regra de negócio central do projeto.
 
-### Identidade Visual
+---
 
-A idealização da comunidade LearnTECH para o projeto Eventos tem a cor principal Verde e a logo um cubo onde os lados tem "{" ou "}".
-
-### Cores do Design 
-
-- --color-brand-primary: #00C853 ;
-- --color-brand-secondary: #7000ff;
-- --color-text-white: #FFFFFF;
-
-### Workflow
-
-As branches desse projeto seguem a seguinte organização:
-
-- main: em produção
-- develop: para tratar versão
-- feature/nome_da_tarefa: resolver tarefa
-- hotfix/nome_da_tarefa: resolver urgência
-
-### Bootcamps
-
-Exibir os bootcamps que participei com uma breve descrição
-
-- [x] caelum - apostilas em pdf
-- [x] curso em vídeo - tutorias no youtube
-- [x] dio - bootcamps na plataforma
-- [x] driven - tutorias no youtube
-- [x] startse tech academy - bootcamps na plataforma
-- [x] w3schools - tutorias no site
-- [x] xpeducação - minicamp
-- [x] 42sp - bootcamp
-- [x] rocketseat - tutoriais na plataforma, bootcamps
- 
-## Plano de Ação: Projeto Bootcamps v2
-
-1. Setup & Architecture (A Fundação)
-
-Configuração do ambiente de desenvolvimento focado em escala e tipagem rigorosa.
-
-- [x] 1.1 - Inicialização do Projeto: Setup com Vite + React + TypeScript.
-- [x] 1.2 - Configuração de Estilo: Instalação do Tailwind CSS e configuração de Design Tokens (cores da marca learnTECH, fontes, breakpoints).
-- [x] 1.3 - Estrutura de Pastas (FSD): Implementação da arquitetura Feature-Sliced Design (Entities, Features, Widgets, Shared).
-- [x] 1.4 - Contrato de Dados: Definição da Interface TypeScript para os Eventos, garantindo que nenhum bootcamp seja renderizado sem os campos obrigatórios (img, alt, descrição, etc).
-
-2. Core Entities & Mock Data (O Motor)
-
-- [x] 2.1 - Separação da lógica de dados da interface para facilitar futuras integrações com APIs.
-- [x] 2.2 - Data Manager: Criação de um arquivo central de dados (events.data.ts) com o array de bootcamps baseados no seu readme.md.
-- [x] 2.3 - Custom Hooks: Desenvolvimento de hooks como useEvents() para gerenciar a lógica de filtragem e busca de dados.
-- [x] 2.4 - Configuração de Roteamento: Setup do React Router para suportar as rotas / (Home) e /event/:slug (Detalhes).
-
-3. Responsive UI & Layout (A Estrutura Visual)
-
-- [x] 3.1 - Construção da interface objetiva com foco total em responsividade explícita.
-- [x] 3.2 - Layout Base: Criação do Header com Menu e Footer utilizando semântica HTML5 (<header>, <main>, <footer>).
-- [x] 3.3 - Bento Grid: Implementação do grid de cards usando Tailwind. A responsividade será definida via classes utilitárias (grid-cols-1 md:grid-cols-2 lg:grid-cols-3).
-- [x] 3.4 - Componente EventCard: Desenvolvimento do card com imagens grandes, efeitos de hover (Glassmorphism) e exibição das informações essenciais (tecnologias, carga horária).
-
-4. Detail Page & Content Hub (A Experiência)
-
-- [x] 4.1 - Transformação de um link externo em uma aplicação interna rica em conteúdo.
-- [x] 4.2 - Dynamic Event Page: Criação da página detalhada que consome o ID do evento via URL. 
-- [x] 4.3 - Media Center: Implementação do container de vídeo e galeria de imagens para os detalhes do bootcamp.
-- [x] 4.4 - Interatividade com Framer Motion: Adição de transições suaves entre a lista e a página de detalhes (Shared Layout Transitions).
-- [x] 4.5 - Call to Action (CTA): Botão estilizado para o site oficial, mantendo o usuário dentro do seu ecossistema o máximo possível.
-
-5. Polishing & Deploy (A Excelência)
-
-- [x] 5.1 - Refinamentos finais para atingir o nível "Sênior" de entrega. (1,2,3,4) 
-1. Gerenciamento de Títulos Dinâmicos
-[x] Hook de Título: Implementar o useDocumentTitle em shared/lib/hooks.
-[x] Identidade Visual: Garantir que o sufixo | learnTECH apareça em todas as abas.
-[x] Reatividade: O título deve mudar para "Carregando..." no loading e para o nome do bootcamp no success.
-2. Fluidez de Navegação (UX Invisível)
-[x] Scroll Restoration: Inserir o componente <ScrollToTop /> no App.tsx para evitar que páginas de detalhes abram no meio da tela.
-[x] Smooth Scrolling: Adicionar scroll-behavior: smooth no CSS global para transições menos bruscas.
-[x] Micro-interações: Validar se o AnimatePresence está com mode="wait" para evitar sobreposição de páginas durante a troca de rotas.
-3. Percepção de Performance (Skeleton)
-[x] Base UI: Criar o componente atômico Skeleton com animação de pulse.
-[x] Padrão FSD: Construir o DetailSkeleton mimetizando a estrutura real da página (Banner, Header, Media Center).
-[x] Flicker-Free: Garantir que a transição do Skeleton para o conteúdo real não cause "pulos" de layout (Cumulative Layout Shift).
-4. Tratamento de Erros e Observabilidade
-[x] Página 404: Implementar o componente NotFound com design alinhado à ByteClass.
-[x] Rota Coringa: Configurar <Route path="*" /> no arquivo de rotas principal.
-[x] Log de Roteamento: Inserir o console.warn no useEffect do 404 para monitorar links quebrados ou acessos inválidos.
-5. Clean Code & DX (Developer Experience)
-[x] Absolute Imports: Verificar se todos os componentes novos estão usando @/ ou caminhos relativos limpos.
-[x] Prop Types/Interfaces: Garantir que todos os componentes (Skeleton, CTAButton, NotFound) tenham interfaces TypeScript estritas.
-[x] Consistency Check: Validar se as cores Emerald (Concluído) e Amber (Desejado) estão sendo aplicadas via cn() ou lógica de props em todos os componentes de feedback.
-
-- [x] 5.2 - Acessibilidade (a11y): Auditoria de tags alt, contraste de cores e navegação via teclado.
-- [x] 5.3 - SEO & Meta: Configuração de títulos dinâmicos e Meta Tags para compartilhamento em redes sociais.
-- [x] 5.4 - Performance: Otimização de imagens e análise do bundle final.
-- [x] 5.5 - Continuous Deployment: Setup do workflow para deploy automatizado (GitHub Pages ou Vercel).
-
-### 📊 Monitoramento de Performance
-
-Métricas de performance em produção rastreadas via [Vercel Speed Insights](https://vercel.com/docs/speed-insights), medindo Core Web Vitals (LCP, FID/INP, CLS) automaticamente a cada deploy.
+## ▶️ Como rodar
 
 ```bash
-npm i @vercel/speed-insights
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # tsc -b && vite build
+npm run preview  # serve o build local
+npm run lint
 ```
 
-Integração feita no `main.tsx` (entry point da aplicação):
+Deploy contínuo na Vercel, com `vercel.json` reescrevendo todas as rotas para
+`index.html` (necessário por ser SPA).
 
-```tsx
-import { SpeedInsights } from "@vercel/speed-insights/react";
-```
+---
 
-> ⚠️ A coleta só funciona em produção (deploy real na Vercel) — não gera dados em `npm run dev`.
+## 🧱 Arquitetura
 
-### Estrutura de pasta do projeto
+O projeto segue **Feature-Sliced Design**. Nem toda camada do FSD existe aqui —
+só as que têm conteúdo real:
 
-Mapeamento das Camadas para apresentar O que vai em cada lugar.
-Para você não se perder durante o desenvolvimento, aqui está o guia de responsabilidades de cada pasta:
-
-- app/: Configurações globais que envolvem toda a aplicação. (Styles, Providers, Router).
-- pages/: Onde as rotas vivem. Elas apenas montam a página usando peças menores. (Ex: Home, EventDetails).
-- widgets/: Peças grandes e autônomas da interface. (Ex: EventGrid, Navbar).
-- features/: Funcionalidades que o usuário executa. (Ex: FilterEvents, RegisterNewsletter).
-- entities/: Onde definimos o domínio de negócio. (Ex: EventCard, EventTypes).
-- shared/: O seu canivete suíço. Componentes de UI puros (botão, input), hooks genéricos e utilitários.
-
-#### Arquitetura Design
-
-````markddown
+```text
 src/
-├── app/                      # Configuração Global
-│   ├── App.tsx              # Componente raiz com rotas
-│   ├── main.tsx             # Entry point React
-│   ├── router/              # Roteamento (pode ser expandido)
-│   └── styles/              # Estilos globais
+├── app/                        configuração global
+│   ├── main.tsx                entry point, StrictMode e Speed Insights
+│   ├── App.tsx                 BrowserRouter + HelmetProvider + MainLayout
+│   ├── router/
+│   │   ├── AppRouter.tsx       rotas com lazy + Suspense + AnimatePresence
+│   │   └── index.tsx           barril do AppRouter
+│   └── styles/main.css         Tailwind 4: @theme e camada base
 │
-├── pages/                   # Páginas (rotas completas)
-│   ├── home/
-│   │   └── Home.tsx        # Página inicial - lista de bootcamps
-│   └── detail/
-│       └── Detail.tsx      # Página de detalhes (placeholder)
-│
-├── entities/                # Domínio de negócio (Bootcamps)
-│   └── event/
-│       ├── model/          # Tipos, lógica, hooks
-│       │   ├── types.ts    # Interface BootcampEvent
-│       │   ├── useEvents.ts # Hook customizado
-│       ├── api/            # Dados e chamadas
-│       │   ├── events.data.ts  # Mock de 3 bootcamps
-│       │   └── eventApi.ts     # Interface de dados
-│       └── ui/             # Componentes específicos da entidade
-│           ├── EventCard.tsx   # Card renderizado no grid
-│           └── badge/
-│               └── Badge.tsx   # Badge de categoria
-│
-├── shared/                  # Código reutilizável
+├── entities/event/             o domínio
+│   ├── model/
+│   │   ├── types.ts            contrato BootcampEvent
+│   │   ├── useEvents.ts        lista, com loading e error
+│   │   └── useEventBySlug.ts   um evento, com loading e error
+│   ├── api/
+│   │   ├── eventApi.ts         camada de acesso a dado (Promise + latência)
+│   │   └── events.data.ts      os 17 eventos
 │   └── ui/
-│       └── layout/
-│           └── MainLayout.tsx # Wrapper com header/footer/nav
+│       ├── EventCard.tsx       card da listagem
+│       └── badge/Badge.tsx     etiqueta de categoria
 │
-└── assets/                  # Recursos estáticos
-````
+├── pages/
+│   ├── home/Home.tsx           listagem agrupada por status
+│   ├── detail/Detail.tsx       capa, mídia, edições, ementa e CTA
+│   ├── detail/DetailSkeleton.tsx
+│   └── notFound/NotFound.tsx
+│
+├── shared/ui/                  peças sem conhecimento de domínio
+│   ├── layout/MainLayout.tsx   cabeçalho fixo, main e rodapé
+│   ├── footer/Footer.tsx
+│   ├── ctaButton/CTAButton.tsx
+│   ├── videoPlayer/VideoPlayer.tsx
+│   ├── eventGallery/EventGallery.tsx
+│   ├── pdf/PDFViewerButton.tsx
+│   ├── skeleton/Skeleton.tsx
+│   ├── backToTop/BackToTopButton.tsx
+│   └── lib/                    cn(), ScrollToTop, useDocumentTitle
+│
+└── assets/                     imagens das instituições e certificados
+```
 
+As camadas `widgets/` e `features/` do FSD canônico **não existem** — nada no
+projeto pediu por elas ainda. Quando pedirem, entram aí.
 
-#### Fluxo de Dados (Data Flow)
+### Fluxo de dados
 
-````
-Home.tsx
-  ↓
-useEvents() [Hook]
-  ↓
-eventApi.getAll() [API Layer]
-  ↓
-events.data.ts [Mock Data]
-  ↓
-Retorna BootcampEvent[]
-  ↓
-.map(event => <EventCard event={event} />) [Rendering]
-````
+```text
+Home.tsx  ou  Detail.tsx
+      ↓
+useEvents()  /  useEventBySlug(slug)        hook: loading, error, dado
+      ↓
+eventApi.getAll()  /  getBySlug()           camada de acesso, assíncrona
+      ↓
+events.data.ts                              os 17 objetos
+```
 
-### Estrutura de roteamento
+A `eventApi` devolve Promises com latência simulada. É de propósito: o dia em
+que virar uma API de verdade, nada acima dela muda.
 
-- Acesse http://localhost:5173/ -> Deve exibir "Home: Lista de Eventos".
-- Acesse http://localhost:5173/event/42-sp -> Deve exibir "Detalhes do Evento".
-- Acesse http://localhost:5173/qualquer-coisa -> Deve exibir o seu fallback de 404.
+---
 
-### Code Review
+## 📐 O contrato de dado
 
-o processo onde um desenvolvedor analisa o código escrito por outro antes que ele seja integrado à branch principal (main).
+Todo evento obedece a `BootcampEvent`. O TypeScript recusa um card incompleto:
 
-objetivos são:
+```ts
+interface BootcampEvent {
+  id: string;
+  slug: string;              // vira a URL: /event/minas-summit
+  title: string;
+  institution: string;
+  description: string;       // uma linha, aparece no card
+  coverImage: string;        // import do Vite, não caminho solto
+  altText: string;           // obrigatório — acessibilidade não é opcional
+  category: "frontend" | "backend" | "fullstack" | "mobile" | "outros";
+  status: "concluido" | "desejado";
 
-- Qualidade: Encontrar bugs ou falhas de lógica antes que cheguem ao usuário.
-- Consistência: Garantir que o código segue os padrões do ecossistema learnTECH (como o FSD que aplicamos).
-- Mentoria: Compartilhar conhecimento sobre técnicas mais modernas ou performáticas.
+  content: {
+    longDescription: string;
+    videoUrl?: string;
+    gallery?: EventMedia[];
+    curriculum: string[];
+    officialLink: string;
+    editions?: EventEdition[];   // linha do tempo por ano
+    links?: EventLink[];
+    certificate?: string;        // import do PDF
+  };
+}
+```
 
-- [x] Favicon
-- [x] Redes Sociais no Footer
-- [x] Componentizar o Footer
+### Como o catálogo está preenchido
 
-## Informações do Site
+| Campo | Eventos que usam |
+| --- | --- |
+| `curriculum` | quase todos |
+| `editions` | 1 (Minas Summit, 5 edições) |
+| `certificate` | 1 (Minas Summit) |
+| `videoUrl` | 1 (Piscine 42SP) |
+| `gallery` | 0 |
 
-### Versão 1
+Distribuição por categoria: fullstack 10, outros 5, frontend 1, backend 1.
 
-- Template do W3.CSS
-- Informações Estáticas que levam para os sites oficiais
+---
 
-### Requisitos
+## 🎨 Identidade e convenções
 
-- [x] Design personalizado
-- [x] Responsividade
+A comunidade learnTECH tem **verde** como cor principal e um cubo com `{` e `}`
+nos lados como logo.
 
-@douglasabnovato - Developer Fullstack
+```css
+--color-brand-primary:   #00c853   /* verde learnTECH */
+--color-brand-secondary: #7000ff
+--font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif
+```
+
+### ⚠️ Tailwind 4: a configuração mora no CSS
+
+Este projeto usa **Tailwind 4**. Os tokens ficam no bloco `@theme` de
+`src/app/styles/main.css` — **não existe `tailwind.config.js`**, e criar um não
+adianta: o Tailwind 4 só lê um arquivo de configuração se você apontar para ele
+com a diretiva `@config`.
+
+Consequências práticas:
+
+- token novo → `@theme` em `main.css`, e ele vira classe (`text-brand-primary`)
+- cor de anel/borda a partir de variável → `ring-brand-primary`, **nunca**
+  `ring-[--color-brand-primary]` (sintaxe da v3; na v4 não produz cor nenhuma
+  e falha em silêncio)
+
+### A regra verde/âmbar
+
+| Estado | Cor | Onde aparece |
+| --- | --- | --- |
+| `concluido` | Emerald | etiqueta do card, selo da capa, botão de CTA, moldura do vídeo, marcador da edição |
+| `desejado` | Amber | os mesmos pontos |
+
+Os componentes de `shared/` recebem `isCompleted: boolean`. Eles não conhecem o
+vocabulário do domínio — a tradução acontece uma vez só, no `Detail`.
+
+### Títulos de aba
+
+`useDocumentTitle` acrescenta ` | learnTECH`. Passe só o nome da página
+(`useDocumentTitle("Eventos")`), nunca a marca junto.
+
+---
+
+## 🗺️ Rotas
+
+| Rota | Página |
+| --- | --- |
+| `/` | listagem, agrupada em Concluídos e Metas de estudo |
+| `/event/:slug` | detalhe do evento |
+| `*` | 404 com `console.warn` do caminho acessado |
+
+Verificação rápida:
+
+```text
+/                    → lista os 17 eventos em dois grupos
+/event/42-sp         → detalhe da Piscine 42SP
+/event/minas-summit  → detalhe com linha do tempo e certificado
+/qualquer-coisa      → 404
+```
+
+---
+
+## 📍 Momento atual
+
+Build e checagem de tipos limpos (`tsc -b` e `vite build`). A rodada mais
+recente atacou defeitos encontrados por auditoria, não por suposição — cada um
+confirmado no CSS compilado ou no navegador.
+
+### Corrigido
+
+- [x] `tailwind.config.js` removido — era inerte no Tailwind 4 e declarava uma
+      paleta ciano que nunca chegou ao build, contradizendo o verde real
+- [x] Anel de foco sem cor: `ring-[--var]` é sintaxe da v3 e não gerava
+      `--tw-ring-color`
+- [x] Três links sociais de exemplo (`github.com/seuusuario`) no rodapé
+- [x] As 5 edições do Minas Summit passaram a ser renderizadas — o campo existia
+      e nenhum componente lia
+- [x] `PDFViewerButton`: a URL do PDF já vem resolvida pelo Vite (o
+      `new URL(..., import.meta.url)` anterior quebrava o caminho); ganhou Esc,
+      trava de rolagem, retorno de foco, clique fora e nome acessível
+- [x] Três `<h1>` por página viraram um
+- [x] `<main>` aninhado dentro de `<main>` na página de detalhe
+- [x] Dois `aria-labelledby` apontando para `id` inexistente
+- [x] Título da capa sobrepondo o parágrafo, e seções desalinhadas da coluna
+      do cabeçalho
+- [x] `/vite.svg` no `<head>` — 404 em toda visita
+- [x] `index.html` sem `lang="pt-BR"`, sem descrição e sem Open Graph
+- [x] Status do evento invisível no card da listagem — a tela onde a escolha
+      acontece era a única sem a informação
+- [x] Roteador fantasma em `app/router/index.tsx`, `HelmetProvider` duplicado,
+      bloco inalcançável no `Detail` e `event.id === '16'` cravado no JSX
+- [x] `.history/` do VS Code versionado por engano
+
+### Em aberto
+
+| Prioridade | Item |
+| --- | --- |
+| 🔴 | `public/eventos-vivos/byteclass.dev/assets/` tem **11,2 MB** em 6 PNGs |
+| 🟡 | Bundle principal em 415 KB (134 KB gzip) — Framer Motion domina |
+| 🟡 | Media Center construído, mas 1 de 17 eventos tem vídeo e nenhum tem galeria |
+| 🟡 | SPA sem pré-renderização: o robô que não executa JS só vê o `index.html` |
+| 🟡 | Tipografia e espaçamento fixos em alguns componentes (ver abaixo) |
+| 🟢 | `context.txt` na raiz é um prompt de IA, não documentação do projeto |
+| 🟢 | 10 dos 17 eventos em `fullstack` — a categoria virou balde |
+
+---
+
+## 🗺️ Próximos passos
+
+### Fase 1 — Peso
+
+- [ ] Converter os 6 PNGs do `byteclass.dev` para `.webp` (11,2 MB → ~1,5 MB)
+- [ ] Converter os 18 JPGs de `assets/instituicoes/` (4,2 MB)
+- [ ] Avaliar `LazyMotion` do Framer Motion para cortar o bundle inicial
+
+### Fase 2 — Conteúdo
+
+- [ ] Preencher `gallery` nos eventos presenciais, que é onde a foto tem valor
+- [ ] Revisar a categoria dos 10 eventos em `fullstack`
+- [ ] Definir um terceiro estado para eventos que **você organiza** — hoje o BQ
+      Agenda Tech é `desejado`, o que descreve mal um evento do qual você é
+      coorganizador
+
+### Fase 3 — Responsividade fina
+
+Os itens abaixo sobraram da auditoria de responsividade de julho/2026, já
+descontando o que foi corrigido e o que era falso positivo:
+
+- [ ] `EventCard`: `text-xl` e `p-6` sem escala — usar `text-lg md:text-xl` e
+      `p-4 md:p-6`
+- [ ] `Home`: `gap-8` fixo na grade — `gap-4 md:gap-8`
+- [ ] Testar em 320px (iPhone SE); o que foi validado até agora foi 390px
+- [ ] Conferir alvos de toque com 48px mínimo
+
+Três apontamentos daquela auditoria **não procediam** e ficam registrados para
+não voltarem: a meta tag `viewport` nunca esteve ausente, o breakpoint `sm:`
+já era usado no `MainLayout`, e não existe menu de navegação para receber um
+botão hamburger. Os outros dois — `-mt-32` no mobile e `text-8xl` em tela
+pequena — foram resolvidos na reconstrução da página de detalhe.
+
+### Fase 4 — Descoberta
+
+- [ ] Pré-renderizar as rotas para que o Open Graph do `Detail` seja visível
+- [ ] `canonical` e `og:url` com o domínio de produção
+
+---
+
+## 📊 Monitoramento
+
+Core Web Vitals (LCP, INP, CLS) em produção via
+[Vercel Speed Insights](https://vercel.com/docs/speed-insights), integrado no
+`main.tsx`.
+
+> A coleta só roda em produção. Em `npm run dev` o script não reporta nada, e o
+> 404 de `/_vercel/speed-insights/script.js` no console local é esperado.
+
+---
+
+## 🌿 Workflow
+
+| Branch | Papel |
+| --- | --- |
+| `main` | produção |
+| `developer-mvp` | integração antes de subir |
+| `feature/add-4-projetos` | migração de conteúdo de 4 repositórios antigos |
+
+Convenção para trabalho novo: `feature/<tarefa>` para funcionalidade,
+`hotfix/<tarefa>` para urgência na `main`. Tudo passa por `developer-mvp` antes
+da produção.
+
+### Code review
+
+Toda alteração é lida antes de entrar na `main`, com três objetivos: achar
+falha de lógica antes do usuário, manter o padrão do ecossistema (o FSD e as
+convenções acima) e circular conhecimento sobre o que foi feito.
+
+---
+
+## 🕓 Histórico
+
+**Versão 2** — reconstrução completa em React + TypeScript + Vite, com FSD,
+página de detalhe dinâmica, Media Center, transições com Framer Motion,
+skeleton de carregamento, 404 próprio e SEO por página.
+
+**Versão 1** — página estática sobre template do W3.CSS, com informações fixas
+que apenas levavam aos sites oficiais.
+
+---
+
+<p align="center">
+  <a href="https://github.com/douglasabnovato">@douglasabnovato</a> — Desenvolvedor Fullstack
+</p>
