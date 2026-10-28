@@ -26,6 +26,8 @@ export const PDFViewerButton = ({
       if (evento.key === 'Escape') setAberto(false);
     };
 
+    // Guarda o botão agora: no cleanup, gatilho.current pode já ter mudado.
+    const botao = gatilho.current;
     const rolagem = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', aoTeclar);
@@ -33,7 +35,7 @@ export const PDFViewerButton = ({
     return () => {
       document.body.style.overflow = rolagem;
       document.removeEventListener('keydown', aoTeclar);
-      gatilho.current?.focus();
+      botao?.focus();
     };
   }, [aberto]);
 
