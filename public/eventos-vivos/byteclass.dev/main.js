@@ -148,7 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
+      // href="#" (links ainda sem destino) não é seletor válido: sem o try, o clique gerava erro no console.
+      let target = null;
+      try {
+        target = document.querySelector(this.getAttribute("href"));
+      } catch {
+        target = null;
+      }
       if (target) {
         window.scrollTo({
           top: target.offsetTop - 80,
