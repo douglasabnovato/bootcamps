@@ -67,7 +67,7 @@ src/
 │   │   ├── useEvents.ts        lista, com loading e error
 │   │   └── useEventBySlug.ts   um evento, com loading e error
 │   ├── api/
-│   │   ├── eventApi.ts         camada de acesso a dado (Promise + latência)
+│   │   ├── eventApi.ts         camada de acesso: API learntech-content, com dados locais de reserva
 │   │   └── events.data.ts      os 17 eventos
 │   └── ui/
 │       ├── EventCard.tsx       card da listagem
@@ -108,8 +108,18 @@ eventApi.getAll()  /  getBySlug()           camada de acesso, assíncrona
 events.data.ts                              os 17 objetos
 ```
 
-A `eventApi` devolve Promises com latência simulada. É de propósito: o dia em
-que virar uma API de verdade, nada acima dela muda.
+A `eventApi` busca primeiro na API learntech-content (`src/shared/api/learntechContent.ts`,
+tempo limite de 5 s) e, se a API não estiver configurada, falhar ou responder fora
+do formato esperado, devolve os dados locais de `events.data.ts`. Nada acima dela
+precisa saber de onde o dado veio.
+
+### Variável de ambiente
+
+| Nome | Efeito |
+| --- | --- |
+| `VITE_API_URL` | Endereço da API learntech-content. Sem ela, o site usa só os dados locais e **não** carrega o script de identificação do ecossistema (`/sdk/identificacao.js`). Modelo em `.env.example`. |
+
+Revisão independente e plano de melhorias: `docs/claudeia/`.
 
 ---
 

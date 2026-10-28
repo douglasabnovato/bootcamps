@@ -202,7 +202,8 @@ export const Detail = () => {
             </div>
 
             <div className="max-w-md mx-auto space-y-4">
-              <CTAButton url={event.content.officialLink} isCompleted={concluido} />
+              {/* Sem link oficial (ex.: edição sem página própria), o botão não aparece em vez de recarregar a página. */}
+              {event.content.officialLink && (<CTAButton url={event.content.officialLink} isCompleted={concluido} />)}
 
               {event.content.certificate && (
                 <PDFViewerButton

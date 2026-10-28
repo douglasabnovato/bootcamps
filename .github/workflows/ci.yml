@@ -1,0 +1,36 @@
+# CI — roda apenas scripts que já existem no package.json (lint e build).
+# Não faz deploy: o deploy continua com a integração da Vercel.
+name: CI
+
+on:
+  push:
+    branches: [main, developer-mvp, "feature/**", "hotfix/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências (lockfile)
+        run: npm ci
+
+      - name: Lint (npm run lint)
+        run: npm run lint
+
+      - name: Build com checagem de tipos (npm run build = tsc -b && vite build)
+        run: npm run build
