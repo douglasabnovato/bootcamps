@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>O hub de eventos e formações do ecossistema learnTECH.</strong><br />
-  17 registros · 14 concluídos · 3 metas de estudo
+  17 registros · 14 concluídos · 3 metas de estudo e eventos
 </p>
 
 <p align="center">
