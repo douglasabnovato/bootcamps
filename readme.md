@@ -68,7 +68,7 @@ src/
 │   │   └── useEventBySlug.ts   um evento, com loading e error
 │   ├── api/
 │   │   ├── eventApi.ts         camada de acesso: API learntech-content, com dados locais de reserva
-│   │   └── events.data.ts      os 17 eventos
+│   │   └── events.data.ts      cópia de reserva dos 22 eventos, GERADA pela API (não editar)
 │   └── ui/
 │       ├── EventCard.tsx       card da listagem
 │       └── badge/Badge.tsx     etiqueta de categoria
@@ -105,13 +105,17 @@ useEvents()  /  useEventBySlug(slug)        hook: loading, error, dado
       ↓
 eventApi.getAll()  /  getBySlug()           camada de acesso, assíncrona
       ↓
-events.data.ts                              os 17 objetos
+events.data.ts                              cópia de reserva gerada a partir da API
 ```
 
 A `eventApi` busca primeiro na API learntech-content (`src/shared/api/learntechContent.ts`,
 tempo limite de 5 s) e, se a API não estiver configurada, falhar ou responder fora
 do formato esperado, devolve os dados locais de `events.data.ts`. Nada acima dela
 precisa saber de onde o dado veio.
+
+`events.data.ts` não é editado à mão: é gerado por `npm run copias` no repositório
+learntech-content a partir de `content/bootcamps/eventos/*.json`. As imagens da cópia
+apontam para a API (`/media/...` em URL absoluta).
 
 ### Variável de ambiente
 
@@ -262,12 +266,10 @@ confirmado no CSS compilado ou no navegador.
 
 | Prioridade | Item |
 | --- | --- |
-| 🔴 | `public/eventos-vivos/byteclass.dev/assets/` tem **11,2 MB** em 6 PNGs |
 | 🟡 | Bundle principal em 415 KB (134 KB gzip) — Framer Motion domina |
 | 🟡 | Media Center construído, mas 1 de 17 eventos tem vídeo e nenhum tem galeria |
 | 🟡 | SPA sem pré-renderização: o robô que não executa JS só vê o `index.html` |
 | 🟡 | Tipografia e espaçamento fixos em alguns componentes (ver abaixo) |
-| 🟢 | `context.txt` na raiz é um prompt de IA, não documentação do projeto |
 | 🟢 | 10 dos 17 eventos em `fullstack` — a categoria virou balde |
 
 ---
@@ -276,8 +278,8 @@ confirmado no CSS compilado ou no navegador.
 
 ### Fase 1 — Peso
 
-- [ ] Converter os 6 PNGs do `byteclass.dev` para `.webp` (11,2 MB → ~1,5 MB)
-- [ ] Converter os 18 JPGs de `assets/instituicoes/` (4,2 MB)
+- [x] Páginas próprias de BQ e ByteClass (`public/eventos-vivos`, 11,2 MB de PNG) removidas em 28/10/2026; o conteúdo aproveitável foi para os eventos na API
+- [x] JPGs de `assets/instituicoes/` removidos: a cópia de reserva usa as imagens WebP da API
 - [ ] Avaliar `LazyMotion` do Framer Motion para cortar o bundle inicial
 
 ### Fase 2 — Conteúdo
