@@ -22,8 +22,23 @@ export interface EventLink {
 }
 
 
+export interface EventActivity {
+  tipo: "palestra" | "painel" | "workshop" | "networking" | "sorteio";
+  titulo: string;
+  descricao?: string;
+}
+
 export interface EventEdition {
+  numero?: number;
   year: string;
+  data?: string;
+  horario?: string;
+  local?: { nome: string; cidade: string };
+  tema?: string;
+  formato?: string;
+  programacao?: EventActivity[];
+  participacao?: "presente" | "inscrito" | "nao-participou";
+  link?: string;
   image: string;
   highlight: string;
   status: "realizado" | "anunciado";
@@ -42,12 +57,14 @@ export interface BootcampEvent {
 
   content: {
     longDescription: string;
+    paragraphs?: string[];
     videoUrl?: string;
     gallery?: EventMedia[];
     curriculum: string[];
     officialLink: string;
     editions?: EventEdition[];
     links?: EventLink[];
-    certificate?: string; //  
+    certificate?: string;
+    sources?: EventLink[];
   };
 }
