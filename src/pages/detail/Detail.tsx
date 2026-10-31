@@ -133,8 +133,12 @@ export const Detail = () => {
             <ol className="relative border-l border-zinc-800 pl-8 space-y-10">
               {event.content.editions.map((edicao) => {
                 const realizada = edicao.status === 'realizado';
+                const quando = edicao.data
+                  ? new Date(`${edicao.data}T12:00:00`).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })
+                  : edicao.year;
+                const rotulo = [edicao.numero ? `${edicao.numero}ª edição` : null, edicao.formato].filter(Boolean).join(' · ');
                 return (
-                  <li key={edicao.year} className="relative">
+                  <li key={`${edicao.formato ?? ''}-${edicao.numero ?? ''}-${edicao.data ?? edicao.year}`} className="relative">
                     <span
                       className={`absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 ${
                         realizada
@@ -144,7 +148,8 @@ export const Detail = () => {
                       aria-hidden="true"
                     />
                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <span className="font-mono text-xl font-black text-white">{edicao.year}</span>
+                      <span className="font-mono text-xl font-black text-white">{quando}</span>
+                      {rotulo && <span className="text-sm font-semibold text-zinc-300">{rotulo}</span>}
                       <span
                         className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider border ${
                           realizada
@@ -154,12 +159,57 @@ export const Detail = () => {
                       >
                         {realizada ? 'Realizada' : 'Anunciada'}
                       </span>
+                      {edicao.participacao === 'presente' && (
+                        <span className="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider border bg-sky-500/10 text-sky-400 border-sky-500/20">
+                          Eu estive lá
+                        </span>
+                      )}
                     </div>
+                    {edicao.tema && <h3 className="text-lg font-semibold text-zinc-100 mb-1">{edicao.tema}</h3>}
+                    {(edicao.local || edicao.horario) && (
+                      <p className="text-sm text-zinc-500 mb-2">
+                        {[edicao.local && `${edicao.local.nome}, ${edicao.local.cidade}`, edicao.horario].filter(Boolean).join(' · ')}
+                      </p>
+                    )}
                     <p className="text-zinc-400 leading-relaxed">{edicao.highlight}</p>
+                    {edicao.programacao && edicao.programacao.length > 0 && (
+                      <ul className="mt-4 space-y-2">
+                        {edicao.programacao.map((atividade) => (
+                          <li key={atividade.titulo} className="text-sm text-zinc-400">
+                            <span className="font-bold uppercase text-[10px] tracking-wider text-zinc-500 mr-2">{atividade.tipo}</span>
+                            <span className="text-zinc-300">{atividade.titulo}</span>
+                            {atividade.descricao && <span className="block text-zinc-500 mt-0.5">{atividade.descricao}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {edicao.link && (
+                      <a href={edicao.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm text-brand-primary hover:underline">
+                        Página da edição ↗
+                      </a>
+                    )}
                   </li>
                 );
               })}
             </ol>
+          </section>
+        )}
+
+        {event.content.paragraphs && event.content.paragraphs.length > 0 && (
+          <section aria-labelledby="sobre-title" className="mt-20 space-y-6">
+            <div className="flex items-center gap-6">
+              <h2 id="sobre-title" className="text-2xl md:text-3xl font-bold text-zinc-100 tracking-tight">
+                Sobre
+              </h2>
+              <div className="h-px flex-grow bg-zinc-800/60" />
+            </div>
+            <div className="space-y-5 max-w-3xl">
+              {event.content.paragraphs.map((paragrafo) => (
+                <p key={paragrafo.slice(0, 40)} className="text-zinc-400 leading-relaxed">
+                  {paragrafo}
+                </p>
+              ))}
+            </div>
           </section>
         )}
 
@@ -231,6 +281,28 @@ export const Detail = () => {
             </div>
           </div>
         </section>
+
+        {event.content.sources && event.content.sources.length > 0 && (
+          <section aria-labelledby="fontes-title" className="mt-16 space-y-4">
+            <h2 id="fontes-title" className="text-lg font-semibold text-zinc-300">
+              Fontes
+            </h2>
+            <ul className="space-y-2 text-sm">
+              {event.content.sources.map((fonte) => (
+                <li key={fonte.url}>
+                  <a
+                    href={fonte.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-400 underline underline-offset-4 hover:text-zinc-200"
+                  >
+                    {fonte.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </article>
     </>
   );
