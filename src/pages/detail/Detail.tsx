@@ -282,6 +282,31 @@ export const Detail = () => {
           </div>
         </section>
 
+        {event.content.relacionados && event.content.relacionados.some((r) => r.url) && (
+          <section aria-labelledby="relacionados-title" className="mt-16 space-y-4">
+            <h2 id="relacionados-title" className="text-lg font-semibold text-zinc-300">
+              Veja também no ecossistema
+            </h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {event.content.relacionados
+                .filter((r) => r.url)
+                .map((r) => (
+                  <li key={`${r.tipo}-${r.id}`}>
+                    <a
+                      href={r.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors"
+                    >
+                      <span className="block text-[10px] font-bold uppercase tracking-wider text-zinc-500">{r.projeto}</span>
+                      <span className="text-zinc-200">{r.titulo ?? r.id}</span>
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        )}
+
         {event.content.sources && event.content.sources.length > 0 && (
           <section aria-labelledby="fontes-title" className="mt-16 space-y-4">
             <h2 id="fontes-title" className="text-lg font-semibold text-zinc-300">
