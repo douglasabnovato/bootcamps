@@ -66,5 +66,7 @@ export interface BootcampEvent {
     links?: EventLink[];
     certificate?: string;
     sources?: EventLink[];
+    /* Conteúdo relacionado nos outros projetos; a API publica título e URL prontos. */
+    relacionados?: { tipo: string; id: string; projeto?: string; titulo?: string; url?: string }[];
   };
 }

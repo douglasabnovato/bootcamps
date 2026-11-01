@@ -554,6 +554,20 @@ export const events: BootcampEvent[] = [
           "label": "Google for Developers: Perguntas frequentes sobre GDG e DevFest",
           "url": "https://developers.google.com/community/devfest/faq?hl=pt-br"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "eventos-de-comunidade-tech"
+        },
+        {
+          "tipo": "eventos",
+          "id": "capivara-tech-juiz-de-fora"
+        },
+        {
+          "tipo": "eventos",
+          "id": "hackathon-inovacao-social-jf"
+        }
       ]
     }
   },
@@ -1056,6 +1070,20 @@ export const events: BootcampEvent[] = [
         "Em 9 de novembro de 2024, a segunda edição voltou à UniAcademia com três trilhas temáticas, ignite talks (apresentações curtas e cronometradas) e open spaces, em que os próprios participantes propõem e conduzem as conversas. Nessa edição Douglas integrou a organização, conduziu em dupla a abertura oficial e desenvolveu a landing page do evento em React, Vite, TypeScript e Tailwind. A edição de 2025, em 29 de novembro, manteve o formato gratuito com palestras simultâneas, workshops, ignite talks e roda de conversa, viabilizada por quatro cotas de apoio.",
         "O público é amplo: estudantes que querem conhecer a área, profissionais em busca de atualização e pessoas em transição de carreira. As inscrições são feitas pelo Sympla e a divulgação acontece pelo Instagram do evento; por ser gratuito e com vagas limitadas pelo espaço, costuma ser necessário garantir o ingresso com antecedência.",
         "Eventos de comunidade como o CodeXperience aproximam quem está começando de quem já trabalha na área, mostram o que as empresas da região fazem e abrem espaço para os primeiros passos como palestrante, voluntário ou organizador. Para quem mora fora dos grandes centros, são uma das formas mais acessíveis de construir rede de contatos e se manter atualizado."
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "como-organizar-evento-de-comunidade-tech"
+        },
+        {
+          "tipo": "blog",
+          "id": "eventos-de-comunidade-tech"
+        },
+        {
+          "tipo": "eventos",
+          "id": "gdg-jf"
+        }
       ]
     }
   },
@@ -1277,6 +1305,24 @@ export const events: BootcampEvent[] = [
           "label": "Diário do Comércio: Wabtec vai iniciar obras de centro de engenharia em Contagem (01/02/2025)",
           "url": "https://diariodocomercio.com.br/economia/wabtec-vai-iniciar-obras-de-centro-de-engenharia-em-contagem/"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "do-problema-ao-pitch-canvas-em-ideathon"
+        },
+        {
+          "tipo": "blog",
+          "id": "editais-de-fomento-a-inovacao-como-ler-e-onde-encontrar"
+        },
+        {
+          "tipo": "programas",
+          "id": "503"
+        },
+        {
+          "tipo": "eventos",
+          "id": "startup-way-challenge-2023"
+        }
       ]
     }
   },
@@ -1291,7 +1337,7 @@ export const events: BootcampEvent[] = [
     "category": "outros",
     "status": "concluido",
     "content": {
-      "longDescription": "Em 21 e 22 de janeiro de 2023, a Prefeitura de Juiz de Fora e o Moinho realizaram o Hackathon de Inovação Social. Equipes de estudantes, profissionais e empreendedores desenvolveram soluções tecnológicas para desafios de saúde e educação levantados com alunos da rede municipal, com mentorias e conversas com empreendedores. As melhores equipes receberam seis meses de acesso ao hub de inovação do Moinho. Douglas participou da maratona.",
+      "longDescription": "Em 21 e 22 de janeiro de 2023, a Prefeitura de Juiz de Fora e o Moinho realizaram o Hackathon de Inovação Social, com apoio do GDG Juiz de Fora, da Zero40, do Critt da UFJF e do Sebrae. Equipes de estudantes, profissionais e empreendedores desenvolveram soluções tecnológicas para desafios de saúde e educação levantados com alunos da rede municipal, com mentorias e conversas com empreendedores. As melhores equipes receberam seis meses de acesso ao hub de inovação do Moinho. Douglas fez parte da equipe voluntária de apoio que organizou o evento, da preparação, meses antes, ao encerramento.",
       "videoUrl": "https://www.youtube.com/embed/WW8qL1QAhOE",
       "gallery": [
         {
@@ -1461,13 +1507,20 @@ export const events: BootcampEvent[] = [
         "Desafios reais de saúde e educação",
         "Mentorias com empreendedores",
         "Prototipação em equipe",
-        "Apresentação das soluções"
+        "Apresentação das soluções",
+        "Organização voluntária: kits, crachás, cordões e alimentação",
+        "Comunicação com participantes: regras de times e encontros online",
+        "Abertura e condução de um evento de 24 horas"
       ],
       "officialLink": "https://tribunademinas.com.br/noticias/cidade/18-01-2023/pjf-e-moinho-realizam-hackathon-para-projetos-de-tecnologia-nas-areas-de-saude-e-educacao.html",
       "paragraphs": [
         "O Hackathon de Inovação Social foi uma maratona de dois dias realizada em 21 e 22 de janeiro de 2023 pela Prefeitura de Juiz de Fora em parceria com o Moinho, hub de inovação e empreendedorismo instalado num antigo moinho de farinha da zona norte da cidade, retrofitado para receber startups, empresas e atividades de educação.",
         "O evento deu continuidade a uma agenda de inovação social na cidade: em novembro de 2022, o Moinho havia recebido o I Festival de Inovação Social de Juiz de Fora, com mesas sobre saúde e educação e apoio da Secretaria de Desenvolvimento Sustentável e Inclusivo, da Inovação e Competitividade (Sedic) da prefeitura. No hackathon, os desafios também foram de saúde e educação, levantados com alunos da rede municipal.",
-        "Equipes de estudantes, profissionais e empreendedores trabalharam em soluções tecnológicas para esses desafios, com mentorias, conversas com empreendedores, prototipação em equipe e apresentação final das soluções. As melhores equipes receberam seis meses de acesso ao hub de inovação do Moinho. Douglas participou da maratona.",
+        "Equipes de estudantes, profissionais e empreendedores trabalharam em soluções tecnológicas para esses desafios, com mentorias, conversas com empreendedores, prototipação em equipe e apresentação final das soluções. As melhores equipes receberam seis meses de acesso ao hub de inovação do Moinho. As regras de formação de times eram abertas: bastavam três pessoas, de qualquer perfil, sem obrigação de ter um dev ou um empreendedor no grupo, e havia três caminhos para entrar num time: participar dos encontros online na semana anterior, inscrever-se com um time já montado ou se juntar a uma equipe na primeira hora do evento.",
+        "Os bastidores começaram bem antes do fim de semana da maratona. Os registros de Douglas mostram a preparação desde outubro de 2022: encontros da comunidade no Moinho para mobilizar voluntários, a criação da identidade visual (a arte do crachá imita uma tela de login, com o campo \"LOGIN:\" para o nome do participante, e a barra de logos dos realizadores e apoiadores), a aprovação de arte do cordão de crachá com o fornecedor e, em dezembro, um encontro para ler os desafios que seriam resolvidos no hackathon. A data foi remarcada para 21 e 22 de janeiro, com inscrições pelo site do evento até 16 de janeiro.",
+        "Na véspera e durante a maratona, o trabalho da equipe de apoio foi de logística e acolhimento: montar os kits e separar camisetas e cordões, fazer as compras de lanches e café para atravessar a madrugada (a lista anotada em post-it incluía macarrão instantâneo, pipoca, energético, cafeteira e cápsulas), organizar o espaço e conduzir a abertura, com Douglas chamando os participantes no megafone. Uma ideia simples virou exemplo de inovação social dentro do próprio evento: o café expresso era vendido por R$ 3, com pagamento numa caixinha ou por Pix, e o lucro foi destinado a uma ONG da cidade.",
+        "Para a equipe de apoio, foram cerca de 30 horas de atividades seguidas, da recepção à foto oficial e ao anúncio das equipes premiadas. Depois do encerramento, as fotos foram reunidas num álbum compartilhado com os participantes, e o Sebrae Minas divulgou o evento nas suas redes. A mensagem final no grupo dos participantes resumiu o espírito: ganhou a cidade e ganhou o ecossistema de inovação de Juiz de Fora.",
+        "Organizar um hackathon ensina habilidades que nenhum curso técnico cobre: planejar com meses de antecedência, trabalhar com voluntários, negociar com fornecedores (crachá, cordão, camisetas), cuidar de orçamento e compras, comunicar regras de forma clara e manter a energia de todo mundo durante um fim de semana inteiro. Para quem está entrando em tecnologia, ser voluntário na organização de um evento de comunidade é uma das formas mais rápidas de conhecer pessoas do ecossistema e de mostrar responsabilidade na prática. Douglas levou essa experiência para os eventos que organizou depois, como o CodeXperience e o DevOpsDays Juiz de Fora.",
         "Hackathons de inovação social costumam ser abertos a qualquer pessoa interessada, de programadores a profissionais de saúde, educação, design e negócios, porque resolver um problema público exige conhecer o contexto tanto quanto a tecnologia. A participação geralmente é gratuita e as equipes podem ser formadas antes ou durante o evento.",
         "Para a carreira, a experiência ensina a trabalhar sob prazo curto, priorizar o essencial de um protótipo e explicar uma solução para quem não é técnico. Quando o desafio vem do poder público, há o ganho extra de entender como funcionam escolas e unidades de saúde, e de conhecer gestores e empreendedores interessados em levar as ideias adiante."
       ],
@@ -1479,6 +1532,24 @@ export const events: BootcampEvent[] = [
         {
           "label": "Tribuna de Minas: I Festival de Inovação Social de Juiz de Fora acontece nesta quinta e sexta (01/11/2022)",
           "url": "https://tribunademinas.com.br/?p=500123"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "bastidores-de-um-hackathon-de-comunidade"
+        },
+        {
+          "tipo": "blog",
+          "id": "como-organizar-evento-de-comunidade-tech"
+        },
+        {
+          "tipo": "programas",
+          "id": "503"
+        },
+        {
+          "tipo": "eventos",
+          "id": "fator-s-challenge"
         }
       ]
     }
@@ -1544,6 +1615,18 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/tdc-innovation-2023/8.webp",
           "type": "image",
           "alt": "Tela de intervalo da transmissão do TDC Innovation 2023"
+        },
+        {
+          "id": "tdc-innovation-9",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/tdc-innovation-2023/9.webp",
+          "type": "image",
+          "alt": "Palestra de uma das trilhas do TDC Innovation 2023"
+        },
+        {
+          "id": "tdc-innovation-10",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/tdc-innovation-2023/10.webp",
+          "type": "image",
+          "alt": "Acompanhando uma trilha do TDC pelo notebook"
         }
       ],
       "curriculum": [
@@ -1574,6 +1657,16 @@ export const events: BootcampEvent[] = [
         {
           "label": "Galícia Educação: Evento TDC – The Developers Conference",
           "url": "https://www.galiciaeducacao.com.br/blog/evento-tdc-the-developers-conference"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "eventos-de-comunidade-tech"
+        },
+        {
+          "tipo": "blog",
+          "id": "networking-pitch-60-segundos"
         }
       ]
     }
@@ -1656,6 +1749,20 @@ export const events: BootcampEvent[] = [
           "label": "UFRPE: Startup Way - Manual (edição jun/2023 com Sebrae e IEBT)",
           "url": "https://ad.ufrpe.br/sites/ufrpe.br/files/Startup%20Way%20-%20Manual.pdf"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "do-problema-ao-pitch-canvas-em-ideathon"
+        },
+        {
+          "tipo": "programas",
+          "id": "503"
+        },
+        {
+          "tipo": "eventos",
+          "id": "fator-s-challenge"
+        }
       ]
     }
   },
@@ -1719,6 +1826,12 @@ export const events: BootcampEvent[] = [
         {
           "label": "Faefid/UFJF: Nota de agradecimento da Associação Atlética Acadêmica UFJF (JUBs 2010) (02/12/2010)",
           "url": "https://www2.ufjf.br/faefid/2010/12/02/nota-de-agradecimento-da-associacao-atletica-academica-ufjf/"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "atleticas-universitarias-esporte-e-universidade"
         }
       ]
     }
@@ -1882,6 +1995,241 @@ export const events: BootcampEvent[] = [
         {
           "label": "Visite São Paulo — Product Camp 2026",
           "url": "https://visitesaopaulo.com/evento/product-camp-2026-2026/"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "501"
+        },
+        {
+          "tipo": "programas",
+          "id": "801"
+        },
+        {
+          "tipo": "eventos",
+          "id": "gdg-jf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "25",
+    "slug": "na-pratica-carreira",
+    "title": "Cursos de Carreira e Produtividade Na Prática",
+    "institution": "Fundação Estudar (Na Prática)",
+    "description": "Sequência de cursos online do Na Prática sobre autoconhecimento, decisão e plano de carreira, processo seletivo e produtividade, feita durante a transição de carreira.",
+    "coverImage": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/instituicoes/na-pratica-carreira.webp",
+    "altText": "Materiais dos cursos online do Na Prática: roda da vida, plano odisseico e matriz de decisão",
+    "category": "outros",
+    "status": "concluido",
+    "content": {
+      "longDescription": "O Na Prática é o braço de carreira da Fundação Estudar e mantém cursos online curtos sobre competências que escola e faculdade raramente ensinam. Entre 2018 e 2020, Douglas percorreu a trilha quase inteira: Autoconhecimento, Decisão de Carreira, Plano de Carreira, Processos Seletivos e Produtividade. Guardou apostilas, planilhas e exercícios respondidos, que depois viraram a base dos programas de carreira do learnTECH.",
+      "paragraphs": [
+        "A Fundação Estudar organiza sua atuação em três frentes, e o Na Prática é a que cuida das decisões de carreira de jovens, com um portal de conteúdo gratuito e cursos online. Os cursos seguem um padrão parecido: vídeos curtos, apostila para imprimir, fórum da turma e missões práticas, muitas delas com um nível básico e um nível opcional mais profundo. A ideia não é decorar conceitos, e sim sair de cada módulo com alguma coisa respondida no papel.",
+        "No Autoconhecimento, o ponto de partida é a própria história: contar a vida como a sinopse de um filme, pedir a pessoas próximas a imagem que elas têm de você, escolher memórias marcantes de cada fase e perguntar o que cada uma revela sobre valores e padrões de comportamento. O curso também trabalha mentalidade de crescimento, isto é, tratar um problema como algo que ainda não foi resolvido, e não como prova de incapacidade. Junto vêm ferramentas como a roda da vida, que dá nota a cada área da vida para mostrar onde está o desequilíbrio, e uma videoteca de apoio.",
+        "Decisão de Carreira e Plano de Carreira partem de um problema conhecido: excesso de opções paralisa. Os exercícios ajudam a mapear o que você não gosta de fazer, em que assuntos as pessoas procuram você, quando você entra em estado de fluxo e quais influências pesaram nas suas decisões passadas. O plano odisseico pede três versões possíveis dos próximos anos, para comparar caminhos em vez de procurar uma carreira perfeita. Depois, a carreira escolhida vira plano: o que pesquisar, com quem conversar, como agir, o que entregar, em que data e para quem prestar contas, numa planilha de ação no estilo 5W2H.",
+        "Processos Seletivos ensina a contar a própria trajetória de forma objetiva com o método STAR (situação, tarefa, ação, resultado) e a usar uma matriz de decisão para comparar propostas: cada fator, como salário, aprendizado, autonomia ou equilíbrio, recebe um peso de 1 a 5, e cada opção é avaliada nesses fatores. Produtividade trata de motivação, rotina, planejamento e concentração, com a matriz de Eisenhower, o diagrama do Getting Things Done, uma tabela para registrar a rotina de uma semana, a atividade das esferas da vida e um roteiro em cinco passos para trocar um hábito: identificar o gatilho, entender o que o comportamento resolve, perceber a recompensa e testar uma rotina substituta.",
+        "Para quem trabalha ou quer trabalhar com tecnologia, essas ferramentas resolvem problemas bem concretos. O plano odisseico e a matriz de decisão ajudam a escolher entre front-end, dados, suporte ou produto sem decidir no impulso. O STAR transforma projetos de portfólio e experiências fora da área em histórias que um recrutador entende. E a parte de hábitos e rotina é o que sustenta meses de estudo à noite, depois do expediente, que é a realidade de quem faz transição de carreira.",
+        "Os cursos foram pensados para universitários, recém-formados e jovens profissionais em dúvida sobre o próximo passo, mas funcionam para qualquer pessoa em transição. Não exigem conhecimento prévio. Exigem disposição para escrever, conversar com outras pessoas e revisitar as respostas meses depois.",
+        "No learnTECH, esse percurso foi reescrito em programas próprios: 1001 (Autoconhecimento em Ação) retoma as missões de história, memórias e valores; 1002 (Decisão e Plano de Carreira) reúne mapeamento de opções, plano odisseico e plano de ação; 1003 (Processo Seletivo na Prática) trata de currículo, STAR, entrevistas e decisão de proposta; 1004 (Produtividade, Hábitos e Metas) organiza rotina, prioridades e hábitos; e 1005 (Hack Dev) aplica tudo isso à rotina de estudo e ao portfólio de quem busca a primeira vaga em tecnologia."
+      ],
+      "curriculum": [
+        "Autoconhecimento: história pessoal, memórias marcantes e mentalidade de crescimento",
+        "Roda da vida e esferas da vida",
+        "Decisão de carreira: interesses, fluxo, influências e plano odisseico",
+        "Plano de carreira e plano de ação (5W2H)",
+        "Processo seletivo: método STAR, testes, dinâmicas e entrevistas",
+        "Matriz de decisão para comparar propostas",
+        "Produtividade: matriz de Eisenhower, Getting Things Done e registro de rotina",
+        "Cinco passos para mudar um hábito"
+      ],
+      "officialLink": "https://napratica.org.br/cursos-de-carreira-fundacao-estudar",
+      "links": [
+        {
+          "label": "Na Prática: curso Decisão de Carreira",
+          "url": "https://napratica.org.br/curso-decisao-de-carreira-na-pratica"
+        },
+        {
+          "label": "Na Prática: curso online Produtividade Na Prática",
+          "url": "https://www.napratica.org.br/curso-online-produtividade-na-pratica/"
+        },
+        {
+          "label": "Na Prática: curso online Processos Seletivos Na Prática",
+          "url": "https://www.napratica.org.br/fundacao-estudar-lanca-curso-online-processos-seletivos-na-pratica/"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Na Prática: Decisão de Carreira, curso online com cinco módulos e certificado de 8 horas (30/09/2021)",
+          "url": "https://napratica.org.br/curso-decisao-de-carreira-na-pratica"
+        },
+        {
+          "label": "Na Prática: Fundação Estudar lança curso online Processos Seletivos Na Prática, seis módulos e cerca de 8 horas (29/11/2017)",
+          "url": "https://www.napratica.org.br/fundacao-estudar-lanca-curso-online-processos-seletivos-na-pratica/"
+        },
+        {
+          "label": "Na Prática: novo curso online Produtividade Na Prática, quatro módulos e cerca de 8 horas (16/10/2018)",
+          "url": "https://www.napratica.org.br/curso-online-produtividade-na-pratica/"
+        },
+        {
+          "label": "Exame: curso online gratuito da Fundação Estudar sobre autoconhecimento (19/07/2016)",
+          "url": "https://exame.com/carreira/este-curso-online-gratuito-vai-reforcar-seu-autoconhecimento"
+        },
+        {
+          "label": "Na Prática: cursos de carreira da Fundação Estudar (13/11/2017)",
+          "url": "https://napratica.org.br/cursos-de-carreira-fundacao-estudar"
+        }
+      ],
+      "videoUrl": "",
+      "gallery": [],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "1001"
+        },
+        {
+          "tipo": "programas",
+          "id": "1002"
+        },
+        {
+          "tipo": "programas",
+          "id": "1003"
+        },
+        {
+          "tipo": "programas",
+          "id": "1004"
+        }
+      ]
+    }
+  },
+  {
+    "id": "26",
+    "slug": "dnc-imersao-hardwork-power",
+    "title": "Imersão Hardwork Power",
+    "institution": "Escola DNC",
+    "description": "Imersão online de carreira da Escola DNC sobre hard skills, soft skills e preparação para processos seletivos, com mentoria de carreira.",
+    "coverImage": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/instituicoes/dnc-imersao-hardwork-power.webp",
+    "altText": "Material da imersão Hardwork Power Online com os módulos do curso",
+    "category": "outros",
+    "status": "concluido",
+    "content": {
+      "longDescription": "A Escola DNC é uma edtech de São José dos Campos (SP), fundada em 2012, com formações online voltadas a transição e atualização de carreira. A Hardwork Power foi uma imersão curta de carreira da escola, em formato EAD, que Douglas fez no período da sua transição para a tecnologia. O material dele registra cinco módulos, de introdução a preparação final, mais mentoria de carreira depois do treinamento.",
+      "paragraphs": [
+        "A Escola DNC se apresenta como escola de formação complementar para o mercado de trabalho, com cursos online em marketing, dados, tecnologia, produto e gestão de projetos. O método combina aula, treino, prática em projetos e mentoria. Em 2021 a escola recebeu um aporte de R$ 1,1 milhão de investidores-anjo, segundo o Startupi, e em 2024 declarava mais de 20 cursos no portfólio.",
+        "A Hardwork Power Online é uma imersão de carreira, não um curso técnico. Pelo material guardado, a versão online tinha carga de 8 horas, aulas gravadas, exercícios e suporte de consultores para dúvidas. O roteiro passa por cinco módulos: introdução, preparação inicial, hard skills e soft skills, frameworks de soft skills e preparação final.",
+        "O conteúdo central é separar o que se sabe fazer (hard skills, como uma linguagem ou uma ferramenta) de como se trabalha com outras pessoas (soft skills, como comunicação, organização e lidar com pressão), e depois mostrar essas duas camadas com clareza. Os frameworks de soft skills servem para transformar características vagas em exemplos concretos, que podem ir para o currículo, o LinkedIn e a entrevista.",
+        "Os diferenciais destacados no material são a dinâmica do treinamento, o acompanhamento depois dele e a mentoria de carreira, além de uma plataforma online em que alunos e ex-alunos continuam conectados. Em outras palavras, a imersão é o começo de uma preparação, e não o fim.",
+        "Na carreira em tecnologia, esse tipo de imersão ajuda principalmente quem vem de outra área. Um profissional de suporte, atendimento ou vendas costuma ter soft skills fortes e não sabe nomeá-las; um iniciante em programação costuma listar tecnologias sem mostrar o que fez com elas. Organizar as duas coisas é o que separa um currículo genérico de um perfil que chama para entrevista.",
+        "É indicada para quem está em transição, recém-formados e pessoas que vão começar a disputar processos seletivos. No learnTECH, essa preparação aparece no programa 1003 (Processo Seletivo na Prática), que trata de currículo, testes, dinâmicas e entrevistas, e no 1005 (Hack Dev), que leva a mesma lógica para rotina de estudo, trilha técnica e portfólio da primeira vaga. O programa 1001 (Autoconhecimento em Ação) complementa a parte de reconhecer as próprias forças."
+      ],
+      "curriculum": [
+        "Introdução à imersão",
+        "Preparação inicial",
+        "Hard skills e soft skills",
+        "Frameworks de soft skills",
+        "Preparação para processos seletivos",
+        "Mentoria de carreira e pós-treinamento"
+      ],
+      "officialLink": "",
+      "links": [
+        {
+          "label": "Startupi: Escola DNC prevê faturamento de R$ 50 milhões em 2024",
+          "url": "https://startupi.com.br/escola-dnc-edtech-50-milhoes/"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Startupi: Escola DNC, edtech fundada em 2012 em São José dos Campos, cursos online de transição de carreira (26/07/2024)",
+          "url": "https://startupi.com.br/escola-dnc-edtech-50-milhoes/"
+        },
+        {
+          "label": "Startupi: startup de educação recebe aporte de R$ 1,1 milhão (22/06/2021)",
+          "url": "https://startupi.com.br/2021/06/startup-de-educacao-recebe-aporte-de-r-11-milhao/"
+        },
+        {
+          "label": "B2B Stack: Escola DNC, formações online e metodologia aprender, treinar, praticar e mentoria",
+          "url": "https://www.b2bstack.com.br/product/dnc"
+        }
+      ],
+      "videoUrl": "",
+      "gallery": [],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "1002"
+        },
+        {
+          "tipo": "programas",
+          "id": "1003"
+        }
+      ]
+    }
+  },
+  {
+    "id": "27",
+    "slug": "geronimo-theml-alta-performance",
+    "title": "Treinamento de Alta Performance com Geronimo Theml",
+    "institution": "Geronimo Theml",
+    "description": "Treinamento de produtividade e alta performance com metas claras, dia perfeito, folha de produtividade, planejamento por tríade e inteligência emocional.",
+    "coverImage": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/instituicoes/geronimo-theml-alta-performance.webp",
+    "altText": "Folha de produtividade e planilha de planejamento diário do treinamento de alta performance",
+    "category": "outros",
+    "status": "concluido",
+    "content": {
+      "longDescription": "Geronimo Theml é advogado e palestrante, autor de Produtividade para Quem Quer Tempo (Editora Gente, 2016), e criou um método de produtividade que começa pela clareza de objetivos. Entre 2018 e 2019, Douglas seguiu o treinamento de alta performance dele e aplicou as ferramentas à própria rotina: metas, dia perfeito, folha de produtividade, planilha de planejamento por tríade, quiz de inteligência emocional e um memo de prioridades por área da vida.",
+      "paragraphs": [
+        "Antes de trabalhar com produtividade, Geronimo Theml foi professor de direito e advogado da União, chegando a procurador-chefe da AGU no Espírito Santo, segundo a Forbes Brasil. Deixou o cargo, criou a Academia de Produtividade e publicou em 2016 o livro Produtividade para Quem Quer Tempo, que liderou as vendas no país na última semana de abril daquele ano. A tese dele é que estar ocupado não é o mesmo que ser produtivo, e que tudo começa pela clareza do que se quer.",
+        "O primeiro bloco do treinamento trata de metas e de por que elas falham. Os motivos mais comuns: a meta não é específica, mensurável, atingível, relevante e com prazo (o modelo SMART); não fica à vista no dia a dia; não se sabe o que ajuda e o que atrapalha; não se conhece a meta por trás da meta; falta grupo de apoio; e a pessoa abandona tudo quando só fez metade. A resposta é comportamental: fazer metade é melhor que não fazer, comemorar o acerto, aprender com o erro e recomeçar.",
+        "Depois vêm as ferramentas de rotina. O exercício do dia perfeito pede para descrever, passo a passo, como seria um dia ideal, do horário de dormir na véspera ao momento de lazer, e usar isso como referência para montar a rotina real. A folha de produtividade organiza a semana por papéis: o que mantém o equilíbrio, o que aproxima da meta e o que é tarefa necessária, e fecha cada dia com uma avaliação curta. A planilha de planejamento divide o dia em blocos de horário e classifica cada tarefa como importante, urgente ou circunstancial, para mostrar quanto tempo vai para o que de fato importa.",
+        "Completam o treinamento um quiz de inteligência emocional, que mede autoconsciência, autorregulação, automotivação, empatia e habilidades sociais, e o memo, uma lista de prioridades por área da vida (imagem profissional, estudos, carreira, saúde, lazer) revisitada ao longo do semestre. O material de apoio inclui temas como medos, organização financeira por percentuais do orçamento, rotina matinal, meditação, visualização e organização de projetos pessoais com agenda e listas de tarefas.",
+        "Na carreira em tecnologia, o ganho é direto. Quem estuda programação depois do trabalho precisa de metas mensuráveis (terminar um projeto, publicar um artigo, fechar um módulo), de blocos fixos na agenda e de um jeito de perceber quando o dia inteiro foi consumido por urgências. A classificação em importante, urgente e circunstancial também serve para times: ajuda a separar incidente de prioridade e a proteger tempo para aprender.",
+        "O treinamento é para quem sente que trabalha muito e avança pouco, para quem está em transição e precisa conciliar emprego e estudo e para quem quer criar uma rotina sem depender de motivação. No learnTECH, essas ferramentas foram reescritas no programa 1004 (Produtividade, Hábitos e Metas para Quem Estuda e Trabalha com Tecnologia), aplicadas à rotina de estudo e ao portfólio no 1005 (Hack Dev) e conectadas ao autoconhecimento do 1001 e ao plano de ação do 1002."
+      ],
+      "curriculum": [
+        "Por que as metas não são cumpridas e o modelo SMART",
+        "Exercício do dia perfeito",
+        "Folha de produtividade semanal por papéis",
+        "Planejamento diário por blocos: importante, urgente e circunstancial",
+        "Quiz de inteligência emocional em cinco pilares",
+        "Memo de prioridades por área da vida",
+        "Rotina, hábitos, finanças pessoais e organização de projetos"
+      ],
+      "officialLink": "",
+      "links": [
+        {
+          "label": "Forbes Brasil: clareza é o segredo da produtividade",
+          "url": "https://forbes.com.br/carreira/2016/05/clareza-e-o-segredo-da-produtividade-diz-advogado-campeao-das-livrarias/"
+        },
+        {
+          "label": "Skoob: Produtividade para Quem Quer Tempo",
+          "url": "https://www.skoob.com.br/book/579769"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Forbes Brasil: Clareza é o segredo da produtividade, diz advogado campeão das livrarias (16/05/2016)",
+          "url": "https://forbes.com.br/carreira/2016/05/clareza-e-o-segredo-da-produtividade-diz-advogado-campeao-das-livrarias/"
+        },
+        {
+          "label": "Skoob: Produtividade para Quem Quer Tempo, Geronimo Theml (Editora Gente, 2016)",
+          "url": "https://www.skoob.com.br/book/579769"
+        },
+        {
+          "label": "Voitto: resumo de Produtividade para Quem Quer Tempo (folha de produtividade e ciclo semanal)",
+          "url": "https://blog.voitto.com.br/resumo/en/produtividade-para-quem-quer-tempo"
+        }
+      ],
+      "videoUrl": "",
+      "gallery": [],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "1004"
+        },
+        {
+          "tipo": "programas",
+          "id": "1001"
         }
       ]
     }
