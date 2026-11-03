@@ -59,6 +59,20 @@ export const events: BootcampEvent[] = [
           "label": "TabNews: Experiência no processo seletivo e formação da 42 SP",
           "url": "https://www.tabnews.com.br/iaurg/experiencia-no-processo-seletivo-e-formacao-da-42-sp"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "901"
+        },
+        {
+          "tipo": "programas",
+          "id": "4"
+        },
+        {
+          "tipo": "blog",
+          "id": "escolher-formacao-dev"
+        }
       ]
     }
   },
@@ -122,6 +136,20 @@ export const events: BootcampEvent[] = [
           "label": "IT Forum: Rocketseat lança faculdade de tecnologia com pós em IA para devs",
           "url": "https://itforum.com.br/?p=9592600"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "101"
+        },
+        {
+          "tipo": "programas",
+          "id": "104"
+        },
+        {
+          "tipo": "programas",
+          "id": "102"
+        }
       ]
     }
   },
@@ -183,6 +211,28 @@ export const events: BootcampEvent[] = [
         {
           "label": "Alura: carreira Desenvolvimento Back-End Java",
           "url": "https://www.alura.com.br/carreiras/desenvolvimento-backend-java"
+        },
+        {
+          "label": "Money Times: Caelum, como o ensino online em TI se desenvolve a passos largos (05/06/2017)",
+          "url": "https://www.moneytimes.com.br/caelum-como-o-ensino-online-em-ti-se-desenvolve-a-passos-largos/"
+        },
+        {
+          "label": "Bloomberg Línea: Professor cria gigante em edtech no país com aquisição de faculdade (18/08/2022)",
+          "url": "https://www.bloomberglinea.com.br/2022/08/18/aquisicao-de-cientista-da-computacao-cria-um-gigante-no-ensino-da-tecnologia/"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "301"
+        },
+        {
+          "tipo": "programas",
+          "id": "401"
+        },
+        {
+          "tipo": "blog",
+          "id": "escolher-formacao-dev"
         }
       ]
     }
@@ -232,6 +282,20 @@ export const events: BootcampEvent[] = [
         {
           "label": "DIO (artigo da comunidade): conclusão do Santander Bootcamp 2023 – Ciência de Dados com Python",
           "url": "https://www.dio.me/articles/santander-bootcamp-2023-ciencia-de-dados-com-python-pela-dio-ACJTM6"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "304"
+        },
+        {
+          "tipo": "programas",
+          "id": "401"
+        },
+        {
+          "tipo": "blog",
+          "id": "bolsas-universidade-como-ler-edital"
         }
       ]
     }
@@ -292,6 +356,16 @@ export const events: BootcampEvent[] = [
           "label": "freeCodeCamp News: freeCodeCamp's new JavaScript certification is now live (2025)",
           "url": "https://freecodecamp.org/news/freecodecamps-new-javascript-certification-is-now-live"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "4"
+        },
+        {
+          "tipo": "programas",
+          "id": "901"
+        }
       ]
     }
   },
@@ -338,6 +412,20 @@ export const events: BootcampEvent[] = [
           "label": "Baguete: Driven capta R$ 16 milhões (2021)",
           "url": "https://www.baguete.com.br/noticias/driven-capta-r-16-milhoes"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "101"
+        },
+        {
+          "tipo": "programas",
+          "id": "302"
+        },
+        {
+          "tipo": "programas",
+          "id": "401"
+        }
       ]
     }
   },
@@ -380,6 +468,20 @@ export const events: BootcampEvent[] = [
         {
           "label": "Wikipédia: W3Schools",
           "url": "https://en.wikipedia.org/wiki/W3Schools"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "2"
+        },
+        {
+          "tipo": "programas",
+          "id": "3"
+        },
+        {
+          "tipo": "programas",
+          "id": "4"
         }
       ]
     }
@@ -424,6 +526,16 @@ export const events: BootcampEvent[] = [
         {
           "label": "InfoMoney: Faculdade XP, graduação EAD em Investimentos e Mercado Financeiro (2025)",
           "url": "https://www.infomoney.com.br/?p=2981906"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "901"
+        },
+        {
+          "tipo": "blog",
+          "id": "escolher-formacao-dev"
         }
       ]
     }
@@ -476,6 +588,16 @@ export const events: BootcampEvent[] = [
         {
           "label": "DIO: Canais de vídeo-aulas voltados para TI (Curso em Vídeo)",
           "url": "https://www.dio.me/articles/canais-de-video-aulas-voltado-para-tecnologia-da-informacao"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "901"
+        },
+        {
+          "tipo": "programas",
+          "id": "4"
         }
       ]
     }
@@ -619,6 +741,24 @@ export const events: BootcampEvent[] = [
         {
           "label": "IF Sudeste MG: Edital nº 32/2023, cursos técnicos 2024/1",
           "url": "https://www.ifsudestemg.edu.br/editais/reitoria/processo-seletivo/2024-1/cursos-tecnicos/2023-32-edital-dos-cursos-tecnicos-concomitantes-subsequentes-subsequentes-especializacao-tecnica-e-proeja/edital-cursos-tecnicos-multicampi-2024-1.pdf"
+        },
+        {
+          "label": "Acessa.com: IF Sudeste MG oferece 643 vagas para cursos técnicos, graduação e pós em Juiz de Fora (22/09/2026)",
+          "url": "https://www.acessa.com/educacao/2026/09/340482-if-sudeste-mg-oferece-643-vagas-para-cursos-tecnicos-graduacao-e-pos-em-juiz-de-fora.html"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "2"
+        },
+        {
+          "tipo": "programas",
+          "id": "4"
+        },
+        {
+          "tipo": "programas",
+          "id": "901"
         }
       ]
     }
@@ -695,6 +835,24 @@ export const events: BootcampEvent[] = [
           "label": "UFJF Ciência da Computação: Corpo docente noturno",
           "url": "https://www2.ufjf.br/cursocomputacao/noturno/"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "901"
+        },
+        {
+          "tipo": "programas",
+          "id": "401"
+        },
+        {
+          "tipo": "eventos",
+          "id": "smc-2012"
+        },
+        {
+          "tipo": "eventos",
+          "id": "jogos-universitarios-juiz-de-fora"
+        }
       ]
     }
   },
@@ -737,6 +895,20 @@ export const events: BootcampEvent[] = [
           "label": "Tribuna do Sertão: Startup abre inscrições para curso gratuito sobre programação (2022)",
           "url": "https://www.tribunadosertao.com.br/brasil/2022/04/06/430514-startup-abre-inscricoes-para-curso-gratuito-sobre-programacao"
         }
+      ],
+      "relacionados": [
+        {
+          "tipo": "programas",
+          "id": "501"
+        },
+        {
+          "tipo": "programas",
+          "id": "801"
+        },
+        {
+          "tipo": "blog",
+          "id": "deep-tech-do-laboratorio-ao-produto"
+        }
       ]
     }
   },
@@ -776,6 +948,26 @@ export const events: BootcampEvent[] = [
         "Na grade planejada, os níveis avançam em sequência: M1 trabalha lógica, algoritmos e preparação do ambiente; M2 dá as bases de Web e de linguagens estruturadas; M3 entra em frameworks, integração de APIs e banco de dados; M4 trata de arquitetura, performance e segurança; e M5 fecha com projetos reais de ponta a ponta para o portfólio.",
         "As trilhas definem o foco técnico: Frontend concentra-se em interface, interatividade e experiência do usuário, com React, Vue e Tailwind CSS; Backend concentra-se em servidores, lógica de negócio e persistência de dados, com Node.js, PHP com Laravel e Python; e Fullstack reúne as duas pontas. O stack previsto inclui ainda Next.js, Sass, Express, Django, React Native e Expo, bancos MySQL e PostgreSQL, Supabase, Docker, Vercel, Git e GitHub, além do Figma para design de interfaces.",
         "A mentoria é conduzida por quem atua no mercado como CTO, dentro de um hub de tecnologia que facilita networking real entre alunos. Além da formação contínua, a ByteClass organiza um evento de tecnologia com data anunciada e agendada diretamente pelo Discord da comunidade — fique de olho nos canais para não perder a próxima edição."
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "escolher-formacao-dev"
+        },
+        {
+          "tipo": "programas",
+          "id": "901"
+        },
+        {
+          "tipo": "blog",
+          "id": "hack-dev-rotina-e-trilha-para-a-primeira-vaga"
+        }
+      ],
+      "sources": [
+        {
+          "label": "ByteClass: site oficial (byteclass.dev)",
+          "url": "https://byteclass.dev/"
+        }
       ]
     }
   },
@@ -809,6 +1001,26 @@ export const events: BootcampEvent[] = [
         "O formato planejado reúne palestras com convidados do ecossistema local, uma rodada de apresentação de apoiadores e parceiros e tempo dedicado ao networking entre participantes. As inscrições estão previstas como gratuitas e com vagas limitadas. O local previsto é a BQ Spazio Coworking, no Shopping Spazio Design (Ladeira Alexandre Leonel, 113, São Mateus, Juiz de Fora - MG).",
         "A primeira edição ainda está em fase de organização. Data, palestrantes, temas e canais de inscrição serão publicados quando forem confirmados, e esta página será atualizada com essas informações.",
         "Encontros curtos e locais como este funcionam como porta de entrada para o ecossistema de tecnologia de uma cidade: permitem conhecer profissionais e empresas da região, entender que problemas os negócios tradicionais enfrentam e encontrar oportunidades de projeto ou parceria que dificilmente surgem em eventos online."
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "eventos-de-comunidade-tech"
+        },
+        {
+          "tipo": "eventos",
+          "id": "capivara-tech-juiz-de-fora"
+        },
+        {
+          "tipo": "eventos",
+          "id": "gdg-jf"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Sympla: perfil do produtor BQ Escritórios (unidade Juiz de Fora no Shopping Spazio Design)",
+          "url": "https://www.sympla.com.br/produtor/bqescritorios"
+        }
       ]
     }
   },
@@ -884,6 +1096,20 @@ export const events: BootcampEvent[] = [
         {
           "label": "Estado de Minas: Minas Summit espera 11 mil participantes na maior edição do evento em BH (jun/2026)",
           "url": "https://www.em.com.br/economia/economia-digital/2026/06/7438814-minas-summit-espera-11-mil-participantes-na-maior-edicao-do-evento-em-bh.html"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "blog",
+          "id": "editais-de-fomento-a-inovacao-como-ler-e-onde-encontrar"
+        },
+        {
+          "tipo": "blog",
+          "id": "deep-tech-do-laboratorio-ao-produto"
+        },
+        {
+          "tipo": "eventos",
+          "id": "startup-way-challenge-2023"
         }
       ]
     }
@@ -1083,6 +1309,16 @@ export const events: BootcampEvent[] = [
         {
           "tipo": "eventos",
           "id": "gdg-jf"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Sympla: CodeXperience Zona da Mata 2024 (9/11/2024, UniAcademia)",
+          "url": "https://www.sympla.com.br/evento/codexperience-zona-da-mata-2024/2600648"
+        },
+        {
+          "label": "Repórter Kadu Fontana: Felipe Rodrigues representa SJN no maior evento de profissionais T.I. da Zona da Mata (11/08/2023)",
+          "url": "https://reporterkadufontana.jor.br/2023/08/11/felipe-rodrigues-representa-sjn-no-maior-evento-de-profissionais-t-i-da-zona-da-mata/"
         }
       ]
     }
@@ -1392,7 +1628,7 @@ export const events: BootcampEvent[] = [
           "id": "hackathon-inovacao-social-jf-9",
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/9.webp",
           "type": "image",
-          "alt": "Crachá do Festival de Inovação Social"
+          "alt": "Crachá do I Festival de Inovação Social (novembro de 2022), evento que antecedeu o hackathon"
         },
         {
           "id": "hackathon-inovacao-social-jf-10",
@@ -1521,7 +1757,7 @@ export const events: BootcampEvent[] = [
         "Na véspera e durante a maratona, o trabalho da equipe de apoio foi de logística e acolhimento: montar os kits e separar camisetas e cordões, fazer as compras de lanches e café para atravessar a madrugada (a lista anotada em post-it incluía macarrão instantâneo, pipoca, energético, cafeteira e cápsulas), organizar o espaço e conduzir a abertura, com Douglas chamando os participantes no megafone. Uma ideia simples virou exemplo de inovação social dentro do próprio evento: o café expresso era vendido por R$ 3, com pagamento numa caixinha ou por Pix, e o lucro foi destinado a uma ONG da cidade.",
         "Para a equipe de apoio, foram cerca de 30 horas de atividades seguidas, da recepção à foto oficial e ao anúncio das equipes premiadas. Depois do encerramento, as fotos foram reunidas num álbum compartilhado com os participantes, e o Sebrae Minas divulgou o evento nas suas redes. A mensagem final no grupo dos participantes resumiu o espírito: ganhou a cidade e ganhou o ecossistema de inovação de Juiz de Fora.",
         "Organizar um hackathon ensina habilidades que nenhum curso técnico cobre: planejar com meses de antecedência, trabalhar com voluntários, negociar com fornecedores (crachá, cordão, camisetas), cuidar de orçamento e compras, comunicar regras de forma clara e manter a energia de todo mundo durante um fim de semana inteiro. Para quem está entrando em tecnologia, ser voluntário na organização de um evento de comunidade é uma das formas mais rápidas de conhecer pessoas do ecossistema e de mostrar responsabilidade na prática. Douglas levou essa experiência para os eventos que organizou depois, como o CodeXperience e o DevOpsDays Juiz de Fora.",
-        "Hackathons de inovação social costumam ser abertos a qualquer pessoa interessada, de programadores a profissionais de saúde, educação, design e negócios, porque resolver um problema público exige conhecer o contexto tanto quanto a tecnologia. A participação geralmente é gratuita e as equipes podem ser formadas antes ou durante o evento.",
+        "Hackathons de inovação social costumam ser abertos a qualquer pessoa interessada, de programadores a profissionais de saúde, educação, design e negócios, porque resolver um problema público exige conhecer o contexto tanto quanto a tecnologia. Em muitos hackathons a participação é gratuita; neste, a inscrição era feita pelo site do evento, com desconto para quem levasse amigos, e as equipes podiam ser formadas antes ou durante o evento.",
         "Para a carreira, a experiência ensina a trabalhar sob prazo curto, priorizar o essencial de um protótipo e explicar uma solução para quem não é técnico. Quando o desafio vem do poder público, há o ganho extra de entender como funcionam escolas e unidades de saúde, e de conhecer gestores e empreendedores interessados em levar as ideias adiante."
       ],
       "sources": [
@@ -1702,6 +1938,16 @@ export const events: BootcampEvent[] = [
         {
           "label": "SBC: Escolas Regionais",
           "url": "https://www.sbc.org.br/escolas-regionais"
+        }
+      ],
+      "relacionados": [
+        {
+          "tipo": "eventos",
+          "id": "ufjf-dcc-cc-noturno"
+        },
+        {
+          "tipo": "programas",
+          "id": "901"
         }
       ]
     }
@@ -2179,7 +2425,7 @@ export const events: BootcampEvent[] = [
     "content": {
       "longDescription": "Geronimo Theml é advogado e palestrante, autor de Produtividade para Quem Quer Tempo (Editora Gente, 2016), e criou um método de produtividade que começa pela clareza de objetivos. Entre 2018 e 2019, Douglas seguiu o treinamento de alta performance dele e aplicou as ferramentas à própria rotina: metas, dia perfeito, folha de produtividade, planilha de planejamento por tríade, quiz de inteligência emocional e um memo de prioridades por área da vida.",
       "paragraphs": [
-        "Antes de trabalhar com produtividade, Geronimo Theml foi professor de direito e advogado da União, chegando a procurador-chefe da AGU no Espírito Santo, segundo a Forbes Brasil. Deixou o cargo, criou a Academia de Produtividade e publicou em 2016 o livro Produtividade para Quem Quer Tempo, que liderou as vendas no país na última semana de abril daquele ano. A tese dele é que estar ocupado não é o mesmo que ser produtivo, e que tudo começa pela clareza do que se quer.",
+        "Antes de trabalhar com produtividade, Geronimo Theml foi professor de direito e advogado da União, chegando a procurador-chefe da AGU no Espírito Santo, segundo a Forbes Brasil. Deixou o cargo, criou a Academia de Produtividade e publicou em 2016 o livro Produtividade para Quem Quer Tempo, que liderou as vendas em pré-venda na última semana de abril de 2016, segundo a Forbes Brasil. A tese dele é que estar ocupado não é o mesmo que ser produtivo, e que tudo começa pela clareza do que se quer.",
         "O primeiro bloco do treinamento trata de metas e de por que elas falham. Os motivos mais comuns: a meta não é específica, mensurável, atingível, relevante e com prazo (o modelo SMART); não fica à vista no dia a dia; não se sabe o que ajuda e o que atrapalha; não se conhece a meta por trás da meta; falta grupo de apoio; e a pessoa abandona tudo quando só fez metade. A resposta é comportamental: fazer metade é melhor que não fazer, comemorar o acerto, aprender com o erro e recomeçar.",
         "Depois vêm as ferramentas de rotina. O exercício do dia perfeito pede para descrever, passo a passo, como seria um dia ideal, do horário de dormir na véspera ao momento de lazer, e usar isso como referência para montar a rotina real. A folha de produtividade organiza a semana por papéis: o que mantém o equilíbrio, o que aproxima da meta e o que é tarefa necessária, e fecha cada dia com uma avaliação curta. A planilha de planejamento divide o dia em blocos de horário e classifica cada tarefa como importante, urgente ou circunstancial, para mostrar quanto tempo vai para o que de fato importa.",
         "Completam o treinamento um quiz de inteligência emocional, que mede autoconsciência, autorregulação, automotivação, empatia e habilidades sociais, e o memo, uma lista de prioridades por área da vida (imagem profissional, estudos, carreira, saúde, lazer) revisitada ao longo do semestre. O material de apoio inclui temas como medos, organização financeira por percentuais do orçamento, rotina matinal, meditação, visualização e organização de projetos pessoais com agenda e listas de tarefas.",
