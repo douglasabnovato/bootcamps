@@ -32,5 +32,8 @@ jobs:
       - name: Lint (npm run lint)
         run: npm run lint
 
+      - name: Testes (npm test = vitest run)
+        run: npm test
+
       - name: Build com checagem de tipos (npm run build = tsc -b && vite build)
         run: npm run build
