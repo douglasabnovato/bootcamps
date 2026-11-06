@@ -17,6 +17,14 @@
 
 ---
 
+## 📍 Estado do projeto (06/11/2026)
+
+- **Onde está:** Em produção na Vercel. CI verde com lint, 25 testes e build tipado, sem vulnerabilidades.
+- **O que fizemos na rodada de MVP (03 a 05/11):** Filtro por status e categoria na URL, Voltar seguro, relacionados sem a API, logo de 205 KB para 4 KB, galeria acessível e movimento reduzido.
+- **O que queremos fazer:** [#74](https://github.com/douglasabnovato/bootcamps/issues/74), [#75](https://github.com/douglasabnovato/bootcamps/issues/75), [#70](https://github.com/douglasabnovato/bootcamps/issues/70), [#73](https://github.com/douglasabnovato/bootcamps/issues/73), [#71](https://github.com/douglasabnovato/bootcamps/issues/71), [#72](https://github.com/douglasabnovato/bootcamps/issues/72) (Prettier, contraste, busca, Lighthouse, pré-renderização e categorias). Todas com o label `proximos-passos` e critérios de entrega.
+
+A linha do tempo completa, os números e a ordem sugerida estão em [`docs/ESTADO-DO-PROJETO.md`](docs/ESTADO-DO-PROJETO.md).
+
 ## 🧭 Sobre
 
 O Bootcamps registra a jornada técnica em duas frentes, e é essa divisão que
@@ -298,54 +306,30 @@ MVP de 03/11/2026: `docs/claudeia/06-mvp-2026-11-03.md`.
 
 ### Em aberto
 
-| Prioridade | Item |
+O que falta virou issue com o label `proximos-passos` e critérios de entrega, na ordem sugerida. O detalhe está em [`docs/ESTADO-DO-PROJETO.md`](docs/ESTADO-DO-PROJETO.md).
+
+| Issue | Item |
 | --- | --- |
-| 🟡 | JS inicial em 389 KB (130 KB gzip) + chunk compartilhado de 174 KB (50 KB gzip) — Framer Motion domina |
-| 🟡 | Galeria em 6 de 27 eventos e vídeo em 4 |
-| 🟡 | SPA sem pré-renderização: o robô que não executa JS só vê o `index.html` (o 404 responde 200, com `noindex`) |
-| 🟡 | Tipografia e espaçamento fixos em alguns componentes (ver abaixo) |
-| 🟡 | 27 arquivos fora do Prettier (`npm run format:check`); o passo não está na CI |
-| 🟢 | 14 dos 27 eventos em `outros` e 11 em `fullstack` — as categorias viraram balde |
+| [#74](https://github.com/douglasabnovato/bootcamps/issues/74) | Prettier em todo o código e `format:check` na CI (27 arquivos fora do padrão) |
+| [#75](https://github.com/douglasabnovato/bootcamps/issues/75) | Contraste de cor: zerar `color-contrast` do axe |
+| [#70](https://github.com/douglasabnovato/bootcamps/issues/70) | Busca por título e instituição na listagem |
+| [#73](https://github.com/douglasabnovato/bootcamps/issues/73) | Lighthouse mobile ≥ 90 e Framer Motion fora do caminho crítico |
+| [#71](https://github.com/douglasabnovato/bootcamps/issues/71) | Pré-renderização das rotas e SEO por evento (canonical e Open Graph do detalhe) |
+| [#72](https://github.com/douglasabnovato/bootcamps/issues/72) | Revisar categorias (14 em `outros`, 11 em `fullstack`) e criar o estado "organizado" |
 
----
+### Responsividade fina (sem issue ainda)
 
-## 🗺️ Próximos passos
+Sobra da auditoria de julho/2026, já descontando o que foi corrigido:
 
-### Fase 1 — Peso
-
-- [x] Páginas próprias de BQ e ByteClass (`public/eventos-vivos`, 11,2 MB de PNG) removidas em 28/10/2026; o conteúdo aproveitável foi para os eventos na API
-- [x] JPGs de `assets/instituicoes/` removidos: a cópia de reserva usa as imagens WebP da API
-- [ ] Avaliar `LazyMotion` do Framer Motion para cortar o bundle inicial
-
-### Fase 2 — Conteúdo
-
-- [ ] Preencher `gallery` nos eventos presenciais, que é onde a foto tem valor
-- [ ] Revisar a categoria dos 14 eventos em `outros` e dos 11 em `fullstack`
-- [ ] Definir um terceiro estado para eventos que **você organiza** — hoje o BQ
-      Agenda Tech é `desejado`, o que descreve mal um evento do qual você é
-      coorganizador
-
-### Fase 3 — Responsividade fina
-
-Os itens abaixo sobraram da auditoria de responsividade de julho/2026, já
-descontando o que foi corrigido e o que era falso positivo:
-
-- [ ] `EventCard`: `text-xl` e `p-6` sem escala — usar `text-lg md:text-xl` e
-      `p-4 md:p-6`
-- [ ] `Home`: `gap-8` fixo na grade — `gap-4 md:gap-8`
-- [ ] Testar em 320px (iPhone SE); o que foi validado até agora foi 390px
-- [ ] Conferir alvos de toque com 48px mínimo
+- [ ] `EventCard`: `text-lg md:text-xl` e `p-4 md:p-6` em vez de valores fixos
+- [ ] `Home`: `gap-4 md:gap-8` na grade
+- [ ] Testar em 320px (iPhone SE); o validado até agora foi 390px
+- [ ] Preencher `gallery` nos eventos presenciais (hoje 6 de 27 têm galeria)
 
 Três apontamentos daquela auditoria **não procediam** e ficam registrados para
 não voltarem: a meta tag `viewport` nunca esteve ausente, o breakpoint `sm:`
 já era usado no `MainLayout`, e não existe menu de navegação para receber um
-botão hamburger. Os outros dois — `-mt-32` no mobile e `text-8xl` em tela
-pequena — foram resolvidos na reconstrução da página de detalhe.
-
-### Fase 4 — Descoberta
-
-- [ ] Pré-renderizar as rotas para que o Open Graph do `Detail` seja visível
-- [ ] `canonical` e `og:url` com o domínio de produção
+botão hamburger.
 
 ---
 
