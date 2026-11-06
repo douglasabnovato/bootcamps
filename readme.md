@@ -5,6 +5,8 @@
   27 registros · 24 concluídos · 3 metas de estudo
 </p>
 
+> **Vai evoluir o projeto ou trouxe arquivos novos?** Comece por [`docs/COMO-EVOLUIR.md`](docs/COMO-EVOLUIR.md): onde fica cada coisa, o que é gerado pela API, comandos e a checklist de estabilidade.
+
 <p align="center">
   <img alt="React" src="https://img.shields.io/badge/React-19-0a0a0b?style=flat-square&logo=react&logoColor=00C853" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-0a0a0b?style=flat-square&logo=typescript&logoColor=00C853" />
