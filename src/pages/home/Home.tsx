@@ -1,15 +1,31 @@
-/* Home.tsx — listagem dos eventos, separada entre concluídos e metas de estudo. */
+/* Home.tsx — listagem dos eventos, separada entre concluídos e metas de estudo, com filtro na URL. */
 
+import { useSearchParams } from 'react-router-dom';
 import { useEvents } from '../../entities/event/model/useEvents';
 import { EventCard } from '../../entities/event/ui/EventCard';
 import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
+import {
+  EventFilter,
+  FILTRO_VAZIO,
+  filtrarEventos,
+  filtroAtivo,
+  filtroParaParametros,
+  lerFiltro,
+  type FiltroEventos,
+} from '../../features/event-filter';
 
 export const Home = () => {
   const { events, isLoading, error } = useEvents();
   useDocumentTitle('Eventos');
+  const [parametros, setParametros] = useSearchParams();
+  const filtro = lerFiltro(parametros);
+
+  /* replace: trocar de filtro não empilha histórico; o Voltar do detalhe cai na Home já filtrada. */
+  const aplicarFiltro = (novo: FiltroEventos) => setParametros(filtroParaParametros(novo), { replace: true });
 
   const concluidos = events.filter((evento) => evento.status === 'concluido');
   const metas = events.filter((evento) => evento.status === 'desejado');
+  const visiveis = filtrarEventos(events, filtro);
 
   if (isLoading) {
     return (
@@ -46,9 +62,40 @@ export const Home = () => {
         </p>
       </header>
 
+      <EventFilter eventos={events} filtro={filtro} aoMudar={aplicarFiltro} />
+
+      <p className="sr-only" aria-live="polite">
+        {visiveis.length === 1 ? '1 evento encontrado' : `${visiveis.length} eventos encontrados`}
+      </p>
+
+      {visiveis.length === 0 && (
+        <div className="flex flex-col items-center justify-center gap-4 py-16 text-center border border-dashed border-zinc-800 rounded-3xl">
+          <p className="text-zinc-300 text-lg">Nenhum evento com esses filtros.</p>
+          <button
+            type="button"
+            onClick={() => aplicarFiltro(FILTRO_VAZIO)}
+            className="px-6 py-3 rounded-xl border border-zinc-700 text-zinc-200 hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+          >
+            Limpar filtros
+          </button>
+        </div>
+      )}
+
+      {visiveis.length > 0 && filtroAtivo(filtro) && (
+        <div className="mb-8 -mt-6">
+          <button
+            type="button"
+            onClick={() => aplicarFiltro(FILTRO_VAZIO)}
+            className="text-sm text-zinc-400 underline underline-offset-4 hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary rounded"
+          >
+            Limpar filtros
+          </button>
+        </div>
+      )}
+
       {[
-        { titulo: 'Concluídos', lista: concluidos },
-        { titulo: 'Metas de estudo', lista: metas },
+        { titulo: 'Concluídos', lista: visiveis.filter((evento) => evento.status === 'concluido') },
+        { titulo: 'Metas de estudo', lista: visiveis.filter((evento) => evento.status === 'desejado') },
       ]
         .filter((grupo) => grupo.lista.length > 0)
         .map((grupo) => (

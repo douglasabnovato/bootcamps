@@ -16,6 +16,15 @@ export type EventCategory =
   | "outros";
 export type EventStatus = "concluido" | "desejado";
 
+/* Rótulos em português para os valores crus do schema (o card mostrava "fullstack", "outros"). */
+export const ROTULO_CATEGORIA: Record<EventCategory, string> = {
+  frontend: "Front-end",
+  backend: "Back-end",
+  fullstack: "Full stack",
+  mobile: "Mobile",
+  outros: "Outros",
+};
+
 export interface EventLink {
   label: string;
   url: string;

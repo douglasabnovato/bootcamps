@@ -38,5 +38,10 @@ export const eventApi = {
       if (API_URL) console.warn('[learntech-content] usando evento local:', (erro as Error).message);
       return events.find((item) => item.slug === slug);
     }
-  }
+  },
+
+  /**
+   * Título de um evento pela cópia local, sem rede: rótulo dos relacionados quando a API não manda o título.
+   */
+  tituloLocal: (slug: string): string | undefined => events.find((item) => item.slug === slug)?.title,
 };

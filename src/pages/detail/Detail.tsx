@@ -1,10 +1,13 @@
 /* Detail.tsx — página do evento: capa, mídia, edições, ementa e chamada final. */
 
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 import { useEventBySlug } from '../../entities/event/model/useEventBySlug';
+import { eventApi } from '../../entities/event/api/eventApi';
+import { ROTULO_CATEGORIA } from '../../entities/event/model/types';
+import { resolverRelacionados } from '../../shared/config/ecossistema';
 import { Badge } from '../../entities/event/ui/badge/Badge';
 import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
 
@@ -19,13 +22,22 @@ import { CTAButton } from '../../shared/ui/ctaButton/CTAButton';
 export const Detail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
   const { event, loading } = useEventBySlug(slug);
-  useDocumentTitle(event ? event.title : 'Carregando');
+  useDocumentTitle(event ? event.title : loading ? 'Carregando' : 'Página não encontrada');
 
   if (loading) return <DetailSkeleton />;
   if (!event) return <NotFound />;
 
   const concluido = event.status === 'concluido';
+
+  /* Entrada direta (link compartilhado, aba nova): key "default" e nada no histórico do app; vai para a Home.
+     Vindo da Home, volta uma posição e recupera os filtros que estão na URL dela. */
+  const relacionados = resolverRelacionados(event.content.relacionados, (tipo, id) =>
+    tipo === 'eventos' ? eventApi.tituloLocal(id) : undefined,
+  );
+
+  const voltar = () => (location.key === 'default' ? navigate('/') : navigate(-1));
 
   return (
     <>
@@ -52,13 +64,18 @@ export const Detail = () => {
               layoutId={`image-${event.id}`}
               src={event.coverImage}
               alt={event.altText}
+              width={1280}
+              height={720}
+              decoding="async"
+              fetchPriority="high"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/10" />
 
             <button
-              onClick={() => navigate(-1)}
-              aria-label="Voltar para a listagem"
+              onClick={voltar}
+              type="button"
+              aria-label="Voltar para a listagem de eventos"
               className="absolute top-5 left-5 px-4 py-2.5 bg-black/50 backdrop-blur-xl rounded-full text-sm text-white border border-white/10 hover:bg-brand-primary hover:text-zinc-950 hover:border-brand-primary transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-950"
             >
               <span className="group-hover:-translate-x-1 inline-block transition-transform">←</span> Voltar
@@ -66,7 +83,7 @@ export const Detail = () => {
 
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <Badge>{event.category}</Badge>
+                <Badge>{ROTULO_CATEGORIA[event.category]}</Badge>
                 <span
                   className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.15em] border ${
                     concluido
@@ -151,7 +168,7 @@ export const Detail = () => {
                       <span className="font-mono text-xl font-black text-white">{quando}</span>
                       {rotulo && <span className="text-sm font-semibold text-zinc-300">{rotulo}</span>}
                       <span
-                        className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider border ${
+                        className={`px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider border ${
                           realizada
                             ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                             : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
@@ -160,7 +177,7 @@ export const Detail = () => {
                         {realizada ? 'Realizada' : 'Anunciada'}
                       </span>
                       {edicao.participacao === 'presente' && (
-                        <span className="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider border bg-sky-500/10 text-sky-400 border-sky-500/20">
+                        <span className="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider border bg-sky-500/10 text-sky-400 border-sky-500/20">
                           Eu estive lá
                         </span>
                       )}
@@ -176,7 +193,7 @@ export const Detail = () => {
                       <ul className="mt-4 space-y-2">
                         {edicao.programacao.map((atividade) => (
                           <li key={atividade.titulo} className="text-sm text-zinc-400">
-                            <span className="font-bold uppercase text-[10px] tracking-wider text-zinc-500 mr-2">{atividade.tipo}</span>
+                            <span className="font-bold uppercase text-xs tracking-wider text-zinc-400 mr-2">{atividade.tipo}</span>
                             <span className="text-zinc-300">{atividade.titulo}</span>
                             {atividade.descricao && <span className="block text-zinc-500 mt-0.5">{atividade.descricao}</span>}
                           </li>
@@ -282,27 +299,36 @@ export const Detail = () => {
           </div>
         </section>
 
-        {event.content.relacionados && event.content.relacionados.some((r) => r.url) && (
+        {relacionados.length > 0 && (
           <section aria-labelledby="relacionados-title" className="mt-16 space-y-4">
             <h2 id="relacionados-title" className="text-lg font-semibold text-zinc-300">
               Veja também no ecossistema
             </h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {event.content.relacionados
-                .filter((r) => r.url)
-                .map((r) => (
+              {relacionados.map((r) => {
+                const classe =
+                  'block p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary';
+                const conteudo = (
+                  <>
+                    <span className="block text-xs font-bold uppercase tracking-wider text-zinc-400">{r.projeto}</span>
+                    <span className="text-zinc-200">{r.titulo}</span>
+                  </>
+                );
+                return (
                   <li key={`${r.tipo}-${r.id}`}>
-                    <a
-                      href={r.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors"
-                    >
-                      <span className="block text-[10px] font-bold uppercase tracking-wider text-zinc-500">{r.projeto}</span>
-                      <span className="text-zinc-200">{r.titulo ?? r.id}</span>
-                    </a>
+                    {r.caminhoInterno ? (
+                      <Link to={r.caminhoInterno} className={classe}>
+                        {conteudo}
+                      </Link>
+                    ) : (
+                      <a href={r.url} target="_blank" rel="noopener noreferrer" className={classe}>
+                        {conteudo}
+                        <span className="sr-only"> (abre em nova aba)</span>
+                      </a>
+                    )}
                   </li>
-                ))}
+                );
+              })}
             </ul>
           </section>
         )}

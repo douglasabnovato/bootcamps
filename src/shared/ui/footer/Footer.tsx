@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import LogoLTECH from './../../../assets/logo-icon.png';
+import LogoLTECH from './../../../assets/logo-icon.webp';
 import { Github, Linkedin, Instagram } from 'lucide-react';
 
 export const Footer = () => {
@@ -13,10 +13,13 @@ export const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
 
                     <div className="space-y-4">
-                        <Link to="/" className="group flex items-center gap-3">
+                        <Link to="/" aria-label="LearnTECH, voltar ao início" className="group flex items-center gap-3">
                             <img
                                 src={LogoLTECH}
-                                alt="Logo LearnTECH"
+                                alt=""
+                                width={40}
+                                height={40}
+                                decoding="async"
                                 className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
                             />
                             <span className="text-2xl font-black tracking-tighter transition-transform group-hover:scale-105">
@@ -31,7 +34,7 @@ export const Footer = () => {
 
                     {/* Direita: Redes Sociais */}
                     <div className="flex flex-col items-start md:items-end gap-4">
-                        <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Connect with us</span>
+                        <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Redes</span>
                         <div className="flex items-center gap-5">
                             <SocialLink
                                 href="https://github.com/douglasabnovato"
@@ -57,10 +60,10 @@ export const Footer = () => {
 
                 {/* Créditos Finais */}
                 <div className="mt-16 pt-8 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-zinc-600 text-xs font-mono">
+                    <p className="text-zinc-500 text-xs font-mono">
                         © {currentYear} learnTECH — Douglas A. B. Novato
                     </p>
-                    <div className="text-zinc-600 text-[10px] uppercase tracking-tighter">
+                    <div className="text-zinc-500 text-xs uppercase tracking-tighter">
                         Feito com <span className="text-brand-primary">React + TypeScript + Vite</span>
                     </div>
                 </div>
