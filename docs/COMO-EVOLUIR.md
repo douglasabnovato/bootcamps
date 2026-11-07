@@ -48,5 +48,6 @@ Guia curto para mudar o site com segurança. Os eventos e as formações **não 
 ## 7. Documentos
 - `readme.md`: visão geral. `docs/README.md`: engenharia.
 - `docs/claudeia/`: histórico datado, com o diagnóstico de MVP e o relatório de 03/11/2026.
+- `CLAUDE.md`: instruções para o Claude. Contrato do conteúdo deste site: `../learntech-content/docs/contratos/bootcamps.md`.
 - `docs/ESTADO-DO-PROJETO.md`: o que fizemos, como está hoje e o que queremos fazer, com as issues em ordem.
 - Próximos passos: issues com a label `proximos-passos`.
