@@ -1665,6 +1665,42 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/29.webp",
           "type": "image",
           "alt": "Plateia acompanhando os pitches no auditório"
+        },
+        {
+          "id": "fator-s-challenge-30",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/30.webp",
+          "type": "image",
+          "alt": "Abertura do Fator S Challenge no auditório"
+        },
+        {
+          "id": "fator-s-challenge-31",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/31.webp",
+          "type": "image",
+          "alt": "Equipe do autor reunida durante o desafio"
+        },
+        {
+          "id": "fator-s-challenge-32",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/32.webp",
+          "type": "image",
+          "alt": "Equipe apresentando o pitch no palco"
+        },
+        {
+          "id": "fator-s-challenge-33",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/33.webp",
+          "type": "image",
+          "alt": "Plateia acompanhando as apresentações finais"
+        },
+        {
+          "id": "fator-s-challenge-34",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/34.webp",
+          "type": "image",
+          "alt": "Canvas da equipe: atividades e recursos-chave em post-its"
+        },
+        {
+          "id": "fator-s-challenge-35",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/35.webp",
+          "type": "image",
+          "alt": "Canvas da equipe: segmento de clientes em post-its"
         }
       ],
       "curriculum": [
@@ -1907,6 +1943,42 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/27.webp",
           "type": "image",
           "alt": "Anúncio das equipes premiadas no encerramento"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-28",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/28.webp",
+          "type": "image",
+          "alt": "Foto oficial com todos os participantes do hackathon"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-29",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/29.webp",
+          "type": "image",
+          "alt": "Participantes reunidos no auditório no encerramento"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-30",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/30.webp",
+          "type": "image",
+          "alt": "Organizadores e voluntários diante do mapa-múndi do espaço"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-31",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/31.webp",
+          "type": "image",
+          "alt": "Vista panorâmica do salão com as equipes trabalhando"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-32",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/32.webp",
+          "type": "image",
+          "alt": "Grupo de participantes na chegada, com os brindes do evento"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-33",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/33.webp",
+          "type": "image",
+          "alt": "Arte de divulgação com a nova data do hackathon, 21 e 22 de janeiro"
         }
       ],
       "curriculum": [
