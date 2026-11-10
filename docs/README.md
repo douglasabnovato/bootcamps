@@ -5,7 +5,7 @@ Site de eventos, bootcamps e formações (os que o autor fez e os que quer fazer
 ## Stack
 - React 19, Vite 7, React Router 7, TypeScript 5.9 e Tailwind CSS 4 (PostCSS).
 - Bibliotecas: `framer-motion`, `react-helmet-async` (metadados por página) e `@vercel/speed-insights`.
-- Qualidade: ESLint com `typescript-eslint`; checagem de tipos no build; testes de unidade com Vitest (ambiente `node`, sem jsdom): contrato da cópia, fallback da API, filtro da Home (`filtrarEventos`) e resolvedor de relacionados. 25 testes em 4 arquivos em 03/11/2026.
+- Qualidade: ESLint com `typescript-eslint`; checagem de tipos no build; testes de unidade com Vitest (ambiente `node`, sem jsdom): contrato da cópia, fallback da API, filtro e busca da Home (`filtrarEventos`, `buscarEventos`) e resolvedor de relacionados. 34 testes em 4 arquivos em 10/11/2026.
 
 ## Como rodar do zero
 ```bash
@@ -35,7 +35,7 @@ Seções, na ordem:
 A galeria (`src/shared/ui/eventGallery/EventGallery.tsx`) amplia a foto num `<dialog>` nativo (←/→, Esc, contador "3 de 29", foco devolvido à miniatura). O botão Voltar vai para `/` quando a página foi aberta direto (`location.key === "default"`) e volta no histórico quando veio da Home, preservando o filtro.
 
 ## Home (`src/pages/home/Home.tsx`)
-Filtro por status e categoria em `src/features/event-filter/`, lido e gravado na URL (`?status=concluido|desejado&categoria=...`, com `replace` para não empilhar histórico). Valor desconhecido na URL vira "todos". Sem resultado, aparece "Limpar filtros".
+Busca, filtro por status e filtro por categoria em `src/features/event-filter/`, lidos e gravados na URL (`?q=...&status=concluido|desejado&categoria=...`, com `replace` para não empilhar histórico). Valor desconhecido na URL vira "todos". A busca olha título e instituição, sem diferença de acento e caixa, e exige todas as palavras (`buscarEventos`, limite de 100 caracteres). As contagens dos botões respeitam a busca. Sem resultado, aparece "Limpar filtros", que limpa também a busca.
 
 ## Cores e contraste
 Fundo da página: `zinc-950` (#09090b). Mínimo WCAG AA: 4,5:1 em texto normal e 3:1 em texto grande.

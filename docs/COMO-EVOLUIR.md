@@ -11,7 +11,7 @@ Guia curto para mudar o site com segurança. Os eventos e as formações **não 
 |---|---|
 | `src/app/` | Raiz da aplicação e rotas |
 | `src/pages/` | Home, Detail (`/event/:slug`) e NotFound |
-| `src/features/event-filter/` | Filtro por status e categoria (função pura `filtrarEventos`, com teste, e o componente) |
+| `src/features/event-filter/` | Busca e filtro por status e categoria (funções puras `filtrarEventos` e `buscarEventos`, com teste, e o componente) |
 | `src/entities/event/model/types.ts` | Tipo `BootcampEvent`. Precisa bater com o schema da API (`learntech-content/src/schemas/bootcamps.ts`) |
 | `src/entities/event/api/eventApi.ts` | Busca na API, com a reserva |
 | `src/entities/event/api/events.data.ts` | **Gerado** pela API (`npm run copias` em `learntech-content`). Não edite à mão |
@@ -33,8 +33,9 @@ Guia curto para mudar o site com segurança. Os eventos e as formações **não 
 | Comando | Para quê |
 |---|---|
 | `npm run dev` | Servidor local (sem `VITE_API_URL`, testa a reserva) |
-| `npm test` | Vitest (25 testes em 05/11/2026) |
+| `npm test` | Vitest (34 testes em 10/11/2026) |
 | `npx eslint .` | Lint (obrigatório na CI) |
+| `npm run format:check` | Prettier em `src/` (obrigatório na CI desde 10/11/2026) |
 | `npm run build` | `tsc -b` + build |
 | `npm audit --omit=dev` | 0 vulnerabilidades em produção em 05/11/2026 |
 
