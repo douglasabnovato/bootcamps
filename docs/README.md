@@ -37,6 +37,18 @@ A galeria (`src/shared/ui/eventGallery/EventGallery.tsx`) amplia a foto num `<di
 ## Home (`src/pages/home/Home.tsx`)
 Filtro por status e categoria em `src/features/event-filter/`, lido e gravado na URL (`?status=concluido|desejado&categoria=...`, com `replace` para não empilhar histórico). Valor desconhecido na URL vira "todos". Sem resultado, aparece "Limpar filtros".
 
+## Cores e contraste
+Fundo da página: `zinc-950` (#09090b). Mínimo WCAG AA: 4,5:1 em texto normal e 3:1 em texto grande.
+
+| Uso | Cor | Contraste sobre zinc-950 |
+|---|---|---|
+| Marca (destaques, links, badge principal) | `brand-primary` #00c853 | sem mudança |
+| Texto secundário (contadores, rodapé, local e horário das edições, textos da CTA, títulos pequenos do detalhe) | `zinc-400` #9f9fa9 | 7,59:1 |
+| Antes (10/11/2026, trocado) | `zinc-500` #71717b | 4,12:1, reprovado pelo axe |
+
+Regra: texto sobre fundo escuro não usa `zinc-500` ou mais escuro. O `zinc-500` fica só em bordas e detalhes decorativos.
+Verificação de 10/11/2026: axe (e2e de `learntech-content`, build local) sem `color-contrast` na home e no detalhe do evento.
+
 ## Deploy e CI
 - **Deploy:** push na `main` publica no Vercel. O `vercel.json` tem a reescrita de SPA e os cabeçalhos de segurança.
 - **CI:** `.github/workflows/ci.yml` roda `npm ci`, `npm run lint`, `npm run format:check`, `npm test` e `npm run build` em Node 22.
