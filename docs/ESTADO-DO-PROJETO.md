@@ -8,9 +8,9 @@
 |---|---|
 | Produção | `https://bootcamps-dun.vercel.app/` (Vercel, deploy a cada push na `main`) |
 | Repositório | `main` protegida (check `verificar` obrigatório, sem force push). Fluxo: `feature/tasks-DD-MM-AAAA` → `developer` → `main`, só fast-forward |
-| CI | Lint, 25 testes (Vitest) e build com checagem de tipos; `npm audit --omit=dev` sem avisos |
+| CI | Lint, `format:check` (Prettier), 34 testes (Vitest) e build com checagem de tipos; `npm audit --omit=dev` sem avisos |
 | Conteúdo | 27 eventos (24 concluídos e 3 metas), com reserva local gerada pela API (`events.data.ts`) |
-| Acessibilidade | Sem violação crítica no axe. Resta contraste de cor (5 na home e 6 no evento), na #75 |
+| Acessibilidade | Sem violação crítica no axe. Contraste corrigido na branch `feature/tasks-10-11-2026-b` (axe local sem `color-contrast` em 10/11/2026); falta conferir na produção depois da `main` (#75) |
 
 ## O que fizemos
 
@@ -23,6 +23,7 @@
 | 05/11, MVP | React Router 7.18 (0 vulnerabilidades); filtro por status e categoria refletido na URL; Voltar seguro na entrada direta; relacionados sem a API; logo de 205 KB trocado por WebP de 4 KB; galeria acessível; movimento reduzido e "Pular para o conteúdo" |
 | 05/11, estabilidade | e2e contra a produção passando; `COMO-EVOLUIR.md`; README com os números reais |
 | 06/11 | Este documento, README com o estado e issue nova (#75) |
+| 10/11 | Prettier em `src/` e `format:check` na CI (#74); textos secundários em `zinc-400` (#75); busca por título e instituição com `?q=` (#70). Em revisão, fora da `main` |
 
 Detalhes: `docs/claudeia/diagnostico-mvp-2026-11-03.md` e `docs/claudeia/06-mvp-2026-11-03.md`.
 
