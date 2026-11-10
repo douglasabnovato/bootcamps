@@ -5,3 +5,6 @@ content
 media
 *.min.js
 package-lock.json
+
+# Cópia gerada pela API (npm run copias no learntech-content): não formatar à mão
+src/entities/event/api/events.data.ts
