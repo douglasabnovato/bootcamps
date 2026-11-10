@@ -39,8 +39,9 @@ Filtro por status e categoria em `src/features/event-filter/`, lido e gravado na
 
 ## Deploy e CI
 - **Deploy:** push na `main` publica no Vercel. O `vercel.json` tem a reescrita de SPA e os cabeçalhos de segurança.
-- **CI:** `.github/workflows/ci.yml` roda `npm ci`, `npm run lint`, `npm test` e `npm run build` em Node 22.
-- **Proposta (não aplicada):** acrescentar `npm run format:check` (depois de um commit só de formatação, 27 arquivos) e `npm audit --omit=dev --audit-level=high` à CI, e corrigir o comentário da linha 1 do `ci.yml`, que ainda diz "lint e build".
+- **CI:** `.github/workflows/ci.yml` roda `npm ci`, `npm run lint`, `npm run format:check`, `npm test` e `npm run build` em Node 22.
+- **Formatação:** Prettier (`.prettierrc`) em todo o `src/` desde 10/11/2026. A cópia gerada `events.data.ts` fica no `.prettierignore`. Antes de commitar: `npx prettier --write "src/**/*.{ts,tsx}"`.
+- **Proposta (não aplicada):** acrescentar `npm audit --omit=dev --audit-level=high` à CI.
 
 ## Pendências de engenharia
 O backlog fica em `learntech-content/docs/engenharia/backlog.md`. Para este site: testes de componente (jsdom + Testing Library) e de ponta a ponta, métricas de Lighthouse, axe sem violações serious/critical, pré-renderização das rotas e o gerador de cópias exportar `url` e `titulo` nos relacionados.
