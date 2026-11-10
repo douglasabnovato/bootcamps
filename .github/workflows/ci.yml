@@ -1,4 +1,4 @@
-# CI — roda apenas scripts que já existem no package.json (lint e build).
+# CI — roda apenas scripts que já existem no package.json (lint, formatação, testes e build).
 # Não faz deploy: o deploy continua com a integração da Vercel.
 name: CI
 
@@ -31,6 +31,9 @@ jobs:
 
       - name: Lint (npm run lint)
         run: npm run lint
+
+      - name: Formatação (npm run format:check = prettier --check)
+        run: npm run format:check
 
       - name: Testes (npm test = vitest run)
         run: npm test
