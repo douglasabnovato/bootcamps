@@ -25,7 +25,7 @@ export const Footer = () => {
                 <span className="text-brand-primary">TECH</span>
               </span>
             </Link>
-            <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
+            <p className="text-zinc-400 text-sm max-w-xs leading-relaxed">
               Ecossistema de aceleração para desenvolvedores focado em tracks práticas e bootcamps intensivos.
             </p>
             <a
@@ -41,7 +41,7 @@ export const Footer = () => {
 
           {/* Direita: Redes Sociais */}
           <div className="flex flex-col items-start md:items-end gap-4">
-            <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Redes</span>
+            <span className="text-zinc-400 font-mono text-xs uppercase tracking-widest">Redes</span>
             <div className="flex items-center gap-5">
               <SocialLink href="https://github.com/douglasabnovato" label="GitHub" icon={<Github size={20} />} />
 
@@ -54,8 +54,8 @@ export const Footer = () => {
 
         {/* Créditos Finais */}
         <div className="mt-16 pt-8 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-zinc-500 text-xs font-mono">© {currentYear} learnTECH — Douglas A. B. Novato</p>
-          <div className="text-zinc-500 text-xs uppercase tracking-tighter">
+          <p className="text-zinc-400 text-xs font-mono">© {currentYear} learnTECH — Douglas A. B. Novato</p>
+          <div className="text-zinc-400 text-xs uppercase tracking-tighter">
             Feito com <span className="text-brand-primary">React + TypeScript + Vite</span>
           </div>
         </div>

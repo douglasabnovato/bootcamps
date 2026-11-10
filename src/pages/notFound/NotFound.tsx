@@ -35,7 +35,7 @@ export const NotFound = () => {
       {/* Conteúdo de Texto */}
       <div className="max-w-md space-y-6">
         <h2 className="text-2xl md:text-3xl font-bold text-zinc-100">Ops! Essa jornada ainda não foi mapeada.</h2>
-        <p className="text-zinc-500 text-lg leading-relaxed font-light">
+        <p className="text-zinc-400 text-lg leading-relaxed font-light">
           Parece que você tentou acessar um bootcamp ou evento que não existe no ecossistema{" "}
           <span className="text-brand-primary font-bold">learnTECH</span>.
         </p>

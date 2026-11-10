@@ -102,7 +102,7 @@ export const Home = () => {
           <div key={grupo.titulo} className="mb-16 last:mb-0">
             <div className="flex items-center gap-6 mb-8">
               <h2 className="text-2xl font-bold text-zinc-100 tracking-tight">{grupo.titulo}</h2>
-              <span className="text-sm font-mono text-zinc-500">{grupo.lista.length}</span>
+              <span className="text-sm font-mono text-zinc-400">{grupo.lista.length}</span>
               <div className="h-px flex-grow bg-zinc-800/60" />
             </div>
 

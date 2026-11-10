@@ -123,7 +123,7 @@ export const Detail = () => {
 
             {event.content.gallery && event.content.gallery.length > 0 && (
               <div>
-                <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-[0.3em] mb-6">Highlights da jornada</h3>
+                <h3 className="text-xs font-bold text-zinc-400 uppercase tracking-[0.3em] mb-6">Highlights da jornada</h3>
                 <EventGallery media={event.content.gallery} />
               </div>
             )}
@@ -174,7 +174,7 @@ export const Detail = () => {
                     </div>
                     {edicao.tema && <h3 className="text-lg font-semibold text-zinc-100 mb-1">{edicao.tema}</h3>}
                     {(edicao.local || edicao.horario) && (
-                      <p className="text-sm text-zinc-500 mb-2">
+                      <p className="text-sm text-zinc-400 mb-2">
                         {[edicao.local && `${edicao.local.nome}, ${edicao.local.cidade}`, edicao.horario].filter(Boolean).join(" · ")}
                       </p>
                     )}
@@ -185,7 +185,7 @@ export const Detail = () => {
                           <li key={atividade.titulo} className="text-sm text-zinc-400">
                             <span className="font-bold uppercase text-xs tracking-wider text-zinc-400 mr-2">{atividade.tipo}</span>
                             <span className="text-zinc-300">{atividade.titulo}</span>
-                            {atividade.descricao && <span className="block text-zinc-500 mt-0.5">{atividade.descricao}</span>}
+                            {atividade.descricao && <span className="block text-zinc-400 mt-0.5">{atividade.descricao}</span>}
                           </li>
                         ))}
                       </ul>
@@ -256,7 +256,7 @@ export const Detail = () => {
               <h2 id="cta-title" className="text-3xl md:text-4xl font-black text-white tracking-tight">
                 {concluido ? "Explorar esse ecossistema" : "Pronto para conhecer?"}
               </h2>
-              <p className="text-zinc-500 text-lg max-w-2xl mx-auto font-light">
+              <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light">
                 Acesse a plataforma oficial da <span className="text-zinc-300 font-bold">{event.institution}</span> para conferir os
                 conteúdos e programas de formação.
               </p>
