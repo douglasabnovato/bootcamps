@@ -30,6 +30,15 @@ export const Footer = () => {
                         <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
                             Ecossistema de aceleração para desenvolvedores focado em tracks práticas e bootcamps intensivos.
                         </p>
+                        <a
+                            href="https://learn-tech-pied.vercel.app/conheca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-sm text-zinc-400 underline underline-offset-4 hover:text-white focus-visible:text-white transition-colors"
+                        >
+                            Conheça o learnTECH
+                            <span className="sr-only"> (abre em nova aba)</span>
+                        </a>
                     </div>
 
                     {/* Direita: Redes Sociais */}

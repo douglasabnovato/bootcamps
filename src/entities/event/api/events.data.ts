@@ -731,6 +731,30 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/gdg-jf/6.webp",
           "type": "image",
           "alt": "Confraternização da comunidade após um encontro do GDG Juiz de Fora"
+        },
+        {
+          "id": "gdg-jf-7",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/gdg-jf/7.webp",
+          "type": "image",
+          "alt": "Palestra sobre Docker e containers em um encontro do GDG Juiz de Fora (2019)"
+        },
+        {
+          "id": "gdg-jf-8",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/gdg-jf/8.webp",
+          "type": "image",
+          "alt": "Participantes de um encontro do GDG Juiz de Fora (2019)"
+        },
+        {
+          "id": "gdg-jf-9",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/gdg-jf/9.webp",
+          "type": "image",
+          "alt": "Turma do segundo encontro UX na Prática do GDG Juiz de Fora (2019)"
+        },
+        {
+          "id": "gdg-jf-10",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/gdg-jf/10.webp",
+          "type": "image",
+          "alt": "Palestra sobre Firebase no Google I/O Extended Juiz de Fora"
         }
       ],
       "curriculum": [
@@ -1665,6 +1689,120 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/29.webp",
           "type": "image",
           "alt": "Plateia acompanhando os pitches no auditório"
+        },
+        {
+          "id": "fator-s-challenge-30",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/30.webp",
+          "type": "image",
+          "alt": "Abertura do Fator S Challenge no auditório"
+        },
+        {
+          "id": "fator-s-challenge-31",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/31.webp",
+          "type": "image",
+          "alt": "Equipe do autor reunida durante o desafio"
+        },
+        {
+          "id": "fator-s-challenge-32",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/32.webp",
+          "type": "image",
+          "alt": "Equipe apresentando o pitch no palco"
+        },
+        {
+          "id": "fator-s-challenge-33",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/33.webp",
+          "type": "image",
+          "alt": "Plateia acompanhando as apresentações finais"
+        },
+        {
+          "id": "fator-s-challenge-34",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/34.webp",
+          "type": "image",
+          "alt": "Canvas da equipe: atividades e recursos-chave em post-its"
+        },
+        {
+          "id": "fator-s-challenge-35",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/35.webp",
+          "type": "image",
+          "alt": "Canvas da equipe: segmento de clientes em post-its"
+        },
+        {
+          "id": "fator-s-challenge-36",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/36.webp",
+          "type": "image",
+          "alt": "Palestrante apresentando a dica final no telão"
+        },
+        {
+          "id": "fator-s-challenge-37",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/37.webp",
+          "type": "image",
+          "alt": "Palestrante conduzindo a capacitação"
+        },
+        {
+          "id": "fator-s-challenge-38",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/38.webp",
+          "type": "image",
+          "alt": "Palestrante no palco com a plateia sentada no chão"
+        },
+        {
+          "id": "fator-s-challenge-39",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/39.webp",
+          "type": "image",
+          "alt": "Participantes reunidos no auditório"
+        },
+        {
+          "id": "fator-s-challenge-40",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/40.webp",
+          "type": "image",
+          "alt": "Palestrante caminhando pelo palco"
+        },
+        {
+          "id": "fator-s-challenge-41",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/41.webp",
+          "type": "image",
+          "alt": "Equipe apresentando o pitch com o telão ao fundo"
+        },
+        {
+          "id": "fator-s-challenge-42",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/42.webp",
+          "type": "image",
+          "alt": "Equipe no palco durante a apresentação"
+        },
+        {
+          "id": "fator-s-challenge-43",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/43.webp",
+          "type": "image",
+          "alt": "Equipe enfileirada diante do painel do Fator S"
+        },
+        {
+          "id": "fator-s-challenge-44",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/44.webp",
+          "type": "image",
+          "alt": "Integrante da equipe falando ao microfone"
+        },
+        {
+          "id": "fator-s-challenge-45",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/45.webp",
+          "type": "image",
+          "alt": "Rodada de perguntas após o pitch"
+        },
+        {
+          "id": "fator-s-challenge-46",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/46.webp",
+          "type": "image",
+          "alt": "Equipe posando diante do painel do evento"
+        },
+        {
+          "id": "fator-s-challenge-47",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/47.webp",
+          "type": "image",
+          "alt": "Equipe reunida diante do painel no encerramento"
+        },
+        {
+          "id": "fator-s-challenge-48",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/fator-s-challenge/48.webp",
+          "type": "image",
+          "alt": "Canvas da equipe: parceiros-chave em post-its"
         }
       ],
       "curriculum": [
@@ -1907,6 +2045,96 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/27.webp",
           "type": "image",
           "alt": "Anúncio das equipes premiadas no encerramento"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-28",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/28.webp",
+          "type": "image",
+          "alt": "Foto oficial com todos os participantes do hackathon"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-29",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/29.webp",
+          "type": "image",
+          "alt": "Participantes reunidos no auditório no encerramento"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-30",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/30.webp",
+          "type": "image",
+          "alt": "Organizadores e voluntários diante do mapa-múndi do espaço"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-31",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/31.webp",
+          "type": "image",
+          "alt": "Vista panorâmica do salão com as equipes trabalhando"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-32",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/32.webp",
+          "type": "image",
+          "alt": "Grupo de participantes na chegada, com os brindes do evento"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-33",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/33.webp",
+          "type": "image",
+          "alt": "Arte de divulgação com a nova data do hackathon, 21 e 22 de janeiro"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-34",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/34.webp",
+          "type": "image",
+          "alt": "Participantes conversando no lounge do espaço"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-35",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/35.webp",
+          "type": "image",
+          "alt": "Selfie do autor com um grupo de participantes"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-36",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/36.webp",
+          "type": "image",
+          "alt": "Notebook com código durante a maratona"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-37",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/37.webp",
+          "type": "image",
+          "alt": "Participantes circulando entre as mesas do salão"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-38",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/38.webp",
+          "type": "image",
+          "alt": "Equipe trabalhando em uma das mesas"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-39",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/39.webp",
+          "type": "image",
+          "alt": "Participantes descansando nos pufes durante a madrugada"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-40",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/40.webp",
+          "type": "image",
+          "alt": "Equipes programando no auditório"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-41",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/41.webp",
+          "type": "image",
+          "alt": "Equipe reunida para foto"
+        },
+        {
+          "id": "hackathon-inovacao-social-jf-42",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/hackathon-inovacao-social-jf/42.webp",
+          "type": "image",
+          "alt": "Participante com os brindes do evento"
         }
       ],
       "curriculum": [
@@ -2043,6 +2271,12 @@ export const events: BootcampEvent[] = [
           "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/tdc-innovation-2023/10.webp",
           "type": "image",
           "alt": "Acompanhando uma trilha do TDC pelo notebook"
+        },
+        {
+          "id": "tdc-innovation-11",
+          "url": "https://learntech-content.douglasabnovato.workers.dev/media/bootcamps/eventos/tdc-innovation-2023/11.webp",
+          "type": "image",
+          "alt": "Autor acompanhando a transmissão online do TDC Innovation 2023"
         }
       ],
       "curriculum": [
