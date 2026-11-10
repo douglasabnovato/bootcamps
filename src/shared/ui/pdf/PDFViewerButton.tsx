@@ -1,8 +1,8 @@
 /* PDFViewerButton.tsx — abre um PDF já resolvido pelo build numa janela modal.
    A URL chega pronta do import do Vite: não há resolução de caminho em tempo de execução. */
 
-import { useEffect, useRef, useState } from 'react';
-import { cn } from '../lib/utils';
+import { useEffect, useRef, useState } from "react";
+import { cn } from "../lib/utils";
 
 interface PDFViewerButtonProps {
   pdfUrl: string;
@@ -10,11 +10,7 @@ interface PDFViewerButtonProps {
   titulo?: string;
 }
 
-export const PDFViewerButton = ({
-  pdfUrl,
-  label = 'Abrir certificado',
-  titulo = 'Visualizador de PDF',
-}: PDFViewerButtonProps) => {
+export const PDFViewerButton = ({ pdfUrl, label = "Abrir certificado", titulo = "Visualizador de PDF" }: PDFViewerButtonProps) => {
   const [aberto, setAberto] = useState(false);
   const gatilho = useRef<HTMLButtonElement>(null);
 
@@ -23,18 +19,18 @@ export const PDFViewerButton = ({
     if (!aberto) return;
 
     const aoTeclar = (evento: KeyboardEvent) => {
-      if (evento.key === 'Escape') setAberto(false);
+      if (evento.key === "Escape") setAberto(false);
     };
 
     // Guarda o botão agora: no cleanup, gatilho.current pode já ter mudado.
     const botao = gatilho.current;
     const rolagem = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', aoTeclar);
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", aoTeclar);
 
     return () => {
       document.body.style.overflow = rolagem;
-      document.removeEventListener('keydown', aoTeclar);
+      document.removeEventListener("keydown", aoTeclar);
       botao?.focus();
     };
   }, [aberto]);
@@ -46,8 +42,8 @@ export const PDFViewerButton = ({
         type="button"
         onClick={() => setAberto(true)}
         className={cn(
-          'flex items-center justify-center w-full py-4 rounded-2xl font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]',
-          'bg-zinc-800 text-white hover:bg-zinc-700'
+          "flex items-center justify-center w-full py-4 rounded-2xl font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]",
+          "bg-zinc-800 text-white hover:bg-zinc-700",
         )}
       >
         {label}
@@ -68,12 +64,7 @@ export const PDFViewerButton = ({
             <div className="flex items-center justify-between gap-4 p-3 bg-zinc-950 border-b border-zinc-800">
               <p className="text-sm text-zinc-200 truncate">{titulo}</p>
               <div className="flex items-center gap-3 shrink-0">
-                <a
-                  href={pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-zinc-300 underline hover:text-white"
-                >
+                <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-300 underline hover:text-white">
                   Abrir em nova aba
                 </a>
                 <button

@@ -8,12 +8,7 @@ export interface EventMedia {
   alt?: string;
 }
 
-export type EventCategory =
-  | "frontend"
-  | "backend"
-  | "fullstack"
-  | "mobile"
-  | "outros";
+export type EventCategory = "frontend" | "backend" | "fullstack" | "mobile" | "outros";
 export type EventStatus = "concluido" | "desejado";
 
 /* Rótulos em português para os valores crus do schema (o card mostrava "fullstack", "outros"). */
@@ -29,7 +24,6 @@ export interface EventLink {
   label: string;
   url: string;
 }
-
 
 export interface EventActivity {
   tipo: "palestra" | "painel" | "workshop" | "networking" | "sorteio";

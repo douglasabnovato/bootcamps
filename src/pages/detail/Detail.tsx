@@ -1,43 +1,43 @@
 /* Detail.tsx — página do evento: capa, mídia, edições, ementa e chamada final. */
 
-import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
-import { useEventBySlug } from '../../entities/event/model/useEventBySlug';
-import { eventApi } from '../../entities/event/api/eventApi';
-import { ROTULO_CATEGORIA } from '../../entities/event/model/types';
-import { resolverRelacionados } from '../../shared/config/ecossistema';
-import { Badge } from '../../entities/event/ui/badge/Badge';
-import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
+import { useEventBySlug } from "../../entities/event/model/useEventBySlug";
+import { eventApi } from "../../entities/event/api/eventApi";
+import { ROTULO_CATEGORIA } from "../../entities/event/model/types";
+import { resolverRelacionados } from "../../shared/config/ecossistema";
+import { Badge } from "../../entities/event/ui/badge/Badge";
+import { useDocumentTitle } from "./../../shared/ui/lib/hooks/useDocumentTitle";
 
-import { DetailSkeleton } from './DetailSkeleton';
-import { NotFound } from '../notFound/NotFound';
+import { DetailSkeleton } from "./DetailSkeleton";
+import { NotFound } from "../notFound/NotFound";
 
-import { VideoPlayer } from '../../shared/ui/videoPlayer/VideoPlayer';
-import { PDFViewerButton } from '../../shared/ui/pdf/PDFViewerButton';
-import { EventGallery } from '../../shared/ui/eventGallery/EventGallery';
-import { CTAButton } from '../../shared/ui/ctaButton/CTAButton';
+import { VideoPlayer } from "../../shared/ui/videoPlayer/VideoPlayer";
+import { PDFViewerButton } from "../../shared/ui/pdf/PDFViewerButton";
+import { EventGallery } from "../../shared/ui/eventGallery/EventGallery";
+import { CTAButton } from "../../shared/ui/ctaButton/CTAButton";
 
 export const Detail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const location = useLocation();
   const { event, loading } = useEventBySlug(slug);
-  useDocumentTitle(event ? event.title : loading ? 'Carregando' : 'Página não encontrada');
+  useDocumentTitle(event ? event.title : loading ? "Carregando" : "Página não encontrada");
 
   if (loading) return <DetailSkeleton />;
   if (!event) return <NotFound />;
 
-  const concluido = event.status === 'concluido';
+  const concluido = event.status === "concluido";
 
   /* Entrada direta (link compartilhado, aba nova): key "default" e nada no histórico do app; vai para a Home.
      Vindo da Home, volta uma posição e recupera os filtros que estão na URL dela. */
   const relacionados = resolverRelacionados(event.content.relacionados, (tipo, id) =>
-    tipo === 'eventos' ? eventApi.tituloLocal(id) : undefined,
+    tipo === "eventos" ? eventApi.tituloLocal(id) : undefined,
   );
 
-  const voltar = () => (location.key === 'default' ? navigate('/') : navigate(-1));
+  const voltar = () => (location.key === "default" ? navigate("/") : navigate(-1));
 
   return (
     <>
@@ -87,27 +87,23 @@ export const Detail = () => {
                 <span
                   className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.15em] border ${
                     concluido
-                      ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30'
-                      : 'bg-amber-500/15 text-amber-300 border-amber-500/30'
+                      ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"
+                      : "bg-amber-500/15 text-amber-300 border-amber-500/30"
                   }`}
                 >
-                  {concluido ? '✓ Concluído' : '★ Meta de estudo'}
+                  {concluido ? "✓ Concluído" : "★ Meta de estudo"}
                 </span>
-                <span className="text-zinc-400 font-mono text-xs border-l border-zinc-700 pl-3">
-                  {event.institution}
-                </span>
+                <span className="text-zinc-400 font-mono text-xs border-l border-zinc-700 pl-3">{event.institution}</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[0.95] drop-shadow-2xl">
-                {event.title}
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[0.95] drop-shadow-2xl">{event.title}</h1>
             </div>
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.5, ease: 'easeOut' }}
+            transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
             className="mt-10 text-lg md:text-xl text-zinc-400 leading-relaxed font-light"
           >
             {event.content.longDescription || event.description}
@@ -123,15 +119,11 @@ export const Detail = () => {
               <div className="h-px flex-grow bg-zinc-800/60" />
             </div>
 
-            {event.content.videoUrl && (
-              <VideoPlayer url={event.content.videoUrl} title={`Vídeo: ${event.title}`} isCompleted={concluido} />
-            )}
+            {event.content.videoUrl && <VideoPlayer url={event.content.videoUrl} title={`Vídeo: ${event.title}`} isCompleted={concluido} />}
 
             {event.content.gallery && event.content.gallery.length > 0 && (
               <div>
-                <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-[0.3em] mb-6">
-                  Highlights da jornada
-                </h3>
+                <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-[0.3em] mb-6">Highlights da jornada</h3>
                 <EventGallery media={event.content.gallery} />
               </div>
             )}
@@ -149,18 +141,16 @@ export const Detail = () => {
 
             <ol className="relative border-l border-zinc-800 pl-8 space-y-10">
               {event.content.editions.map((edicao) => {
-                const realizada = edicao.status === 'realizado';
+                const realizada = edicao.status === "realizado";
                 const quando = edicao.data
-                  ? new Date(`${edicao.data}T12:00:00`).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })
+                  ? new Date(`${edicao.data}T12:00:00`).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" })
                   : edicao.year;
-                const rotulo = [edicao.numero ? `${edicao.numero}ª edição` : null, edicao.formato].filter(Boolean).join(' · ');
+                const rotulo = [edicao.numero ? `${edicao.numero}ª edição` : null, edicao.formato].filter(Boolean).join(" · ");
                 return (
-                  <li key={`${edicao.formato ?? ''}-${edicao.numero ?? ''}-${edicao.data ?? edicao.year}`} className="relative">
+                  <li key={`${edicao.formato ?? ""}-${edicao.numero ?? ""}-${edicao.data ?? edicao.year}`} className="relative">
                     <span
                       className={`absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 ${
-                        realizada
-                          ? 'bg-emerald-500/20 border-emerald-500'
-                          : 'bg-amber-500/20 border-amber-500'
+                        realizada ? "bg-emerald-500/20 border-emerald-500" : "bg-amber-500/20 border-amber-500"
                       }`}
                       aria-hidden="true"
                     />
@@ -170,13 +160,13 @@ export const Detail = () => {
                       <span
                         className={`px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider border ${
                           realizada
-                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                            : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                            ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+                            : "bg-amber-500/10 text-amber-400 border-amber-500/20"
                         }`}
                       >
-                        {realizada ? 'Realizada' : 'Anunciada'}
+                        {realizada ? "Realizada" : "Anunciada"}
                       </span>
-                      {edicao.participacao === 'presente' && (
+                      {edicao.participacao === "presente" && (
                         <span className="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider border bg-sky-500/10 text-sky-400 border-sky-500/20">
                           Eu estive lá
                         </span>
@@ -185,7 +175,7 @@ export const Detail = () => {
                     {edicao.tema && <h3 className="text-lg font-semibold text-zinc-100 mb-1">{edicao.tema}</h3>}
                     {(edicao.local || edicao.horario) && (
                       <p className="text-sm text-zinc-500 mb-2">
-                        {[edicao.local && `${edicao.local.nome}, ${edicao.local.cidade}`, edicao.horario].filter(Boolean).join(' · ')}
+                        {[edicao.local && `${edicao.local.nome}, ${edicao.local.cidade}`, edicao.horario].filter(Boolean).join(" · ")}
                       </p>
                     )}
                     <p className="text-zinc-400 leading-relaxed">{edicao.highlight}</p>
@@ -201,7 +191,12 @@ export const Detail = () => {
                       </ul>
                     )}
                     {edicao.link && (
-                      <a href={edicao.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm text-brand-primary hover:underline">
+                      <a
+                        href={edicao.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-3 text-sm text-brand-primary hover:underline"
+                      >
                         Página da edição ↗
                       </a>
                     )}
@@ -234,7 +229,7 @@ export const Detail = () => {
           <section aria-labelledby="curriculum-title" className="mt-20 space-y-10">
             <div className="flex items-center gap-6">
               <h2 id="curriculum-title" className="text-2xl md:text-3xl font-bold text-zinc-100 tracking-tight">
-                {concluido ? 'Ementa dominada' : 'Plano de estudos'}
+                {concluido ? "Ementa dominada" : "Plano de estudos"}
               </h2>
               <div className="h-px flex-grow bg-zinc-800/60" />
             </div>
@@ -246,7 +241,7 @@ export const Detail = () => {
                   className="flex items-start gap-4 p-5 bg-zinc-900/40 border border-zinc-800/50 rounded-2xl hover:bg-zinc-900/60 transition-colors"
                 >
                   <span className="text-brand-primary font-mono text-base font-black shrink-0 pt-0.5">
-                    {(index + 1).toString().padStart(2, '0')}
+                    {(index + 1).toString().padStart(2, "0")}
                   </span>
                   <span className="text-zinc-200 leading-relaxed">{item}</span>
                 </li>
@@ -259,25 +254,20 @@ export const Detail = () => {
           <div className="bg-zinc-900/30 rounded-3xl p-10 md:p-16 text-center space-y-8 border border-zinc-800/60">
             <div className="space-y-3">
               <h2 id="cta-title" className="text-3xl md:text-4xl font-black text-white tracking-tight">
-                {concluido ? 'Explorar esse ecossistema' : 'Pronto para conhecer?'}
+                {concluido ? "Explorar esse ecossistema" : "Pronto para conhecer?"}
               </h2>
               <p className="text-zinc-500 text-lg max-w-2xl mx-auto font-light">
-                Acesse a plataforma oficial da{' '}
-                <span className="text-zinc-300 font-bold">{event.institution}</span> para conferir os
+                Acesse a plataforma oficial da <span className="text-zinc-300 font-bold">{event.institution}</span> para conferir os
                 conteúdos e programas de formação.
               </p>
             </div>
 
             <div className="max-w-md mx-auto space-y-4">
               {/* Sem link oficial (ex.: edição sem página própria), o botão não aparece em vez de recarregar a página. */}
-              {event.content.officialLink && (<CTAButton url={event.content.officialLink} isCompleted={concluido} />)}
+              {event.content.officialLink && <CTAButton url={event.content.officialLink} isCompleted={concluido} />}
 
               {event.content.certificate && (
-                <PDFViewerButton
-                  pdfUrl={event.content.certificate}
-                  label="Ver certificado"
-                  titulo={`Certificado — ${event.title}`}
-                />
+                <PDFViewerButton pdfUrl={event.content.certificate} label="Ver certificado" titulo={`Certificado — ${event.title}`} />
               )}
 
               {event.content.links && event.content.links.length > 0 && (
@@ -307,7 +297,7 @@ export const Detail = () => {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {relacionados.map((r) => {
                 const classe =
-                  'block p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary';
+                  "block p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary";
                 const conteudo = (
                   <>
                     <span className="block text-xs font-bold uppercase tracking-wider text-zinc-400">{r.projeto}</span>

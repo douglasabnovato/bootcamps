@@ -2,14 +2,14 @@
    Clique ou Enter abre a foto; ←/→ navegam; Esc, o botão Fechar ou o fundo fecham; o foco volta à miniatura.
    Itens de vídeo não viram <img>: aparecem como link para o vídeo e ficam fora da sequência ampliada. */
 
-import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type TouchEvent } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type TouchEvent } from "react";
+import { motion } from "framer-motion";
 
 // Interface local simples para o Shared (mesmo formato de EventMedia, sem depender de entities)
 interface SharedMediaItem {
   id: string;
   url: string;
-  type?: 'image' | 'video';
+  type?: "image" | "video";
   alt?: string;
 }
 
@@ -21,10 +21,10 @@ interface EventGalleryProps {
 const vizinho = (atual: number, total: number, passo: number) => (atual + passo + total) % total;
 
 const estiloBotao =
-  'px-4 py-2 rounded-full bg-zinc-900/90 border border-zinc-700 text-zinc-100 text-sm hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary';
+  "px-4 py-2 rounded-full bg-zinc-900/90 border border-zinc-700 text-zinc-100 text-sm hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary";
 
 export const EventGallery = ({ media }: EventGalleryProps) => {
-  const fotos = media.filter((item) => item.type !== 'video');
+  const fotos = media.filter((item) => item.type !== "video");
   const [aberta, setAberta] = useState<number | null>(null);
   const dialogo = useRef<HTMLDialogElement>(null);
   const miniaturas = useRef<(HTMLButtonElement | null)[]>([]);
@@ -38,7 +38,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
     if (aberta !== null && !el.open) {
       el.showModal();
       // React não grava o atributo autofocus no DOM: o foco inicial vai para o Fechar explicitamente.
-      el.querySelector<HTMLButtonElement>('[data-fechar]')?.focus();
+      el.querySelector<HTMLButtonElement>("[data-fechar]")?.focus();
     }
     if (aberta === null && el.open) el.close();
   }, [aberta]);
@@ -65,10 +65,10 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
   };
 
   const aoTeclar = (evento: KeyboardEvent<HTMLDialogElement>) => {
-    if (evento.key === 'ArrowRight') {
+    if (evento.key === "ArrowRight") {
       evento.preventDefault();
       navegar(1);
-    } else if (evento.key === 'ArrowLeft') {
+    } else if (evento.key === "ArrowLeft") {
       evento.preventDefault();
       navegar(-1);
     }
@@ -99,7 +99,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
     <>
       <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         {media.map((item, index) => {
-          const ehVideo = item.type === 'video';
+          const ehVideo = item.type === "video";
           const posicao = posicaoDe.get(item.id) ?? -1;
           return (
             <motion.li
@@ -116,7 +116,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
                   rel="noopener noreferrer"
                   className="flex h-full w-full items-center justify-center p-4 text-center text-sm text-zinc-200 hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-primary"
                 >
-                  ▶ {item.alt || 'Assistir ao vídeo'}
+                  ▶ {item.alt || "Assistir ao vídeo"}
                   <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               ) : (
@@ -126,7 +126,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
                   }}
                   type="button"
                   onClick={() => abrir(posicao)}
-                  aria-label={`Ampliar foto ${posicao + 1} de ${fotos.length}${item.alt ? `: ${item.alt}` : ''}`}
+                  aria-label={`Ampliar foto ${posicao + 1} de ${fotos.length}${item.alt ? `: ${item.alt}` : ""}`}
                   className="group block h-full w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-primary"
                 >
                   <img
@@ -164,7 +164,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
             <figcaption className="flex w-full flex-wrap items-center justify-between gap-3">
               <span className="text-sm text-zinc-300" aria-live="polite">
                 {aberta + 1} de {fotos.length}
-                {atual.alt ? ` · ${atual.alt}` : ''}
+                {atual.alt ? ` · ${atual.alt}` : ""}
               </span>
               <span className="flex gap-2">
                 {fotos.length > 1 && (

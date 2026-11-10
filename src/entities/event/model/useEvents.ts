@@ -1,7 +1,7 @@
 // src/entities/event/model/useEvents.ts: este hook gerencia o estado de carregamento (isLoading), o que é essencial para uma boa UX
-import { useState, useEffect } from 'react';
-import type { BootcampEvent } from './types';
-import { eventApi } from '../api/eventApi';
+import { useState, useEffect } from "react";
+import type { BootcampEvent } from "./types";
+import { eventApi } from "../api/eventApi";
 
 /**
  * Hook customizado para gerenciar a lógica de busca de eventos.
@@ -19,7 +19,7 @@ export const useEvents = () => {
         const data = await eventApi.getAll();
         setEvents(data);
       } catch (err) {
-        setError('Falha ao carregar os bootcamps da learnTECH.');
+        setError("Falha ao carregar os bootcamps da learnTECH.");
         console.error(err);
       } finally {
         setIsLoading(false);
@@ -30,9 +30,9 @@ export const useEvents = () => {
   }, []);
 
   // Retornamos os dados e os estados para o componente UI
-  return { 
-    events, 
-    isLoading, 
-    error 
+  return {
+    events,
+    isLoading,
+    error,
   };
 };
