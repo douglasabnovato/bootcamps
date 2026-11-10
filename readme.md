@@ -19,7 +19,7 @@
 
 ## 📍 Estado do projeto (06/11/2026)
 
-- **Onde está:** Em produção na Vercel. CI verde com lint, 25 testes e build tipado, sem vulnerabilidades.
+- **Onde está:** Em produção na Vercel. CI verde com lint, 34 testes e build tipado, sem vulnerabilidades.
 - **O que fizemos na rodada de MVP (03 a 05/11):** Filtro por status e categoria na URL, Voltar seguro, relacionados sem a API, logo de 205 KB para 4 KB, galeria acessível e movimento reduzido.
 - **O que queremos fazer:** [#74](https://github.com/douglasabnovato/bootcamps/issues/74), [#75](https://github.com/douglasabnovato/bootcamps/issues/75), [#70](https://github.com/douglasabnovato/bootcamps/issues/70), [#73](https://github.com/douglasabnovato/bootcamps/issues/73), [#71](https://github.com/douglasabnovato/bootcamps/issues/71), [#72](https://github.com/douglasabnovato/bootcamps/issues/72) (Prettier, contraste, busca, Lighthouse, pré-renderização e categorias). Todas com o label `proximos-passos` e critérios de entrega.
 
@@ -267,7 +267,7 @@ Verificação rápida:
 
 ## 📍 Momento atual
 
-Lint, testes (Vitest, 25 testes em 4 arquivos) e build com checagem de tipos
+Lint, testes (Vitest, 34 testes) e build com checagem de tipos
 limpos, e os três rodam na CI (`.github/workflows/ci.yml`). `npm audit --omit=dev`
 sem avisos desde a atualização do React Router para 7.18. Registro da rodada de
 MVP de 03/11/2026: `docs/claudeia/06-mvp-2026-11-03.md`.
