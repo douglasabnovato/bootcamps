@@ -77,18 +77,22 @@ export function filtrarEventos(eventos: BootcampEvent[], filtro: FiltroEventos):
   );
 }
 
-/* Contagem por categoria respeitando o status escolhido, na ordem do schema e só com categorias presentes. */
-export function contarPorCategoria(eventos: BootcampEvent[], status: FiltroStatus): { categoria: EventCategory; total: number }[] {
-  const daLista = filtrarEventos(eventos, { status, categoria: "todas" });
+/* Contagem por categoria respeitando o status e a busca, na ordem do schema e só com categorias presentes na lista inteira. */
+export function contarPorCategoria(
+  eventos: BootcampEvent[],
+  status: FiltroStatus,
+  busca?: string,
+): { categoria: EventCategory; total: number }[] {
+  const daLista = filtrarEventos(eventos, { status, categoria: "todas", busca });
   return CATEGORIAS_VALIDAS.map((categoria) => ({
     categoria,
     total: daLista.filter((evento) => evento.category === categoria).length,
   })).filter((item) => eventos.some((evento) => evento.category === item.categoria));
 }
 
-/* Contagem por status respeitando a categoria escolhida. */
-export function contarPorStatus(eventos: BootcampEvent[], categoria: FiltroCategoria): Record<FiltroStatus, number> {
-  const daLista = filtrarEventos(eventos, { status: "todos", categoria });
+/* Contagem por status respeitando a categoria e a busca. */
+export function contarPorStatus(eventos: BootcampEvent[], categoria: FiltroCategoria, busca?: string): Record<FiltroStatus, number> {
+  const daLista = filtrarEventos(eventos, { status: "todos", categoria, busca });
   return {
     todos: daLista.length,
     concluido: daLista.filter((evento) => evento.status === "concluido").length,

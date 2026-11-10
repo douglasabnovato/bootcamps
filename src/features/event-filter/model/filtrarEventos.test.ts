@@ -107,6 +107,11 @@ describe("busca por título e instituição", () => {
     expect(ids(filtrarEventos(textos, { status: "concluido", categoria: "todas", busca: "a" }))).toEqual(["t1", "t3"]);
     expect(ids(filtrarEventos(textos, { status: "desejado", categoria: "todas", busca: "alura" }))).toEqual([]);
   });
+
+  it("as contagens dos botões respeitam a busca", () => {
+    expect(contarPorStatus(textos, "todas", "alura")).toEqual({ todos: 1, concluido: 1, desejado: 0 });
+    expect(contarPorCategoria(textos, "todos", "xyzzy")).toEqual([{ categoria: "outros", total: 0 }]);
+  });
 });
 
 describe("contagens do filtro", () => {
