@@ -1,15 +1,18 @@
-/* filtrarEventos.test.ts — filtro da Home: combinação de status e categoria, lista vazia e leitura da URL. */
+/* filtrarEventos.test.ts — filtro da Home: combinação de status, categoria e busca, lista vazia e leitura da URL. */
 import { describe, it, expect } from "vitest";
 import { events } from "../../../entities/event/api/events.data";
 import type { BootcampEvent } from "../../../entities/event/model/types";
 import {
+  BUSCA_MAXIMA,
   FILTRO_VAZIO,
+  buscarEventos,
   contarPorCategoria,
   contarPorStatus,
   filtrarEventos,
   filtroAtivo,
   filtroParaParametros,
   lerFiltro,
+  normalizarTexto,
 } from "./filtrarEventos";
 
 const base = events[0];
@@ -57,6 +60,55 @@ describe("filtrarEventos", () => {
   });
 });
 
+describe("busca por título e instituição", () => {
+  const comTexto = (id: string, title: string, institution: string, status: BootcampEvent["status"] = "concluido"): BootcampEvent => ({
+    ...evento(id, status, "outros"),
+    title,
+    institution,
+  });
+  const textos = [
+    comTexto("t1", "Formação React Avançado", "Rocketseat"),
+    comTexto("t2", "Hackathon Inovação Social", "Prefeitura de Juiz de Fora", "desejado"),
+    comTexto("t3", "Imersão Java", "Alura"),
+  ];
+  const ids = (lista: BootcampEvent[]) => lista.map((e) => e.id);
+
+  it("normaliza acento e caixa", () => {
+    expect(normalizarTexto("FORMAÇÃO Inovação")).toBe("formacao inovacao");
+  });
+
+  it("acha pelo título sem diferença de acento e caixa", () => {
+    expect(ids(buscarEventos(textos, "formacao"))).toEqual(["t1"]);
+    expect(ids(buscarEventos(textos, "INOVAÇÃO"))).toEqual(["t2"]);
+    expect(ids(buscarEventos(textos, "imersao"))).toEqual(["t3"]);
+  });
+
+  it("acha pela instituição", () => {
+    expect(ids(buscarEventos(textos, "alura"))).toEqual(["t3"]);
+    expect(ids(buscarEventos(textos, "juiz de fora"))).toEqual(["t2"]);
+  });
+
+  it("exige todas as palavras, em título ou instituição", () => {
+    expect(ids(buscarEventos(textos, "react rocketseat"))).toEqual(["t1"]);
+    expect(ids(buscarEventos(textos, "react alura"))).toEqual([]);
+  });
+
+  it("busca vazia ou só com espaços devolve tudo", () => {
+    expect(ids(buscarEventos(textos, ""))).toEqual(["t1", "t2", "t3"]);
+    expect(ids(buscarEventos(textos, "   "))).toEqual(["t1", "t2", "t3"]);
+    expect(ids(buscarEventos(textos, undefined))).toEqual(["t1", "t2", "t3"]);
+  });
+
+  it("não acha pela descrição nem por texto ausente", () => {
+    expect(buscarEventos(textos, "xyzzy")).toEqual([]);
+  });
+
+  it("combina com status e categoria", () => {
+    expect(ids(filtrarEventos(textos, { status: "concluido", categoria: "todas", busca: "a" }))).toEqual(["t1", "t3"]);
+    expect(ids(filtrarEventos(textos, { status: "desejado", categoria: "todas", busca: "alura" }))).toEqual([]);
+  });
+});
+
 describe("contagens do filtro", () => {
   it("conta categorias dentro do status e omite categorias ausentes", () => {
     expect(contarPorCategoria(lista, "concluido")).toEqual([
@@ -83,5 +135,15 @@ describe("filtro na URL", () => {
     expect(filtroParaParametros({ status: "concluido", categoria: "todas" })).toEqual({ status: "concluido" });
     expect(filtroAtivo(FILTRO_VAZIO)).toBe(false);
     expect(filtroAtivo({ status: "todos", categoria: "mobile" })).toBe(true);
+  });
+
+  it("lê e grava a busca em ?q=, junto com os filtros", () => {
+    expect(lerFiltro(new URLSearchParams("q=react&status=concluido"))).toEqual({ status: "concluido", categoria: "todas", busca: "react" });
+    expect(lerFiltro(new URLSearchParams("q=%20%20"))).toEqual(FILTRO_VAZIO);
+    expect(lerFiltro(new URLSearchParams(`q=${"a".repeat(500)}`)).busca).toHaveLength(BUSCA_MAXIMA);
+    expect(filtroParaParametros({ status: "desejado", categoria: "todas", busca: "java" })).toEqual({ status: "desejado", q: "java" });
+    expect(filtroParaParametros({ ...FILTRO_VAZIO, busca: "  " })).toEqual({});
+    expect(filtroAtivo({ ...FILTRO_VAZIO, busca: "java" })).toBe(true);
+    expect(filtroAtivo({ ...FILTRO_VAZIO, busca: " " })).toBe(false);
   });
 });
