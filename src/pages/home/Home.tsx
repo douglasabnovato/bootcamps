@@ -70,7 +70,7 @@ export const Home = () => {
 
       {visiveis.length === 0 && (
         <div className="flex flex-col items-center justify-center gap-4 py-16 text-center border border-dashed border-zinc-800 rounded-3xl">
-          <p className="text-zinc-300 text-lg">Nenhum evento com esses filtros.</p>
+          <p className="text-zinc-300 text-lg">Nenhum evento com essa busca ou esses filtros.</p>
           <button
             type="button"
             onClick={() => aplicarFiltro(FILTRO_VAZIO)}
