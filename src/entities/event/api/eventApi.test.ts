@@ -19,7 +19,10 @@ afterEach(() => {
 
 describe("eventApi", () => {
   it("getAll devolve os eventos da API com /media/ resolvido", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => [{ ...events[0], coverImage: "/media/x.webp" }] })));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => ({ ok: true, json: async () => [{ ...events[0], coverImage: "/media/x.webp" }] })),
+    );
     const api = await carregar();
     const lista = await api.getAll();
     expect(lista).toHaveLength(1);
@@ -27,19 +30,28 @@ describe("eventApi", () => {
   });
 
   it("getAll cai na cópia local quando a API responde erro", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => ({ ok: false, status: 500 })));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => ({ ok: false, status: 500 })),
+    );
     const api = await carregar();
     expect(await api.getAll()).toStrictEqual(events);
   });
 
   it("getAll cai na cópia local quando a resposta não é lista", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ erro: true }) })));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => ({ ok: true, json: async () => ({ erro: true }) })),
+    );
     const api = await carregar();
     expect(await api.getAll()).toStrictEqual(events);
   });
 
   it("getBySlug rejeita evento sem content e usa o local", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ slug: events[0].slug }) })));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => ({ ok: true, json: async () => ({ slug: events[0].slug }) })),
+    );
     const api = await carregar();
     expect((await api.getBySlug(events[0].slug))?.title).toBe(events[0].title);
   });

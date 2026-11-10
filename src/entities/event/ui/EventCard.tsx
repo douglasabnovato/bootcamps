@@ -1,16 +1,16 @@
 /* EventCard.tsx — card do evento na listagem, com o status visível na própria grade. */
 
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ROTULO_CATEGORIA, type BootcampEvent } from '../model/types';
-import { Badge } from './badge/Badge';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ROTULO_CATEGORIA, type BootcampEvent } from "../model/types";
+import { Badge } from "./badge/Badge";
 
 interface EventCardProps {
   event: BootcampEvent;
 }
 
 export const EventCard = ({ event }: EventCardProps) => {
-  const concluido = event.status === 'concluido';
+  const concluido = event.status === "concluido";
 
   return (
     <Link
@@ -36,28 +36,20 @@ export const EventCard = ({ event }: EventCardProps) => {
 
           <span
             className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-black uppercase tracking-wider border backdrop-blur-md ${
-              concluido
-                ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30'
-                : 'bg-amber-500/15 text-amber-300 border-amber-500/30'
+              concluido ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30" : "bg-amber-500/15 text-amber-300 border-amber-500/30"
             }`}
           >
-            {concluido ? 'Concluído' : 'Meta'}
+            {concluido ? "Concluído" : "Meta"}
           </span>
         </div>
 
         <div className="p-6 flex flex-col flex-grow">
           <div className="flex justify-between items-center gap-3 mb-4">
             <Badge variant="outline">{ROTULO_CATEGORIA[event.category]}</Badge>
-            <span className="text-xs font-mono text-zinc-400 uppercase truncate">
-              {event.institution}
-            </span>
+            <span className="text-xs font-mono text-zinc-400 uppercase truncate">{event.institution}</span>
           </div>
-          <h3 className="text-xl font-bold text-zinc-100 group-hover:text-brand-primary transition-colors">
-            {event.title}
-          </h3>
-          <p className="text-sm text-zinc-400 mt-3 line-clamp-2 leading-relaxed">
-            {event.description}
-          </p>
+          <h3 className="text-xl font-bold text-zinc-100 group-hover:text-brand-primary transition-colors">{event.title}</h3>
+          <p className="text-sm text-zinc-400 mt-3 line-clamp-2 leading-relaxed">{event.description}</p>
         </div>
       </motion.div>
     </Link>

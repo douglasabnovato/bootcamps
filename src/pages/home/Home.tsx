@@ -1,9 +1,9 @@
 /* Home.tsx — listagem dos eventos, separada entre concluídos e metas de estudo, com filtro na URL. */
 
-import { useSearchParams } from 'react-router-dom';
-import { useEvents } from '../../entities/event/model/useEvents';
-import { EventCard } from '../../entities/event/ui/EventCard';
-import { useDocumentTitle } from './../../shared/ui/lib/hooks/useDocumentTitle';
+import { useSearchParams } from "react-router-dom";
+import { useEvents } from "../../entities/event/model/useEvents";
+import { EventCard } from "../../entities/event/ui/EventCard";
+import { useDocumentTitle } from "./../../shared/ui/lib/hooks/useDocumentTitle";
 import {
   EventFilter,
   FILTRO_VAZIO,
@@ -12,19 +12,19 @@ import {
   filtroParaParametros,
   lerFiltro,
   type FiltroEventos,
-} from '../../features/event-filter';
+} from "../../features/event-filter";
 
 export const Home = () => {
   const { events, isLoading, error } = useEvents();
-  useDocumentTitle('Eventos');
+  useDocumentTitle("Eventos");
   const [parametros, setParametros] = useSearchParams();
   const filtro = lerFiltro(parametros);
 
   /* replace: trocar de filtro não empilha histórico; o Voltar do detalhe cai na Home já filtrada. */
   const aplicarFiltro = (novo: FiltroEventos) => setParametros(filtroParaParametros(novo), { replace: true });
 
-  const concluidos = events.filter((evento) => evento.status === 'concluido');
-  const metas = events.filter((evento) => evento.status === 'desejado');
+  const concluidos = events.filter((evento) => evento.status === "concluido");
+  const metas = events.filter((evento) => evento.status === "desejado");
   const visiveis = filtrarEventos(events, filtro);
 
   if (isLoading) {
@@ -56,8 +56,8 @@ export const Home = () => {
       <header className="mb-12">
         <h1 className="text-4xl font-extrabold tracking-tight text-white">Eventos learnTECH</h1>
         <p className="text-zinc-400 mt-2 text-lg">
-          Bootcamps, formações e encontros que atravessaram minha jornada técnica —{' '}
-          <span className="text-emerald-400 font-semibold">{concluidos.length} concluídos</span> e{' '}
+          Bootcamps, formações e encontros que atravessaram minha jornada técnica —{" "}
+          <span className="text-emerald-400 font-semibold">{concluidos.length} concluídos</span> e{" "}
           <span className="text-amber-400 font-semibold">{metas.length} no radar</span>.
         </p>
       </header>
@@ -65,12 +65,12 @@ export const Home = () => {
       <EventFilter eventos={events} filtro={filtro} aoMudar={aplicarFiltro} />
 
       <p className="sr-only" aria-live="polite">
-        {visiveis.length === 1 ? '1 evento encontrado' : `${visiveis.length} eventos encontrados`}
+        {visiveis.length === 1 ? "1 evento encontrado" : `${visiveis.length} eventos encontrados`}
       </p>
 
       {visiveis.length === 0 && (
         <div className="flex flex-col items-center justify-center gap-4 py-16 text-center border border-dashed border-zinc-800 rounded-3xl">
-          <p className="text-zinc-300 text-lg">Nenhum evento com esses filtros.</p>
+          <p className="text-zinc-300 text-lg">Nenhum evento com essa busca ou esses filtros.</p>
           <button
             type="button"
             onClick={() => aplicarFiltro(FILTRO_VAZIO)}
@@ -94,15 +94,15 @@ export const Home = () => {
       )}
 
       {[
-        { titulo: 'Concluídos', lista: visiveis.filter((evento) => evento.status === 'concluido') },
-        { titulo: 'Metas de estudo', lista: visiveis.filter((evento) => evento.status === 'desejado') },
+        { titulo: "Concluídos", lista: visiveis.filter((evento) => evento.status === "concluido") },
+        { titulo: "Metas de estudo", lista: visiveis.filter((evento) => evento.status === "desejado") },
       ]
         .filter((grupo) => grupo.lista.length > 0)
         .map((grupo) => (
           <div key={grupo.titulo} className="mb-16 last:mb-0">
             <div className="flex items-center gap-6 mb-8">
               <h2 className="text-2xl font-bold text-zinc-100 tracking-tight">{grupo.titulo}</h2>
-              <span className="text-sm font-mono text-zinc-500">{grupo.lista.length}</span>
+              <span className="text-sm font-mono text-zinc-400">{grupo.lista.length}</span>
               <div className="h-px flex-grow bg-zinc-800/60" />
             </div>
 

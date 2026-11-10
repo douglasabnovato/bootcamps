@@ -5,7 +5,7 @@ Site de eventos, bootcamps e formações (os que o autor fez e os que quer fazer
 ## Stack
 - React 19, Vite 7, React Router 7, TypeScript 5.9 e Tailwind CSS 4 (PostCSS).
 - Bibliotecas: `framer-motion`, `react-helmet-async` (metadados por página) e `@vercel/speed-insights`.
-- Qualidade: ESLint com `typescript-eslint`; checagem de tipos no build; testes de unidade com Vitest (ambiente `node`, sem jsdom): contrato da cópia, fallback da API, filtro da Home (`filtrarEventos`) e resolvedor de relacionados. 25 testes em 4 arquivos em 03/11/2026.
+- Qualidade: ESLint com `typescript-eslint`; checagem de tipos no build; testes de unidade com Vitest (ambiente `node`, sem jsdom): contrato da cópia, fallback da API, filtro e busca da Home (`filtrarEventos`, `buscarEventos`) e resolvedor de relacionados. 34 testes em 4 arquivos em 10/11/2026.
 
 ## Como rodar do zero
 ```bash
@@ -35,12 +35,25 @@ Seções, na ordem:
 A galeria (`src/shared/ui/eventGallery/EventGallery.tsx`) amplia a foto num `<dialog>` nativo (←/→, Esc, contador "3 de 29", foco devolvido à miniatura). O botão Voltar vai para `/` quando a página foi aberta direto (`location.key === "default"`) e volta no histórico quando veio da Home, preservando o filtro.
 
 ## Home (`src/pages/home/Home.tsx`)
-Filtro por status e categoria em `src/features/event-filter/`, lido e gravado na URL (`?status=concluido|desejado&categoria=...`, com `replace` para não empilhar histórico). Valor desconhecido na URL vira "todos". Sem resultado, aparece "Limpar filtros".
+Busca, filtro por status e filtro por categoria em `src/features/event-filter/`, lidos e gravados na URL (`?q=...&status=concluido|desejado&categoria=...`, com `replace` para não empilhar histórico). Valor desconhecido na URL vira "todos". A busca olha título e instituição, sem diferença de acento e caixa, e exige todas as palavras (`buscarEventos`, limite de 100 caracteres). As contagens dos botões respeitam a busca. Sem resultado, aparece "Limpar filtros", que limpa também a busca.
+
+## Cores e contraste
+Fundo da página: `zinc-950` (#09090b). Mínimo WCAG AA: 4,5:1 em texto normal e 3:1 em texto grande.
+
+| Uso | Cor | Contraste sobre zinc-950 |
+|---|---|---|
+| Marca (destaques, links, badge principal) | `brand-primary` #00c853 | sem mudança |
+| Texto secundário (contadores, rodapé, local e horário das edições, textos da CTA, títulos pequenos do detalhe) | `zinc-400` #9f9fa9 | 7,59:1 |
+| Antes (10/11/2026, trocado) | `zinc-500` #71717b | 4,12:1, reprovado pelo axe |
+
+Regra: texto sobre fundo escuro não usa `zinc-500` ou mais escuro. O `zinc-500` fica só em bordas e detalhes decorativos.
+Verificação de 10/11/2026: axe (e2e de `learntech-content`, build local) sem `color-contrast` na home e no detalhe do evento.
 
 ## Deploy e CI
 - **Deploy:** push na `main` publica no Vercel. O `vercel.json` tem a reescrita de SPA e os cabeçalhos de segurança.
-- **CI:** `.github/workflows/ci.yml` roda `npm ci`, `npm run lint`, `npm test` e `npm run build` em Node 22.
-- **Proposta (não aplicada):** acrescentar `npm run format:check` (depois de um commit só de formatação, 27 arquivos) e `npm audit --omit=dev --audit-level=high` à CI, e corrigir o comentário da linha 1 do `ci.yml`, que ainda diz "lint e build".
+- **CI:** `.github/workflows/ci.yml` roda `npm ci`, `npm run lint`, `npm run format:check`, `npm test` e `npm run build` em Node 22.
+- **Formatação:** Prettier (`.prettierrc`) em todo o `src/` desde 10/11/2026. A cópia gerada `events.data.ts` fica no `.prettierignore`. Antes de commitar: `npx prettier --write "src/**/*.{ts,tsx}"`.
+- **Proposta (não aplicada):** acrescentar `npm audit --omit=dev --audit-level=high` à CI.
 
 ## Pendências de engenharia
 O backlog fica em `learntech-content/docs/engenharia/backlog.md`. Para este site: testes de componente (jsdom + Testing Library) e de ponta a ponta, métricas de Lighthouse, axe sem violações serious/critical, pré-renderização das rotas e o gerador de cópias exportar `url` e `titulo` nos relacionados.
