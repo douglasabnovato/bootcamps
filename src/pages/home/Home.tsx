@@ -29,7 +29,9 @@ export const Home = () => {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-64" aria-live="polite">
+      /* Ocupa a tela inteira enquanto carrega: com h-64 o rodapé aparecia no meio da tela do celular
+         e saltava quando os eventos chegavam (CLS 0,52 com rede lenta, #79). */
+      <div className="flex justify-center items-center min-h-screen" aria-live="polite">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-brand-primary" />
         <span className="sr-only">Carregando eventos</span>
       </div>
