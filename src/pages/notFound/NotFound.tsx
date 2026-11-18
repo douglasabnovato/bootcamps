@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { m } from "framer-motion";
 import { useDocumentTitle } from "../../shared/ui/lib/hooks/useDocumentTitle";
 
 export const NotFound = () => {
@@ -14,11 +13,9 @@ export const NotFound = () => {
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center px-6 text-center">
       {/* Soft 404 (a Vercel responde 200 para a SPA): pelo menos não indexar. */}
-      <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <meta name="robots" content="noindex" />
       {/* Elemento Visual de Impacto */}
-      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="relative mb-8">
+      <m.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="relative mb-8">
         <h1
           aria-label="Erro 404: trilha perdida"
           className="text-[12rem] md:text-[15rem] font-black text-zinc-900 leading-none select-none"
@@ -30,7 +27,7 @@ export const NotFound = () => {
             Trilha Perdida
           </span>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Conteúdo de Texto */}
       <div className="max-w-md space-y-6">

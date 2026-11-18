@@ -1,15 +1,17 @@
 /* EventCard.tsx — card do evento na listagem, com o status visível na própria grade. */
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ROTULO_CATEGORIA, type BootcampEvent } from "../model/types";
 import { Badge } from "./badge/Badge";
 
 interface EventCardProps {
   event: BootcampEvent;
+  /** Card visível sem rolar (o primeiro da grade): a capa é o LCP, então carrega já e com prioridade alta. */
+  prioritario?: boolean;
 }
 
-export const EventCard = ({ event }: EventCardProps) => {
+export const EventCard = ({ event, prioritario = false }: EventCardProps) => {
   const concluido = event.status === "concluido";
 
   return (
@@ -17,16 +19,17 @@ export const EventCard = ({ event }: EventCardProps) => {
       to={`/event/${event.slug}`}
       className="group relative block h-full rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-950"
     >
-      <motion.div
+      <m.div
         layoutId={`card-${event.id}`}
         className="relative flex flex-col h-full bg-zinc-900/40 border border-zinc-800/50 rounded-3xl overflow-hidden group-hover:border-zinc-700 transition-colors"
       >
         <div className="relative aspect-video overflow-hidden bg-zinc-800">
-          <motion.img
+          <m.img
             layoutId={`image-${event.id}`}
             src={event.coverImage}
             alt={event.altText}
-            loading="lazy"
+            loading={prioritario ? "eager" : "lazy"}
+            fetchPriority={prioritario ? "high" : "auto"}
             decoding="async"
             width={640}
             height={360}
@@ -51,7 +54,7 @@ export const EventCard = ({ event }: EventCardProps) => {
           <h3 className="text-xl font-bold text-zinc-100 group-hover:text-brand-primary transition-colors">{event.title}</h3>
           <p className="text-sm text-zinc-400 mt-3 line-clamp-2 leading-relaxed">{event.description}</p>
         </div>
-      </motion.div>
+      </m.div>
     </Link>
   );
 };

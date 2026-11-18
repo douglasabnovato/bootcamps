@@ -3,7 +3,7 @@
    Itens de vídeo não viram <img>: aparecem como link para o vídeo e ficam fora da sequência ampliada. */
 
 import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type TouchEvent } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 // Interface local simples para o Shared (mesmo formato de EventMedia, sem depender de entities)
 interface SharedMediaItem {
@@ -102,7 +102,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
           const ehVideo = item.type === "video";
           const posicao = posicaoDe.get(item.id) ?? -1;
           return (
-            <motion.li
+            <m.li
               key={item.id}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -140,7 +140,7 @@ export const EventGallery = ({ media }: EventGalleryProps) => {
                   />
                 </button>
               )}
-            </motion.li>
+            </m.li>
           );
         })}
       </ul>
