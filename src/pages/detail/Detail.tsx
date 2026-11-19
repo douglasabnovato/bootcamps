@@ -1,8 +1,7 @@
 /* Detail.tsx — página do evento: capa, mídia, edições, ementa e chamada final. */
 
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { m } from "framer-motion";
 
 import { useEventBySlug } from "../../entities/event/model/useEventBySlug";
 import { eventApi } from "../../entities/event/api/eventApi";
@@ -41,26 +40,24 @@ export const Detail = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{event.title} | learnTECH</title>
-        <meta name="description" content={event.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={`${event.title} — Bootcamps learnTECH`} />
-        <meta property="og:description" content={event.description} />
-        <meta property="og:image" content={event.coverImage} />
-        <meta property="og:url" content={window.location.href} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={event.title} />
-        <meta name="twitter:image" content={event.coverImage} />
-      </Helmet>
+      {/* Metadados nativos do React 19 (sobem para o <head>); o <title> fica com useDocumentTitle. */}
+      <meta name="description" content={event.description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={`${event.title} — Bootcamps learnTECH`} />
+      <meta property="og:description" content={event.description} />
+      <meta property="og:image" content={event.coverImage} />
+      <meta property="og:url" content={window.location.href} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={event.title} />
+      <meta name="twitter:image" content={event.coverImage} />
 
       <article className="max-w-5xl mx-auto pb-24">
         <header>
-          <motion.div
+          <m.div
             layoutId={`card-${event.id}`}
             className="relative w-full aspect-[16/10] md:aspect-[16/7] overflow-hidden rounded-3xl border border-zinc-800/60"
           >
-            <motion.img
+            <m.img
               layoutId={`image-${event.id}`}
               src={event.coverImage}
               alt={event.altText}
@@ -98,16 +95,12 @@ export const Detail = () => {
 
               <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[0.95] drop-shadow-2xl">{event.title}</h1>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
-            className="mt-10 text-lg md:text-xl text-zinc-400 leading-relaxed font-light"
-          >
+          {/* Sem animação de entrada: este parágrafo costuma ser o LCP, e opacity 0 o atrasava até o chunk do Framer Motion chegar (#73). */}
+          <p className="mt-10 text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
             {event.content.longDescription || event.description}
-          </motion.p>
+          </p>
         </header>
 
         {(event.content.videoUrl || (event.content.gallery && event.content.gallery.length > 0)) && (

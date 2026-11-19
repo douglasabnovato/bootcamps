@@ -29,7 +29,9 @@ export const Home = () => {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-64" aria-live="polite">
+      /* Ocupa a tela inteira enquanto carrega: com h-64 o rodapé aparecia no meio da tela do celular
+         e saltava quando os eventos chegavam (CLS 0,52 com rede lenta, #79). */
+      <div className="flex justify-center items-center min-h-screen" aria-live="polite">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-brand-primary" />
         <span className="sr-only">Carregando eventos</span>
       </div>
@@ -98,7 +100,7 @@ export const Home = () => {
         { titulo: "Metas de estudo", lista: visiveis.filter((evento) => evento.status === "desejado") },
       ]
         .filter((grupo) => grupo.lista.length > 0)
-        .map((grupo) => (
+        .map((grupo, indiceGrupo) => (
           <div key={grupo.titulo} className="mb-16 last:mb-0">
             <div className="flex items-center gap-6 mb-8">
               <h2 className="text-2xl font-bold text-zinc-100 tracking-tight">{grupo.titulo}</h2>
@@ -107,8 +109,8 @@ export const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
-              {grupo.lista.map((evento) => (
-                <EventCard key={evento.id} event={evento} />
+              {grupo.lista.map((evento, indice) => (
+                <EventCard key={evento.id} event={evento} prioritario={indiceGrupo === 0 && indice === 0} />
               ))}
             </div>
           </div>

@@ -4,7 +4,7 @@ name: CI
 
 on:
   push:
-    branches: [main, developer-mvp, "feature/**", "hotfix/**"]
+    branches: [main, developer, "feature/**", "hotfix/**"]
   pull_request:
 
 permissions:
@@ -40,3 +40,6 @@ jobs:
 
       - name: Build com checagem de tipos (npm run build = tsc -b && vite build)
         run: npm run build
+
+      - name: Orçamento do JS inicial (npm run orcamento, limite 100 KB gzip)
+        run: npm run orcamento

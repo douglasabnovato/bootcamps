@@ -22,6 +22,7 @@ Guia curto para mudar o site com segurança. Os eventos e as formações **não 
 1. O evento entra em `learntech-content/content/bootcamps/eventos/<slug>.json`. As fotos vão para `media/bootcamps/eventos/<slug>/`, tratadas com `scripts/tratar-fotos.py`.
 2. Lá: `npm run validar`, `npm run copias` (atualiza `events.data.ts` com os relacionados já resolvidos) e `npm run sitemaps`.
 3. Aqui: `npm test && npx eslint . && npm run build`, depois commit só da cópia ("conteudo: cópia dos eventos ...").
+4. O build gera `dist/event/<slug>/index.html` do evento novo (título, Open Graph, canonical e JSON-LD próprios, issue #71). Sem essa página, a Vercel responde 404 para `/event/<slug>`: o evento só aparece no site depois que a cópia chega aqui e o site é publicado.
 
 ## 4. Quando mudar o site
 - **Campo novo do evento:** primeiro o schema da API, depois `types.ts` e a tela. O `tsc -b` do build acusa a divergência.
@@ -33,10 +34,11 @@ Guia curto para mudar o site com segurança. Os eventos e as formações **não 
 | Comando | Para quê |
 |---|---|
 | `npm run dev` | Servidor local (sem `VITE_API_URL`, testa a reserva) |
-| `npm test` | Vitest (34 testes em 10/11/2026) |
+| `npm test` | Vitest (75 testes em 18/11/2026) |
 | `npx eslint .` | Lint (obrigatório na CI) |
 | `npm run format:check` | Prettier em `src/` (obrigatório na CI desde 10/11/2026) |
-| `npm run build` | `tsc -b` + build |
+| `npm run build` | `tsc -b` + build + `scripts/prerender.mjs` (uma página por evento e o `404.html`) |
+| `npm run orcamento` | JS inicial até 100 KB gzip (obrigatório na CI desde 18/11/2026) |
 | `npm audit --omit=dev` | 0 vulnerabilidades em produção em 05/11/2026 |
 
 ## 6. Estabilidade: antes de dar por pronto

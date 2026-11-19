@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import LogoLTECH from "./../../../assets/logo-icon.webp";
 import { Github, Linkedin, Instagram } from "lucide-react";
 
@@ -71,7 +71,7 @@ type SocialLinkProps = {
 };
 
 const SocialLink = ({ href, label, icon }: SocialLinkProps) => (
-  <motion.a
+  <m.a
     whileHover={{ y: -3 }}
     whileTap={{ scale: 0.95 }}
     href={href}
@@ -81,5 +81,5 @@ const SocialLink = ({ href, label, icon }: SocialLinkProps) => (
     className="w-10 h-10 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:border-brand-primary hover:text-brand-primary transition-colors focus-visible:ring-2 focus-visible:ring-brand-primary outline-none"
   >
     {icon}
-  </motion.a>
+  </m.a>
 );
