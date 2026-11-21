@@ -57,6 +57,9 @@ export const Detail = () => {
             layoutId={`card-${event.id}`}
             className="relative w-full aspect-[16/10] md:aspect-[16/7] overflow-hidden rounded-3xl border border-zinc-800/60"
           >
+            {/* Prioridade baixa: a capa fica atrás do degradê e não é o LCP (o LCP é o parágrafo abaixo). Com prioridade
+                alta, os até 190 kB da capa disputavam banda com o JavaScript e a fonte: evento de 4,1 para 3,0 s
+                no preview (Decisão LIDER D19, 20/11/2026). */}
             <m.img
               layoutId={`image-${event.id}`}
               src={event.coverImage}
@@ -64,7 +67,7 @@ export const Detail = () => {
               width={1280}
               height={720}
               decoding="async"
-              fetchPriority="high"
+              fetchPriority="low"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/10" />
