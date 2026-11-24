@@ -1,16 +1,30 @@
 @import "tailwindcss";
 
-/* Fonte reserva com as medidas da Raleway (CLS). A Raleway carrega com font-display: swap: até ela chegar, o texto
-   aparece numa fonte do sistema mais estreita e mais baixa, e a troca empurra o layout (CLS 0,082 a 360 px com a
-   fonte atrasada 1,5 s). Esta face usa a Arial local com o tamanho e as alturas da Raleway, medidos no navegador
-   (24/11/2026: largura de um texto da home em 400 e 700, e fontBoundingBoxAscent/Descent). Sem Arial no aparelho,
-   o local() falha e vale a fonte seguinte da lista, como antes. */
+/* Fontes reserva com as medidas da Raleway (CLS). A Raleway carrega com font-display: swap: até ela chegar, o texto
+   aparece numa fonte do sistema de outra largura e altura, e a troca empurra o layout (CLS 0,082 a 360 px com a
+   fonte atrasada 1,5 s). Cada face usa uma fonte local com o tamanho e as alturas da Raleway, medidos no navegador
+   (24/11/2026: largura de um texto da home e fontBoundingBoxAscent/Descent), uma por peso para não sintetizar o
+   negrito: Arial de 100 a 599 e Arial Bold de 600 a 900 (Windows, Mac, iOS, Linux). Sem a fonte local, o local()
+   falha e vale a fonte seguinte da lista. O Android (sem Arial) fica de fora de propósito: emulado com a Roboto
+   carregada antes da página, ela sem ajuste dá CLS 0,015, e com o size-adjust medido (103,6%) piora para 0,131,
+   provavelmente porque uma linha a mais quebra até a Raleway chegar (bootcamps#86, revisão R19). */
 @font-face {
   font-family: "Raleway Fallback";
+  font-weight: 100 599;
   src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Helvetica");
-  size-adjust: 101%;
-  ascent-override: 93%;
-  descent-override: 22.8%;
+  size-adjust: 102.8%;
+  ascent-override: 91.4%;
+  descent-override: 22.4%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Raleway Fallback";
+  font-weight: 600 900;
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Helvetica Bold");
+  size-adjust: 99.2%;
+  ascent-override: 94.7%;
+  descent-override: 23.2%;
   line-gap-override: 0%;
 }
 
