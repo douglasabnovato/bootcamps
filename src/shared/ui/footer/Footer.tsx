@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
           <div className="space-y-4">
-            <Link to="/" aria-label="LearnTECH, voltar ao início" className="group flex items-center gap-3">
+            <Link to="/" aria-label="LearnTECH, voltar ao início" className="group flex min-h-11 items-center gap-3">
               <img
                 src={LogoLTECH}
                 alt=""
@@ -32,7 +32,7 @@ export const Footer = () => {
               href="https://learn-tech-pied.vercel.app/conheca"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-sm text-zinc-400 underline underline-offset-4 hover:text-white focus-visible:text-white transition-colors"
+              className="inline-flex min-h-11 items-center text-sm text-zinc-400 underline underline-offset-4 hover:text-white focus-visible:text-white transition-colors"
             >
               Conheça o learnTECH
               <span className="sr-only"> (abre em nova aba)</span>
@@ -78,7 +78,7 @@ const SocialLink = ({ href, label, icon }: SocialLinkProps) => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label={label}
-    className="w-10 h-10 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:border-brand-primary hover:text-brand-primary transition-colors focus-visible:ring-2 focus-visible:ring-brand-primary outline-none"
+    className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:border-brand-primary hover:text-brand-primary transition-colors focus-visible:ring-2 focus-visible:ring-brand-primary outline-none"
   >
     {icon}
   </m.a>

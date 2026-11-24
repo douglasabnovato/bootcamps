@@ -20,7 +20,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
       </a>
       <header className="w-full border-b border-zinc-800 bg-zinc-950/50 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center">
-          <Link to="/" aria-label="LearnTECH, página inicial dos eventos" className="group flex items-center gap-3">
+          <Link to="/" aria-label="LearnTECH, página inicial dos eventos" className="group flex min-h-11 items-center gap-3">
             <img
               src={LogoLTECH}
               alt=""

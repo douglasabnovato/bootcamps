@@ -76,7 +76,7 @@ export const Detail = () => {
               onClick={voltar}
               type="button"
               aria-label="Voltar para a listagem de eventos"
-              className="absolute top-5 left-5 px-4 py-2.5 bg-black/50 backdrop-blur-xl rounded-full text-sm text-white border border-white/10 hover:bg-brand-primary hover:text-zinc-950 hover:border-brand-primary transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-950"
+              className="absolute top-5 left-5 min-h-11 px-4 py-2.5 bg-black/50 backdrop-blur-xl rounded-full text-sm text-white border border-white/10 hover:bg-brand-primary hover:text-zinc-950 hover:border-brand-primary transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-950"
             >
               <span className="group-hover:-translate-x-1 inline-block transition-transform">←</span> Voltar
             </button>
