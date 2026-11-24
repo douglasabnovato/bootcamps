@@ -1,10 +1,24 @@
 @import "tailwindcss";
 
+/* Fonte reserva com as medidas da Raleway (CLS). A Raleway carrega com font-display: swap: até ela chegar, o texto
+   aparece numa fonte do sistema mais estreita e mais baixa, e a troca empurra o layout (CLS 0,082 a 360 px com a
+   fonte atrasada 1,5 s). Esta face usa a Arial local com o tamanho e as alturas da Raleway, medidos no navegador
+   (24/11/2026: largura de um texto da home em 400 e 700, e fontBoundingBoxAscent/Descent). Sem Arial no aparelho,
+   o local() falha e vale a fonte seguinte da lista, como antes. */
+@font-face {
+  font-family: "Raleway Fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Helvetica");
+  size-adjust: 101%;
+  ascent-override: 93%;
+  descent-override: 22.8%;
+  line-gap-override: 0%;
+}
+
 @theme {
   --color-brand-primary: #00c853;
   --color-brand-secondary: #7000ff;
   --color-text-white: #ffffff;
-  --font-sans: "Raleway Variable", "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Raleway Variable", "Raleway", "Raleway Fallback", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -14,6 +28,6 @@
 
   body {
     @apply bg-zinc-950 text-zinc-100 antialiased;
-    font-family: "Raleway Variable", "Raleway", sans-serif;
+    font-family: "Raleway Variable", "Raleway", "Raleway Fallback", sans-serif;
   }
 }
