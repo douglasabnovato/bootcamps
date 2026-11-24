@@ -14,7 +14,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     <div className="flex flex-col min-h-screen bg-zinc-950 text-zinc-100">
       <a
         href="#conteudo"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-zinc-100 focus:text-zinc-950 focus:font-bold"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:inline-flex focus:min-h-11 focus:items-center focus:px-4 focus:py-2 focus:rounded-lg focus:bg-zinc-100 focus:text-zinc-950 focus:font-bold"
       >
         Pular para o conteúdo
       </a>
