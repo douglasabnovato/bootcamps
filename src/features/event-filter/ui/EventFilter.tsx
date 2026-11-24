@@ -50,7 +50,7 @@ export const EventFilter = ({ eventos, filtro, aoMudar }: EventFilterProps) => {
           onChange={(evento) => aoMudar({ ...filtro, busca: evento.target.value })}
           placeholder="Buscar por título ou instituição"
           autoComplete="off"
-          className="w-full min-h-11 rounded-full border border-zinc-700 bg-zinc-900/60 py-2.5 pl-11 pr-4 text-sm text-zinc-100 placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+          className="w-full min-h-11 rounded-full border border-zinc-500 bg-zinc-900/60 py-2.5 pl-11 pr-4 text-sm text-zinc-100 placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
         />
       </div>
 
