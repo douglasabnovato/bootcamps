@@ -56,10 +56,10 @@ a[target="_blank"]::after {
 /* Nos botões quadrados das redes (só o logo, 44 px), o ↗ vai para o canto de cima, sem apertar o logo. */
 a[target="_blank"].seta-no-canto::after {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 9px;
-  height: 9px;
+  top: 3px;
+  right: 3px;
+  width: 12px;
+  height: 12px;
   margin: 0;
 }
 

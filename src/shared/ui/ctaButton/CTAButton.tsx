@@ -1,4 +1,6 @@
-/* CTAButton.tsx — chamada principal de um evento; verde quando concluído, âmbar quando é meta. */
+/* CTAButton.tsx — chamada principal de um evento; verde quando concluído, âmbar quando é meta.
+   É block com texto centrado, e não flex: assim o ↗ de nova aba (::after) segue a última palavra quando o texto
+   quebra em 2 linhas (R19 do bootcamps#89). */
 
 import { cn } from "./../lib/utils";
 
@@ -15,7 +17,7 @@ export const CTAButton = ({ url, isCompleted, label }: CTAButtonProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "flex items-center justify-center w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-2xl",
+        "block text-center w-full py-5 rounded-2xl font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-2xl",
         isCompleted
           ? "bg-emerald-500 text-emerald-950 hover:bg-emerald-400 shadow-emerald-500/20"
           : "bg-amber-500 text-amber-950 hover:bg-amber-400 shadow-amber-500/20",
