@@ -35,6 +35,34 @@
   --font-sans: "Raleway Variable", "Raleway", "Raleway Fallback", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Link que abre em nova aba: um ↗ visível depois do texto, para quem enxerga (learntech-content#70, como no tools#73).
+   O leitor de tela ouve o " (abre em nova aba)" do sr-only ou do aria-label, e o ícone não tem texto (content vazio).
+   A cor é a do texto do link (currentColor). */
+a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 0.8em;
+  height: 0.8em;
+  margin-inline-start: 0.3em;
+  vertical-align: -0.05em;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11 11 5M6 5h5v5'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11 11 5M6 5h5v5'/%3E%3C/svg%3E") center / contain no-repeat;
+  /* No alto contraste, o fundo seria trocado pela cor da página e o ícone sumiria. */
+  forced-color-adjust: none;
+}
+
+/* Nos botões quadrados das redes (só o logo, 44 px), o ↗ vai para o canto de cima, sem apertar o logo. */
+a[target="_blank"].seta-no-canto::after {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 9px;
+  height: 9px;
+  margin: 0;
+}
+
 @layer base {
   :focus-visible { 
     @apply outline-none ring-2 ring-brand-primary ring-offset-4 ring-offset-zinc-950;

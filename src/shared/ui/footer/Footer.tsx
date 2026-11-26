@@ -77,8 +77,8 @@ const SocialLink = ({ href, label, icon }: SocialLinkProps) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    aria-label={label}
-    className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:border-brand-primary hover:text-brand-primary transition-colors focus-visible:ring-2 focus-visible:ring-brand-primary outline-none"
+    aria-label={`${label} (abre em nova aba)`}
+    className="seta-no-canto relative w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:border-brand-primary hover:text-brand-primary transition-colors focus-visible:ring-2 focus-visible:ring-brand-primary outline-none"
   >
     {icon}
   </m.a>

@@ -193,7 +193,8 @@ export const Detail = () => {
                         rel="noopener noreferrer"
                         className="inline-block mt-3 text-sm text-brand-primary hover:underline"
                       >
-                        Página da edição ↗
+                        Página da edição
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     )}
                   </li>
@@ -277,6 +278,7 @@ export const Detail = () => {
                       className="px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-300 text-sm font-medium hover:bg-zinc-800 transition-colors"
                     >
                       {link.label}
+                      <span className="sr-only"> (abre em nova aba)</span>
                     </a>
                   ))}
                 </div>
@@ -334,6 +336,7 @@ export const Detail = () => {
                     className="text-zinc-400 underline underline-offset-4 hover:text-zinc-200"
                   >
                     {fonte.label}
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               ))}
