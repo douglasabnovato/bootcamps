@@ -275,7 +275,7 @@ export const Detail = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-300 text-sm font-medium hover:bg-zinc-800 transition-colors"
+                      className="min-h-11 px-5 py-3 rounded-full border border-zinc-700 text-zinc-300 text-sm font-medium hover:bg-zinc-800 transition-colors"
                     >
                       {link.label}
                       <span className="sr-only"> (abre em nova aba)</span>
